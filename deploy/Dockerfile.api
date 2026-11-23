@@ -1,0 +1,16 @@
+ARG MAVEN_IMAGE=maven@sha256:c97d0fa42bed8c381518d76d7ca541ff5c6427b21fa93ac6fc4bd68ffb9a258d
+ARG JRE_IMAGE=eclipse-temurin@sha256:d5626b69d56330f64f1ebe514af0c7a73e6eb253fcb318f28bf399f31d02b88a
+FROM ${MAVEN_IMAGE} AS build
+WORKDIR /build
+COPY backend/pom.xml ./pom.xml
+COPY backend/src ./src
+ARG MAVEN_ARGS="-B -ntp verify"
+RUN mvn ${MAVEN_ARGS}
+
+FROM ${JRE_IMAGE}
+WORKDIR /app
+COPY --from=build /build/target/course-selection-v2-2.0.0.jar /app/application.jar
+COPY deploy/start-api.sh /app/start-api.sh
+USER 10001:10001
+EXPOSE 8080
+ENTRYPOINT ["sh","/app/start-api.sh"]
