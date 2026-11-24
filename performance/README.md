@@ -72,3 +72,20 @@ java -XX:ActiveProcessorCount=1 -Xmx300m -Dloader.path="$work/ceiling.jar" -Dloa
 ```sh
 python3 performance/solver_contention.py --execute --seconds 6 --pairs 3 --origin http://127.0.0.1:18096 --password-file /private/perf-password --output-dir ./new-solver-run
 ```
+
+### 业务服务 JVM 内的真实分配预览
+
+将当前 API 连接到装有一万名合成学生及对应登录账号的 `course_app_v3_perf_test`，在能够操作该 Docker 实例的 Linux 主机上运行。传入现有性能学生账号的私密口令文件。驱动先核验容器实际连接的数据库、数据规模、迁移版本及预期镜像。若学生数据与代码独立构建，用本次构建的镜像 ID 替换命令中的 `IMAGE`。
+
+```sh
+IMAGE=$(docker inspect course34-v3-api-1 --format '{{.Image}}')
+python3 performance/service_preview_contention.py --execute --expected-image "$IMAGE" \
+  --origin http://127.0.0.1:18096 --password-file /private/perf-password \
+  --pairs 2 --seconds 7 --evidence-root ./service-preview-measurements
+```
+
+驱动创建一个独立学期，复用 320 个合成学生档案，导入 64 个教学班和 1600 条志愿。教务先向 API 提交随机种子承诺，封存数据后调用正式的 `POST /api/v3/admin/planning/allocations/preview`。八个前台会话同时执行三读一写的组合操作。对照窗口按 AB、BA 轮换。每个预览在数据库中的状态、摘要和 ID 均须与 HTTP 回包吻合，该学期正式分配数及选课数须为零。
+
+JSON 保留每轮吞吐量、读写 P95、技术错误、服务进程 CPU 计数与内存采样，以及求解器逐目标的状态和耗时。每次预览的各阶段原生求解耗时减去该请求落在前台窗口以外的全部时间，可给出二者实际重叠时间的保守下界。运行目录同时保存最新完成窗口，便于核验中断或未达预期的测量。
+
+在课程机的四个窗口中，八个前台会话共完成 5,216 个请求。两次仅前台运行的吞吐量中位数为 211.59 请求/秒，读、写 P95 的中位数分别为 72.183、120.316 毫秒。两个同时运行预览的窗口分别完成 10 和 11 次预览，前台吞吐量中位数为 159.66 请求/秒，读、写 P95 的中位数为 96.597、144.888 毫秒。原生求解与前台请求实际重叠至少 3.920、4.248 秒。四个窗口的技术错误数均为零，所有 22 条预览（含一次预热）均已在数据库核对。[查看本轮的逐窗结果](results/service-preview-contention.json)

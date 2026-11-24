@@ -28,10 +28,10 @@ class DockerHost:
     """Run on the measured Linux host or use an existing SSH identity and known_hosts."""
     def __init__(self, host):
         self.host = host
-    def run(self, label, command, timeout=45):
+    def run(self, label, command, timeout=45, stdin=None):
         args = (["ssh","-o","BatchMode=yes","-o","StrictHostKeyChecking=yes",self.host,command]
                 if self.host else ["sh","-ec",command])
-        return subprocess.check_output(args,text=True,timeout=timeout).strip()
+        return subprocess.check_output(args,text=True,encoding="utf-8",input=stdin,timeout=timeout).strip()
     def close(self):
         pass
 

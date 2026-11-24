@@ -1,0 +1,475 @@
+{
+  "profile": "uniform",
+  "mode": "closed-loop",
+  "mix": "three reads per alternating withdraw/enroll write",
+  "seed": 20261124,
+  "minimumStageSeconds": 12,
+  "goals": {
+    "readP95Ms": 500,
+    "writeP95Ms": 1000,
+    "technicalErrorRateExclusive": 0.001
+  },
+  "highestPassing": 32,
+  "firstNonPassing": 64,
+  "stages": [
+    {
+      "clients": 1,
+      "rounds": [
+        {
+          "endUtc": "2026-11-24T11:59:50.097453+00:00",
+          "seconds": 12.01,
+          "requests": 561,
+          "reads": 421,
+          "writes": 140,
+          "requestsPerSecond": 46.71,
+          "read": {
+            "p50Ms": 18.03,
+            "p95Ms": 28.458,
+            "p99Ms": 34.209
+          },
+          "write": {
+            "p50Ms": 30.904,
+            "p95Ms": 45.882,
+            "p99Ms": 61.726
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:00:04.780403+00:00",
+          "seconds": 12.006,
+          "requests": 670,
+          "reads": 503,
+          "writes": 167,
+          "requestsPerSecond": 55.81,
+          "read": {
+            "p50Ms": 15.393,
+            "p95Ms": 21.829,
+            "p99Ms": 26.023
+          },
+          "write": {
+            "p50Ms": 27.55,
+            "p95Ms": 33.892,
+            "p99Ms": 36.675
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:00:19.181183+00:00",
+          "seconds": 12.01,
+          "requests": 693,
+          "reads": 520,
+          "writes": 173,
+          "requestsPerSecond": 57.7,
+          "read": {
+            "p50Ms": 14.747,
+            "p95Ms": 20.993,
+            "p99Ms": 30.465
+          },
+          "write": {
+            "p50Ms": 27.197,
+            "p95Ms": 34.928,
+            "p99Ms": 47.252
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "clients": 8,
+      "rounds": [
+        {
+          "endUtc": "2026-11-24T12:00:37.815257+00:00",
+          "seconds": 12.029,
+          "requests": 2787,
+          "reads": 2090,
+          "writes": 697,
+          "requestsPerSecond": 231.69,
+          "read": {
+            "p50Ms": 23.937,
+            "p95Ms": 61.984,
+            "p99Ms": 113.524
+          },
+          "write": {
+            "p50Ms": 43.0,
+            "p95Ms": 109.295,
+            "p99Ms": 177.815
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:00:52.523211+00:00",
+          "seconds": 12.015,
+          "requests": 3060,
+          "reads": 2295,
+          "writes": 765,
+          "requestsPerSecond": 254.68,
+          "read": {
+            "p50Ms": 22.006,
+            "p95Ms": 56.016,
+            "p99Ms": 117.898
+          },
+          "write": {
+            "p50Ms": 39.141,
+            "p95Ms": 92.433,
+            "p99Ms": 171.151
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:01:07.443870+00:00",
+          "seconds": 12.028,
+          "requests": 3329,
+          "reads": 2497,
+          "writes": 832,
+          "requestsPerSecond": 276.76,
+          "read": {
+            "p50Ms": 21.32,
+            "p95Ms": 48.847,
+            "p99Ms": 84.523
+          },
+          "write": {
+            "p50Ms": 38.294,
+            "p95Ms": 74.041,
+            "p99Ms": 114.037
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "clients": 16,
+      "rounds": [
+        {
+          "endUtc": "2026-11-24T12:01:25.479301+00:00",
+          "seconds": 12.032,
+          "requests": 3443,
+          "reads": 2583,
+          "writes": 860,
+          "requestsPerSecond": 286.16,
+          "read": {
+            "p50Ms": 41.904,
+            "p95Ms": 96.674,
+            "p99Ms": 129.641
+          },
+          "write": {
+            "p50Ms": 72.964,
+            "p95Ms": 157.231,
+            "p99Ms": 211.049
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:01:40.358841+00:00",
+          "seconds": 12.045,
+          "requests": 3250,
+          "reads": 2437,
+          "writes": 813,
+          "requestsPerSecond": 269.82,
+          "read": {
+            "p50Ms": 45.08,
+            "p95Ms": 105.442,
+            "p99Ms": 147.413
+          },
+          "write": {
+            "p50Ms": 77.224,
+            "p95Ms": 158.003,
+            "p99Ms": 200.591
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:01:54.521431+00:00",
+          "seconds": 12.043,
+          "requests": 3524,
+          "reads": 2644,
+          "writes": 880,
+          "requestsPerSecond": 292.62,
+          "read": {
+            "p50Ms": 41.715,
+            "p95Ms": 96.578,
+            "p99Ms": 134.491
+          },
+          "write": {
+            "p50Ms": 69.22,
+            "p95Ms": 148.564,
+            "p99Ms": 204.586
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "clients": 32,
+      "rounds": [
+        {
+          "endUtc": "2026-11-24T12:02:13.441997+00:00",
+          "seconds": 12.085,
+          "requests": 3623,
+          "reads": 2718,
+          "writes": 905,
+          "requestsPerSecond": 299.8,
+          "read": {
+            "p50Ms": 81.276,
+            "p95Ms": 229.204,
+            "p99Ms": 344.481
+          },
+          "write": {
+            "p50Ms": 117.125,
+            "p95Ms": 265.847,
+            "p99Ms": 365.078
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:02:28.187441+00:00",
+          "seconds": 12.1,
+          "requests": 3674,
+          "reads": 2754,
+          "writes": 920,
+          "requestsPerSecond": 303.64,
+          "read": {
+            "p50Ms": 80.503,
+            "p95Ms": 220.917,
+            "p99Ms": 321.484
+          },
+          "write": {
+            "p50Ms": 114.164,
+            "p95Ms": 269.476,
+            "p99Ms": 378.639
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        },
+        {
+          "endUtc": "2026-11-24T12:02:42.592645+00:00",
+          "seconds": 12.084,
+          "requests": 3708,
+          "reads": 2779,
+          "writes": 929,
+          "requestsPerSecond": 306.85,
+          "read": {
+            "p50Ms": 79.116,
+            "p95Ms": 229.361,
+            "p99Ms": 315.871
+          },
+          "write": {
+            "p50Ms": 112.519,
+            "p95Ms": 271.431,
+            "p99Ms": 373.147
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "clients": 64,
+      "rounds": [
+        {
+          "endUtc": "2026-11-24T12:03:03.252837+00:00",
+          "seconds": 12.211,
+          "requests": 3661,
+          "reads": 2744,
+          "writes": 917,
+          "requestsPerSecond": 299.81,
+          "read": {
+            "p50Ms": 149.496,
+            "p95Ms": 532.044,
+            "p99Ms": 793.349
+          },
+          "write": {
+            "p50Ms": 191.713,
+            "p95Ms": 614.338,
+            "p99Ms": 936.624
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": false
+        },
+        {
+          "endUtc": "2026-11-24T12:03:18.012843+00:00",
+          "seconds": 12.188,
+          "requests": 3560,
+          "reads": 2670,
+          "writes": 890,
+          "requestsPerSecond": 292.09,
+          "read": {
+            "p50Ms": 152.633,
+            "p95Ms": 558.822,
+            "p99Ms": 748.282
+          },
+          "write": {
+            "p50Ms": 210.554,
+            "p95Ms": 616.61,
+            "p99Ms": 890.688
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": false
+        },
+        {
+          "endUtc": "2026-11-24T12:03:32.580645+00:00",
+          "seconds": 12.201,
+          "requests": 3404,
+          "reads": 2553,
+          "writes": 851,
+          "requestsPerSecond": 278.99,
+          "read": {
+            "p50Ms": 160.694,
+            "p95Ms": 600.586,
+            "p99Ms": 884.893
+          },
+          "write": {
+            "p50Ms": 209.682,
+            "p95Ms": 632.477,
+            "p99Ms": 895.506
+          },
+          "technicalErrors": 0,
+          "businessRefusals": 0,
+          "outcomes": {},
+          "technicalErrorRate": 0.0,
+          "mismatches": {
+            "seatErrors": 0,
+            "duplicateCourses": 0,
+            "creditErrors": 0
+          },
+          "passed": false
+        }
+      ],
+      "passed": false
+    }
+  ],
+  "status": "MEASURED",
+  "sourceImage": "sha256:c520d77243f09e25fd183d258109650832e271889d712f8dd0804a10d8f8a96d",
+  "version": "3.0.0",
+  "database": "course_app_v3_perf_test",
+  "server": "(openGauss 6.0.2 build 6285c0ef) compiled at 2025-07-15 16:58:31 commit 0 last mr 8059  on x86_64-unknown-linux-gnu, compiled by g++ (GCC) 10.3.0, 64-bit",
+  "machine": "openEuler / 4 vCPU / 8 GiB, Hikari 12",
+  "resourceSamples": "v3-1795521573833210300.jsonl",
+  "sourceCommit": "5450c84735db4fe20e8f064131a3f36ae2cda63e",
+  "artifactSha256": "1d205741d317499f6aabfac4fdcd984b04c0ed2b9b9b053fb1f6e6f92f908014"
+}

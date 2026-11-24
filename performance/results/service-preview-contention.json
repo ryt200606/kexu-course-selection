@@ -1,0 +1,2218 @@
+{
+  "status": "MEASURED",
+  "createdUtc": "2026-11-24T12:08:13.288041+00:00",
+  "clients": 8,
+  "pairs": 2,
+  "seconds": 7,
+  "fixture": {
+    "students": 320,
+    "choices": 1600,
+    "sections": 64,
+    "seed": "precommitted by API",
+    "published": false,
+    "roundId": "VJacd0cb3cROUND",
+    "term": "VJacd0cb3cTERM"
+  },
+  "sourceImage": "sha256:c520d77243f09e25fd183d258109650832e271889d712f8dd0804a10d8f8a96d",
+  "database": "course_app_v3_perf_test",
+  "mode": "actual API JVM via POST /api/v3/admin/planning/allocations/preview",
+  "nativeOverlapDefinition": "Sum of per-preview time spent in CP-SAT engine.solve reported by server, subtracting all request time outside foreground interval; conservative lower bound.",
+  "windows": [
+    {
+      "pair": 1,
+      "condition": "alone",
+      "utc": "2026-11-24T12:08:21.778801+00:00",
+      "start": 9139.1787873,
+      "end": 9146.2147812,
+      "http": {
+        "endUtc": "2026-11-24T12:08:28.814467+00:00",
+        "seconds": 7.032,
+        "requests": 1264,
+        "reads": 947,
+        "writes": 317,
+        "requestsPerSecond": 179.74,
+        "read": {
+          "p50Ms": 29.372,
+          "p95Ms": 87.304,
+          "p99Ms": 146.405
+        },
+        "write": {
+          "p50Ms": 54.703,
+          "p95Ms": 144.441,
+          "p99Ms": 217.653
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "serverJvmSamples": [
+        {
+          "utc": "2026-11-24T12:08:22.263675+00:00",
+          "mono": 9139.6636785,
+          "rssKiB": 263804,
+          "jvmCpuTicks": 2177
+        },
+        {
+          "utc": "2026-11-24T12:08:23.448245+00:00",
+          "mono": 9140.848257,
+          "rssKiB": 270340,
+          "jvmCpuTicks": 2391
+        },
+        {
+          "utc": "2026-11-24T12:08:24.513581+00:00",
+          "mono": 9141.9135936,
+          "rssKiB": 271008,
+          "jvmCpuTicks": 2555
+        },
+        {
+          "utc": "2026-11-24T12:08:25.619043+00:00",
+          "mono": 9143.0190554,
+          "rssKiB": 271404,
+          "jvmCpuTicks": 2728
+        },
+        {
+          "utc": "2026-11-24T12:08:26.822160+00:00",
+          "mono": 9144.2221704,
+          "rssKiB": 273488,
+          "jvmCpuTicks": 2915
+        },
+        {
+          "utc": "2026-11-24T12:08:28.007115+00:00",
+          "mono": 9145.4071239,
+          "rssKiB": 266804,
+          "jvmCpuTicks": 3080
+        },
+        {
+          "utc": "2026-11-24T12:08:29.010308+00:00",
+          "mono": 9146.4103156,
+          "rssKiB": 275376,
+          "jvmCpuTicks": 3208
+        }
+      ],
+      "previews": [],
+      "nativeOverlapAtLeastSeconds": 0,
+      "reconciliation": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 1,
+      "condition": "preview",
+      "utc": "2026-11-24T12:08:29.652353+00:00",
+      "start": 9147.0523392,
+      "end": 9154.0738148,
+      "http": {
+        "endUtc": "2026-11-24T12:08:36.673658+00:00",
+        "seconds": 7.018,
+        "requests": 1068,
+        "reads": 799,
+        "writes": 269,
+        "requestsPerSecond": 152.18,
+        "read": {
+          "p50Ms": 36.67,
+          "p95Ms": 102.36,
+          "p99Ms": 166.338
+        },
+        "write": {
+          "p50Ms": 67.064,
+          "p95Ms": 155.111,
+          "p99Ms": 250.722
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "serverJvmSamples": [
+        {
+          "utc": "2026-11-24T12:08:30.214844+00:00",
+          "mono": 9147.6148575,
+          "rssKiB": 285560,
+          "jvmCpuTicks": 3301
+        },
+        {
+          "utc": "2026-11-24T12:08:31.393958+00:00",
+          "mono": 9148.7939627,
+          "rssKiB": 294832,
+          "jvmCpuTicks": 3508
+        },
+        {
+          "utc": "2026-11-24T12:08:32.616134+00:00",
+          "mono": 9150.0161468,
+          "rssKiB": 298508,
+          "jvmCpuTicks": 3722
+        },
+        {
+          "utc": "2026-11-24T12:08:33.774285+00:00",
+          "mono": 9151.1742975,
+          "rssKiB": 299724,
+          "jvmCpuTicks": 3913
+        },
+        {
+          "utc": "2026-11-24T12:08:34.996424+00:00",
+          "mono": 9152.3964353,
+          "rssKiB": 309256,
+          "jvmCpuTicks": 4127
+        },
+        {
+          "utc": "2026-11-24T12:08:36.164346+00:00",
+          "mono": 9153.5643533,
+          "rssKiB": 313712,
+          "jvmCpuTicks": 4317
+        }
+      ],
+      "previews": [
+        {
+          "id": "ec02b7c5-592e-401e-a4ba-801a3b0d79eb",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:29.652650+00:00",
+          "start": 9147.0526399,
+          "end": 9147.9346941,
+          "elapsedSeconds": 0.882,
+          "nativeStageMs": 445,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 161
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 99
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 27
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 36
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 14
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 39
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "c409c940-48f5-4588-9d87-d82a0ce0d66a",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:30.535006+00:00",
+          "start": 9147.934994,
+          "end": 9148.638093,
+          "elapsedSeconds": 0.703,
+          "nativeStageMs": 428,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 157
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 76
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 23
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 27
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 34
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 29
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "91f8797a-eca8-4fa8-8958-f56ffab876b2",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:31.238406+00:00",
+          "start": 9148.638395,
+          "end": 9149.4890027,
+          "elapsedSeconds": 0.851,
+          "nativeStageMs": 474,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 153
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 131
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 36
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 25
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 12
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 39
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "f3124169-0b3b-481b-aa04-e3c77491e73a",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:32.089226+00:00",
+          "start": 9149.4892153,
+          "end": 9150.3026234,
+          "elapsedSeconds": 0.813,
+          "nativeStageMs": 461,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 186
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 71
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 32
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 42
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 25
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 23
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "538de296-3fd5-4d7f-ab1e-eca9363467be",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:32.903093+00:00",
+          "start": 9150.3030813,
+          "end": 9151.044146,
+          "elapsedSeconds": 0.741,
+          "nativeStageMs": 459,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 181
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 69
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 35
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 26
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 31
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 31
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 26
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "a90a9ed7-0b8a-4516-aa74-70c1779c6cdf",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:33.644368+00:00",
+          "start": 9151.0443562,
+          "end": 9151.8339685,
+          "elapsedSeconds": 0.79,
+          "nativeStageMs": 404,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 157
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 75
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 27
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "335f6b47-99fd-424e-b5ff-3a312c1a71bd",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:34.434300+00:00",
+          "start": 9151.834287,
+          "end": 9152.6559567,
+          "elapsedSeconds": 0.822,
+          "nativeStageMs": 496,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 164
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 114
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 42
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 49
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 24
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "ae1db84e-6c75-4498-9921-409140ddb392",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:35.256349+00:00",
+          "start": 9152.6563365,
+          "end": 9153.3454291,
+          "elapsedSeconds": 0.689,
+          "nativeStageMs": 385,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 154
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 67
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 23
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 23
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 23
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 22
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "d7c276c0-4a4b-496d-b7d9-4367151c66fb",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:35.945799+00:00",
+          "start": 9153.3457868,
+          "end": 9153.9550287,
+          "elapsedSeconds": 0.609,
+          "nativeStageMs": 368,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 140
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 78
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 22
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "27da1aff-656f-4e80-bcc9-d206d18f5110",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:36.555616+00:00",
+          "start": 9153.9556022,
+          "end": 9154.4943536,
+          "elapsedSeconds": 0.539,
+          "nativeStageMs": 327,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 121
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 67
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 16
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        }
+      ],
+      "nativeOverlapAtLeastSeconds": 3.92,
+      "reconciliation": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 2,
+      "condition": "preview",
+      "utc": "2026-11-24T12:08:37.908666+00:00",
+      "start": 9155.308652,
+      "end": 9162.3313006,
+      "http": {
+        "endUtc": "2026-11-24T12:08:44.931032+00:00",
+        "seconds": 7.018,
+        "requests": 1173,
+        "reads": 879,
+        "writes": 294,
+        "requestsPerSecond": 167.14,
+        "read": {
+          "p50Ms": 33.326,
+          "p95Ms": 90.834,
+          "p99Ms": 130.163
+        },
+        "write": {
+          "p50Ms": 64.062,
+          "p95Ms": 134.665,
+          "p99Ms": 202.589
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "serverJvmSamples": [
+        {
+          "utc": "2026-11-24T12:08:38.546576+00:00",
+          "mono": 9155.9465877,
+          "rssKiB": 322864,
+          "jvmCpuTicks": 4587
+        },
+        {
+          "utc": "2026-11-24T12:08:39.875799+00:00",
+          "mono": 9157.2758081,
+          "rssKiB": 325168,
+          "jvmCpuTicks": 4781
+        },
+        {
+          "utc": "2026-11-24T12:08:40.989058+00:00",
+          "mono": 9158.3890643,
+          "rssKiB": 329372,
+          "jvmCpuTicks": 4956
+        },
+        {
+          "utc": "2026-11-24T12:08:42.156398+00:00",
+          "mono": 9159.5564122,
+          "rssKiB": 347196,
+          "jvmCpuTicks": 5151
+        },
+        {
+          "utc": "2026-11-24T12:08:43.222313+00:00",
+          "mono": 9160.6223257,
+          "rssKiB": 338596,
+          "jvmCpuTicks": 5303
+        },
+        {
+          "utc": "2026-11-24T12:08:44.504084+00:00",
+          "mono": 9161.9040919,
+          "rssKiB": 349368,
+          "jvmCpuTicks": 5510
+        }
+      ],
+      "previews": [
+        {
+          "id": "872fbcce-23f0-481b-b17b-234c44fb58ad",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:37.909027+00:00",
+          "start": 9155.3090167,
+          "end": 9156.1112901,
+          "elapsedSeconds": 0.802,
+          "nativeStageMs": 467,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 188
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 75
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 36
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 43
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "4b625784-c4eb-4337-8bd0-f8063fb191fb",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:38.711690+00:00",
+          "start": 9156.1116783,
+          "end": 9156.8081388,
+          "elapsedSeconds": 0.696,
+          "nativeStageMs": 427,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 164
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 86
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 26
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 36
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "ac7a160e-bfb1-430b-8db2-1df9230da8f2",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:39.408497+00:00",
+          "start": 9156.8084842,
+          "end": 9157.6521419,
+          "elapsedSeconds": 0.844,
+          "nativeStageMs": 535,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 263
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 96
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 32
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 23
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 18
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "bc350f10-d0f5-41d4-8693-d69bf00348aa",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:40.252592+00:00",
+          "start": 9157.6525801,
+          "end": 9158.3218826,
+          "elapsedSeconds": 0.669,
+          "nativeStageMs": 384,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 155
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 77
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 20
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "c566787f-d2e7-44d9-bdaa-b03cb59ed61b",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:40.922153+00:00",
+          "start": 9158.3221413,
+          "end": 9158.9804442,
+          "elapsedSeconds": 0.658,
+          "nativeStageMs": 416,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 174
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 95
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 19
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 31
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 15
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "acedd735-8a76-4087-9d88-701a261d6003",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:41.581037+00:00",
+          "start": 9158.9810242,
+          "end": 9159.6506399,
+          "elapsedSeconds": 0.67,
+          "nativeStageMs": 430,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 141
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 75
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 43
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 34
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 23
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 37
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 28
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "10b12fc3-87d5-4547-8d44-3c7408e07fd9",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:42.250949+00:00",
+          "start": 9159.6509369,
+          "end": 9160.4121856,
+          "elapsedSeconds": 0.761,
+          "nativeStageMs": 385,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 136
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 68
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 30
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 25
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 32
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "e4ff85b5-0fc5-4e9a-bad9-6856da7dd841",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:43.012776+00:00",
+          "start": 9160.4127629,
+          "end": 9161.1035674,
+          "elapsedSeconds": 0.691,
+          "nativeStageMs": 448,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 161
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 77
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 23
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 40
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 37
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 28
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "227ad5a7-3ca8-4986-99ef-b8125e73d6ed",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:43.703767+00:00",
+          "start": 9161.1037557,
+          "end": 9161.7640738,
+          "elapsedSeconds": 0.66,
+          "nativeStageMs": 406,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 181
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 69
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 21
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 15
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 22
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 27
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "7aa77fdf-5eaa-4580-8e16-6b447df1f97d",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:44.364567+00:00",
+          "start": 9161.7645559,
+          "end": 9162.3160883,
+          "elapsedSeconds": 0.552,
+          "nativeStageMs": 350,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 126
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 70
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 24
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 14
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 20
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 27
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        },
+        {
+          "id": "469a2bba-3ec1-47af-83ec-fb97935c9a03",
+          "state": "PREVIEW",
+          "status": "OPTIMAL",
+          "httpStatus": 200,
+          "utc": "2026-11-24T12:08:44.916605+00:00",
+          "start": 9162.3165931,
+          "end": 9162.8212804,
+          "elapsedSeconds": 0.505,
+          "nativeStageMs": 307,
+          "stages": [
+            {
+              "name": "covered",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 118
+            },
+            {
+              "name": "rank1",
+              "status": "OPTIMAL",
+              "objective": 320,
+              "bestBound": 320.0,
+              "elapsedMs": 59
+            },
+            {
+              "name": "rank2",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank3",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank4",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 17
+            },
+            {
+              "name": "rank5",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 18
+            },
+            {
+              "name": "rank6",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 12
+            },
+            {
+              "name": "rank7",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "rank8",
+              "status": "OPTIMAL",
+              "objective": 0,
+              "bestBound": -0.0,
+              "elapsedMs": 16
+            },
+            {
+              "name": "seedTie",
+              "status": "OPTIMAL",
+              "objective": 256840,
+              "bestBound": 256840.0,
+              "elapsedMs": 19
+            }
+          ],
+          "assigned": 320,
+          "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+        }
+      ],
+      "nativeOverlapAtLeastSeconds": 4.248,
+      "reconciliation": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 2,
+      "condition": "alone",
+      "utc": "2026-11-24T12:08:46.247798+00:00",
+      "start": 9163.6477845,
+      "end": 9170.6789174,
+      "http": {
+        "endUtc": "2026-11-24T12:08:53.278701+00:00",
+        "seconds": 7.028,
+        "requests": 1711,
+        "reads": 1284,
+        "writes": 427,
+        "requestsPerSecond": 243.44,
+        "read": {
+          "p50Ms": 23.933,
+          "p95Ms": 57.061,
+          "p99Ms": 103.565
+        },
+        "write": {
+          "p50Ms": 42.892,
+          "p95Ms": 96.19,
+          "p99Ms": 134.68
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "serverJvmSamples": [
+        {
+          "utc": "2026-11-24T12:08:46.701150+00:00",
+          "mono": 9164.1011595,
+          "rssKiB": 358384,
+          "jvmCpuTicks": 5681
+        },
+        {
+          "utc": "2026-11-24T12:08:48.049499+00:00",
+          "mono": 9165.449506,
+          "rssKiB": 366740,
+          "jvmCpuTicks": 5832
+        },
+        {
+          "utc": "2026-11-24T12:08:49.153345+00:00",
+          "mono": 9166.55335,
+          "rssKiB": 369544,
+          "jvmCpuTicks": 5949
+        },
+        {
+          "utc": "2026-11-24T12:08:50.317786+00:00",
+          "mono": 9167.7177959,
+          "rssKiB": 369668,
+          "jvmCpuTicks": 6077
+        },
+        {
+          "utc": "2026-11-24T12:08:51.527133+00:00",
+          "mono": 9168.9271454,
+          "rssKiB": 369700,
+          "jvmCpuTicks": 6199
+        },
+        {
+          "utc": "2026-11-24T12:08:52.731551+00:00",
+          "mono": 9170.1315559,
+          "rssKiB": 362056,
+          "jvmCpuTicks": 6309
+        }
+      ],
+      "previews": [],
+      "nativeOverlapAtLeastSeconds": 0,
+      "reconciliation": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    }
+  ],
+  "warmPreview": {
+    "id": "1a6f6f51-bdd8-461d-83ef-0aedd19fdcd7",
+    "state": "PREVIEW",
+    "status": "OPTIMAL",
+    "httpStatus": 200,
+    "utc": "2026-11-24T12:08:17.873813+00:00",
+    "start": 9135.2737992,
+    "end": 9136.9243431,
+    "elapsedSeconds": 1.651,
+    "nativeStageMs": 416,
+    "stages": [
+      {
+        "name": "covered",
+        "status": "OPTIMAL",
+        "objective": 320,
+        "bestBound": 320.0,
+        "elapsedMs": 193
+      },
+      {
+        "name": "rank1",
+        "status": "OPTIMAL",
+        "objective": 320,
+        "bestBound": 320.0,
+        "elapsedMs": 60
+      },
+      {
+        "name": "rank2",
+        "status": "OPTIMAL",
+        "objective": 0,
+        "bestBound": -0.0,
+        "elapsedMs": 25
+      },
+      {
+        "name": "rank3",
+        "status": "OPTIMAL",
+        "objective": 0,
+        "bestBound": -0.0,
+        "elapsedMs": 13
+      },
+      {
+        "name": "rank4",
+        "status": "OPTIMAL",
+        "objective": 0,
+        "bestBound": -0.0,
+        "elapsedMs": 16
+      },
+      {
+        "name": "rank5",
+        "status": "OPTIMAL",
+        "objective": 0,
+        "bestBound": -0.0,
+        "elapsedMs": 21
+      },
+      {
+        "name": "rank6",
+        "status": "OPTIMAL",
+        "objective": 0,
+        "bestBound": -0.0,
+        "elapsedMs": 36
+      },
+      {
+        "name": "rank7",
+        "status": "OPTIMAL",
+        "objective": 0,
+        "bestBound": -0.0,
+        "elapsedMs": 23
+      },
+      {
+        "name": "rank8",
+        "status": "OPTIMAL",
+        "objective": 0,
+        "bestBound": -0.0,
+        "elapsedMs": 11
+      },
+      {
+        "name": "seedTie",
+        "status": "OPTIMAL",
+        "objective": 256840,
+        "bestBound": 256840.0,
+        "elapsedMs": 18
+      }
+    ],
+    "assigned": 320,
+    "snapshotHash": "2e9bda3298cd355567a4778ea971591d0394769587d23b36face55744a72fefe"
+  },
+  "finalReconciliation": {
+    "seatErrors": 0,
+    "duplicateCourses": 0,
+    "creditErrors": 0
+  },
+  "persistedPreviews": 22,
+  "publishedAwards": 0,
+  "enrollmentsInSyntheticTerm": 0,
+  "medianByCondition": {
+    "alone": {
+      "requestsPerSecond": 211.59,
+      "readP95Ms": 72.1825,
+      "writeP95Ms": 120.3155,
+      "technicalErrorRate": 0.0
+    },
+    "preview": {
+      "requestsPerSecond": 159.66,
+      "readP95Ms": 96.59700000000001,
+      "writeP95Ms": 144.88799999999998,
+      "technicalErrorRate": 0.0
+    }
+  }
+}

@@ -50,7 +50,7 @@ All lists return `{items:[],page:0,size:20,total:0}`; query `page`, `size` (1..1
 - `GET /health` public → `{status,database,serverVersion,schemaVersion,surrogate}` (H2 always surrogate).
 - `GET /terms` any role → page of `{id,name,state}`.
 - `GET /rounds?termId=` any → page of `{id,termId,name,state,startsAt,endsAt,withdrawalEndsAt,creditLimit}`.
-- `GET /catalog?termId=&q=&department=&availableOnly=` any → page of sections below, including meetings and prerequisite labels.
+- `GET /catalog?termId=&q=&courseId=&department=&availableOnly=` returns a page of published sections with meetings and prerequisites. The optional `courseId` is exact and applied before counting or paging. A curriculum link for course `C` excludes `C2`. The existing `q` filter is a substring search and can be combined with `courseId`. A term without a matching offering returns an empty page.
 - `GET /sections/{id}` any → section + meetings + prerequisites.
 - `GET /dashboard?termId=` → role-scoped `{students,courses,sections,enrollments,waiting,selectedCredits,creditLimit,averageGrade,passRate,gradeDistribution:[{label,count}],capacity:[{sectionId,title,enrolledCount,capacity}]}`.
 - `GET /notifications` → page of `{id,title,message,createdAt,readAt}`; `PUT /notifications/{id}/read` marks own message read.

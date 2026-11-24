@@ -3,25 +3,72 @@ import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
 
-export default defineConfig(({mode}) => ({
-  plugins: [vue(), {name:'static-preview-entry', enforce:'pre', transformIndexHtml: { order:'pre', handler(html:string){return mode==='pages' ? html.replace('/src/main.ts','/src/preview/main.ts') : html} } }, {
-    name:'published-measurements',
-    generateBundle(){
-      if(mode!=='pages')return
-      const included:string[]=[]
-      for(const id of ['sql-matrix','resource-summary','allocation-ceiling','uniform','hot','v2-uniform','v2-hot','planning-linux','planning-windows-20261124','solver-contention']){
-        const path=resolve(process.cwd(),'../performance/results',id+'.json')
-        if(!existsSync(path))continue
-        const contents=readFileSync(path,'utf8')
-        const data=JSON.parse(contents)
-        if(['uniform','hot','v2-uniform','v2-hot','solver-contention'].includes(id) && data.status!=='MEASURED')continue
-        if(id.startsWith('planning-') && (!data.finishedAt || !Array.isArray(data.allocation) || !Array.isArray(data.scheduling)))continue
-        this.emitFile({type:'asset',fileName:'measurements/'+id+'.json',source:contents})
-        included.push(id)
-      }
-      this.emitFile({type:'asset',fileName:'measurements/index.json',source:JSON.stringify(included)})
-    }
-  }],
+export default defineConfig(({ mode }) => ({
+  plugins: [
+    vue(),
+    {
+      name: 'static-preview-entry',
+      enforce: 'pre',
+      transformIndexHtml: {
+        order: 'pre',
+        handler(html: string) {
+          return mode === 'pages' ? html.replace('/src/main.ts', '/src/preview/main.ts') : html
+        },
+      },
+    },
+    {
+      name: 'published-measurements',
+      generateBundle() {
+        if (mode !== 'pages') return
+        const included: string[] = []
+        for (const id of [
+          'sql-matrix',
+          'resource-summary',
+          'catalog-release-summary',
+          'allocation-ceiling',
+          'uniform',
+          'hot',
+          'v2-uniform',
+          'v2-hot',
+          'planning-linux',
+          'planning-windows-20261124',
+          'solver-contention',
+        ]) {
+          const path = resolve(process.cwd(), '../performance/results', id + '.json')
+          if (!existsSync(path)) continue
+          const contents = readFileSync(path, 'utf8')
+          const data = JSON.parse(contents)
+          if (
+            ['uniform', 'hot', 'v2-uniform', 'v2-hot', 'solver-contention'].includes(id) &&
+            data.status !== 'MEASURED'
+          )
+            continue
+          if (
+            id === 'catalog-release-summary' &&
+            !(data.sourceCommit && data.artifactSha256 && data.profiles?.uniform && data.profiles?.hot)
+          )
+            continue
+          if (
+            id.startsWith('planning-') &&
+            (!data.finishedAt || !Array.isArray(data.allocation) || !Array.isArray(data.scheduling))
+          )
+            continue
+          this.emitFile({ type: 'asset', fileName: 'measurements/' + id + '.json', source: contents })
+          included.push(id)
+        }
+        this.emitFile({
+          type: 'asset',
+          fileName: 'measurements/index.json',
+          source: JSON.stringify(included),
+        })
+      },
+    },
+  ],
   server: { host: '127.0.0.1', proxy: { '/api': 'http://127.0.0.1:8080' } },
-  build: { chunkSizeWarningLimit: 850, rollupOptions: { output: { manualChunks: { charts: ['echarts'], framework: ['vue', 'vue-router', 'pinia'] } } } },
+  build: {
+    chunkSizeWarningLimit: 850,
+    rollupOptions: {
+      output: { manualChunks: { charts: ['echarts'], framework: ['vue', 'vue-router', 'pinia'] } },
+    },
+  },
 }))

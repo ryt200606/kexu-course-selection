@@ -115,8 +115,8 @@ try {
       .filter({ has: page.locator('option[value="DEMO-ROUND-CLOSED"]') })
     await roundPicker.selectOption('DEMO-ROUND-CLOSED')
     await page.getByText('获分配 DS-B · 第 1 志愿').waitFor()
-    await page.getByText('样例：本班席位已满', {exact:false}).waitFor()
-    assert.equal(await button('保存志愿顺序').count(),0)
+    await page.getByText('样例：本班席位已满', { exact: false }).waitFor()
+    assert.equal(await button('保存志愿顺序').count(), 0)
     await shot('student-allocation')
     checks.push('closed round displays allocated and rejected choices')
     await menu('成绩复核')
@@ -244,6 +244,33 @@ try {
         raw.rounds.filter((r) => r.condition === 'solver').length,
       )
       checks.push('paired solver contention and measured overlap')
+    }
+    if (index.includes('catalog-release-summary')) {
+      await button('最终修订复验').click()
+      await heading('最终修订复验')
+      const summary = await (
+        await context.request.get(url + 'measurements/catalog-release-summary.json')
+      ).json()
+      for (const [key, name] of [
+        ['uniform', '均匀负载'],
+        ['hot', '热点负载'],
+      ]) {
+        const at32 = summary.profiles[key].stages.find((r) => r.clients === 32)
+        const row = page.locator('tbody tr').filter({ has: page.locator('td', { hasText: name }) })
+        const profile = summary.profiles[key]
+        const num = n => n == null ? '—' : n.toLocaleString('zh-CN', {maximumFractionDigits:3})
+        assert(Number.isFinite(at32.medianRoundRequestsPerSecond))
+        assert.deepEqual(await row.locator('td').allTextContents(), [
+          name, num(profile.highestPassing), num(profile.firstNonPassing),
+          num(at32.medianRoundRequestsPerSecond), num(at32.worstRoundReadP95Ms)+' ms', num(at32.worstRoundWriteP95Ms)+' ms',
+        ])
+      }
+      await page.getByText('核对版本与原始数据').click()
+      await page.getByText(summary.artifactSha256, { exact: false }).waitFor()
+      await shot('release-benchmark')
+      checks.push('isolated final artifact benchmark links, source hash, 32-client read/write evidence')
+    } else {
+      assert.equal(await button('最终修订复验').count(), 0)
     }
     checks.push('separate tabs isolate sessions')
     assert.deepEqual(errors, [])
