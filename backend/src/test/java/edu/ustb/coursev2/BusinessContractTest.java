@@ -48,6 +48,9 @@ class BusinessContractTest {
   @Autowired QueryService queries;
   @Autowired GradeService grades;
   @Autowired AdminService admin;
+  @Autowired PromotionWorker promotionWorker;
+  @Autowired PlanningResources planningResources;
+  @Autowired SettlementController settlement;
   @Autowired Bootstrap bootstrap;
   @Autowired PasswordEncoder encoder;
   @Autowired MockMvc http;
@@ -62,12 +65,22 @@ class BusinessContractTest {
   @BeforeEach
   void isolatedDedicatedFixture() {
     String url = env.getRequiredProperty("app.database.url");
-    assertThat(url.startsWith("jdbc:h2:") || url.matches(".*\\/course_app_v2_test(?:\\?.*)?$"))
+    assertThat(url.startsWith("jdbc:h2:") || url.matches(".*/course_app_v3_test(?:\\?.*)?$"))
         .as("No test cleanup in application/teaching/performance database")
         .isTrue();
     reset(db);
+    var fixture = db.jdbc;
+    if (!url.startsWith("jdbc:h2:")) {
+      var owner = new org.springframework.jdbc.datasource.DriverManagerDataSource(url,
+          env.getRequiredProperty("TEST_FIXTURE_OWNER"), env.getRequiredProperty("TEST_FIXTURE_PASSWORD"));
+      fixture = new org.springframework.jdbc.core.JdbcTemplate(owner);
+    }
     for (String table :
         List.of(
+            "cs3_teacher_block", "cs3_room", "cs3_resource_version", "cs3_allocation_award",
+            "cs3_grade_review", "cs3_plan_section", "cs3_plan", "cs3_curriculum_binding",
+            "cs3_module_course", "cs3_module", "cs3_curriculum", "cs3_planning_run",
+            "cs3_preference_choice", "cs3_preference_form", "cs3_preference_round",
             "cs2_idempotency",
             "cs2_notification",
             "cs2_audit",
@@ -83,7 +96,7 @@ class BusinessContractTest {
             "cs2_term",
             "cs2_user",
             "cs2_teacher",
-            "cs2_student")) db.update("DELETE FROM " + table);
+            "cs2_student")) fixture.update("DELETE FROM " + table);
     if (encoded == null) encoded = encoder.encode(PASSWORD);
     db.update("INSERT INTO cs2_term(id,name,state) VALUES('TERM','测试学期','ACTIVE')");
     Instant now = Instant.now();
@@ -549,6 +562,97 @@ class BusinessContractTest {
   }
 
   @Test
+  void sameClassIntersectionsAreRejectedButAdjacentWeeksAreAllowed() {
+    Map<String,Object> m=Api.object("weekday",7,"startPeriod",3,"endPeriod",5,"startWeek",1,"endWeek",8,"room","V3-X");
+    Map<String,Object> overlap=new LinkedHashMap<>(m);
+    overlap.put("room","V3-Y"); overlap.put("startWeek",8);
+    var row=Api.object("id","V3CLASS","offeringId","OFF1","teacherId","OTHER","state","PUBLISHED",
+        "capacity",4,"meetings",List.of(m,overlap));
+    expectCode("TEACHING_SCHEDULE_CONFLICT",()->as(administrator,()->admin.save("sections",null,row)));
+    assertThat(db.count("SELECT COUNT(*) FROM cs2_section WHERE id='V3CLASS'")).isZero();
+    overlap.put("startWeek",9); overlap.put("endWeek",16);
+    as(administrator,()->admin.save("sections",null,row));
+    assertThat(db.count("SELECT COUNT(*) FROM cs2_meeting WHERE section_id='V3CLASS'")).isEqualTo(2);
+  }
+
+  @Test
+  void persistentCursorPassesFailingHeadAndIndependentWorkersContinue() throws Exception {
+    for(int i=0;i<6;i++) {
+      String learner="FAIRS"+i;
+      createStudent(learner);
+      account("ufair"+i,"fair"+i,"STUDENT",learner,null);
+      db.update("INSERT INTO cs2_section(id,offering_id,teacher_id,capacity,state,promotion_pending) VALUES(?, 'OFF1','OTHER',2,'PUBLISHED',1)","FAIR"+i);
+      db.update("INSERT INTO cs2_waitlist(id,student_id,section_id,round_id,queue_no,state,reason,created_at,updated_at)"
+          +" VALUES(?,?,?,'ROUND',1,'WAITING','等待',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)","WAITFAIR"+i,learner,"FAIR"+i);
+    }
+    db.update("UPDATE cs3_promotion_cursor SET last_section=NULL WHERE id=1");
+    var workers=Executors.newFixedThreadPool(2);
+    try {
+      var latch=new CountDownLatch(1);
+      Callable<List<String>> claim=()->{latch.await();return promotionWorker.nextBatch();};
+      var a=workers.submit(claim);var b=workers.submit(claim);
+      latch.countDown();var both=new HashSet<>(a.get(10,TimeUnit.SECONDS));both.addAll(b.get(10,TimeUnit.SECONDS));
+      assertThat(both).hasSize(6);
+      assertThat(db.count("SELECT COUNT(*) FROM cs3_promotion_cursor WHERE id=1 AND last_section IS NOT NULL")).isOne();
+      var txn=new org.springframework.transaction.support.TransactionTemplate(manager);
+      for(int attempt=0;attempt<2;attempt++){
+        for(String id:both) {
+          if(id.equals("FAIR0")){
+            assertThatThrownBy(()->txn.executeWithoutResult(tx->{
+              enrollment.promote(id);
+              throw new IllegalStateException("injected worker failure before commit");
+            })).hasMessage("injected worker failure before commit");
+          } else enrollment.promote(id);
+        }
+      }
+      assertThat(promotionWorker.nextBatch()).containsExactly("FAIR0");
+      assertThat(db.count("SELECT COUNT(*) FROM cs2_waitlist WHERE state='ENROLLED'")).isEqualTo(5);
+      assertThat(db.count("SELECT COUNT(*) FROM cs2_notification WHERE title='候补转正成功'")).isEqualTo(5);
+      assertThat(db.count("SELECT COUNT(*) FROM cs2_audit WHERE action='WAITLIST_ENROLLED'")).isEqualTo(5);
+    } finally {workers.shutdownNow();}
+  }
+
+  @Test
+  void offeringsLookupHasOnePrerequisiteQueryAtBothPageSizes() {
+    for(int i=0;i<101;i++) {
+      db.update("INSERT INTO cs2_course(id,title,department,description) VALUES(?,?, '系','测试')","C3X"+i,"课"+i);
+      db.update("INSERT INTO cs2_offering(id,course_id,term_id,credits,state) VALUES(?,?,'TERM',1,'PUBLISHED')","O3X"+i,"C3X"+i);
+    }
+    for(int size: List.of(20,100)){
+      clearInvocations(db);
+      var result=as(administrator,()->admin.list("offerings","TERM",null,null,0,size));
+      assertThat(result.items()).hasSize(size);
+      long queries=mockingDetails(db).getInvocations().stream()
+          .filter(call->call.getMethod().getName().equals("rows") && call.getArgument(0).toString().contains("FROM cs2_prerequisite p")).count();
+      assertThat(queries).isOne();
+    }
+  }
+
+  @Test
+  void studentLookupFindsTheTenThousandAndFirstRecordOnPageOne() {
+    String range=env.getProperty("app.database.type","h2").equals("h2")
+        ? "SELECT X AS n FROM SYSTEM_RANGE(1,10001)" : "SELECT generate_series(1,10001) AS n";
+    db.update("INSERT INTO cs2_student(id,name,department,state) SELECT 'LOOKUP'||CAST(n AS VARCHAR(12)),"
+        +" '查找测试','虚构','ACTIVE' FROM ("+range+") numbers");
+    var match=as(administrator,()->admin.list("students",null,"LOOKUP10001",null,0,20));
+    assertThat(match.total()).isOne();
+    assertThat(match.items().get(0).get("id")).isEqualTo("LOOKUP10001");
+  }
+
+  @Test
+  void resourceVersionAndSettlementUseTheSamePublishedSnapshot() {
+    var body=Api.object("version",0,"rooms",List.of(Map.of("id","教一","capacity",35)),"unavailable",List.of());
+    var first=as(administrator,()->planningResources.replace("TERM",body));
+    assertThat(first.get("version")).isEqualTo(1L);
+    expectCode("VERSION_CONFLICT",()->as(administrator,()->planningResources.replace("TERM",body)));
+    for(String measure:List.of("UNASSIGNED","PREFERENCE","WAIT_TIME")) {
+      var empty=as(administrator,()->settlement.settlement("TERM",measure,0,20));
+      assertThat(new BigDecimal(empty.get("denominator").toString()).signum()).isZero();
+      assertThat((List<?>)empty.get("items")).isEmpty();
+    }
+  }
+
+  @Test
   void publishedOfferingAndTimetableRejectMutation() {
     Map<String, Object> offering = as(administrator, () -> admin.detail("offerings", "OFF1"));
     offering.put("credits", 4);
@@ -602,12 +706,12 @@ class BusinessContractTest {
   @Test
   void schemaChecksumMismatchIsRejectedWithoutRequiringDdlPrivileges() {
     Map<String, Object> actual =
-        db.one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version");
+        db.one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version WHERE version=1");
     Map<String, Object> mismatch = new LinkedHashMap<>(actual);
     mismatch.put("schemaSha256", "0".repeat(64));
     doReturn(mismatch)
         .when(db)
-        .one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version");
+        .one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version WHERE version=1");
     assertThatThrownBy(bootstrap::verify).isInstanceOf(IllegalStateException.class);
     reset(db);
     bootstrap.verify();

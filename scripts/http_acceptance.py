@@ -264,7 +264,7 @@ def full(admin, base, checks, result):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--base-url', default='http://127.0.0.1:18095')
+    p.add_argument('--base-url', default='http://127.0.0.1:18096')
     p.add_argument('--private-dir', type=Path, help='Prepared private dir; bootstrap_admin_password is read without printing')
     p.add_argument('--phase', choices=['smoke', 'before', 'after'], default='smoke')
     p.add_argument('--snapshot', type=Path, help='Public fixture snapshot written by before; read by after')

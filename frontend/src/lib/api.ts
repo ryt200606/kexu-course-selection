@@ -27,7 +27,12 @@ export function newKey() {
 }
 async function csrf() { const response = await fetch('/api/v2/auth/csrf', { credentials: 'same-origin' }); if (!response.ok) throw new ApiError(response.status, 'CSRF_UNAVAILABLE', '暂时无法建立安全会话，请稍后重试。'); const result = await response.json() as { token: string }; csrfToken = result.token }
 export async function refreshCsrf() { csrfToken = ''; await csrf() }
-export async function api<T>(path: string, options: { method?: string; body?: unknown; idempotent?: boolean; key?: string; signal?: AbortSignal } = {}): Promise<T> {
+export interface ApiOptions { method?: string; body?: unknown; idempotent?: boolean; key?: string; signal?: AbortSignal; version?: 2 | 3 }
+type Transport = (path: string, options: ApiOptions) => Promise<unknown>
+let localTransport: Transport | undefined
+export function configurePreviewTransport(transport: Transport) { localTransport = transport }
+export async function api<T>(path: string, options: ApiOptions = {}): Promise<T> {
+  if (localTransport) return await localTransport(path, options) as T
   const method = options.method || 'GET', writing = !['GET', 'HEAD'].includes(method)
   if (writing && !csrfToken) await csrf()
   const headers: Record<string, string> = { Accept: 'application/json' }
@@ -38,7 +43,7 @@ export async function api<T>(path: string, options: { method?: string; body?: un
   const abort = () => controller.abort()
   options.signal?.addEventListener('abort', abort, { once: true })
   try {
-    const response = await fetch('/api/v2' + path, { method, headers, credentials: 'same-origin', body: options.body === undefined ? undefined : JSON.stringify(options.body), signal: controller.signal })
+    const response = await fetch('/api/v' + (options.version || 2) + path, { method, headers, credentials: 'same-origin', body: options.body === undefined ? undefined : JSON.stringify(options.body), signal: controller.signal })
     if (!response.ok) {
       const result = await response.json().catch(() => ({})) as { code?: string; message?: string; fieldErrors?: Record<string, string>; requestId?: string }
       if (response.status === 401 && !path.startsWith('/auth/')) window.dispatchEvent(new Event('course:session-expired'))

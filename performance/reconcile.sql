@@ -1,0 +1,4 @@
+SELECT
+ (SELECT COUNT(*) FROM cs2_section s LEFT JOIN (SELECT section_id,COUNT(*) AS n FROM cs2_enrollment WHERE state='ENROLLED' GROUP BY section_id) e ON e.section_id=s.id WHERE s.enrolled_count<>COALESCE(e.n,0) OR s.enrolled_count>s.capacity) AS seat_errors,
+ (SELECT COUNT(*) FROM (SELECT e.student_id,o.term_id,o.course_id FROM cs2_enrollment e JOIN cs2_offering o ON o.id=e.offering_id WHERE e.state='ENROLLED' GROUP BY e.student_id,o.term_id,o.course_id HAVING COUNT(*)>1) repeated) AS duplicate_courses,
+ (SELECT COUNT(*) FROM cs2_student_term st FULL JOIN (SELECT e.student_id,o.term_id,SUM(o.credits) AS credits FROM cs2_enrollment e JOIN cs2_offering o ON o.id=e.offering_id WHERE e.state='ENROLLED' GROUP BY e.student_id,o.term_id) c ON c.student_id=st.student_id AND c.term_id=st.term_id WHERE st.student_id IS NULL OR st.selected_credits<>COALESCE(c.credits,0) OR st.selected_credits>st.credit_limit) AS credit_errors;

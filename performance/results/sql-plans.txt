@@ -1,0 +1,2268 @@
+1
+ROWS|base|catalog
+PS000|合成课程000|833
+PS001|合成课程000|834
+PS002|合成课程000|833
+PS003|合成课程001|833
+PS004|合成课程001|833
+PS005|合成课程001|834
+PS006|合成课程002|834
+PS007|合成课程002|833
+PS008|合成课程002|833
+PS009|合成课程003|833
+PS010|合成课程003|834
+PS011|合成课程003|833
+PS012|合成课程004|833
+PS013|合成课程004|833
+PS014|合成课程004|834
+PS015|合成课程005|834
+PS016|合成课程005|833
+PS017|合成课程005|833
+PS018|合成课程006|833
+PS019|合成课程006|834
+ENDROWS
+ROWS|base|eligibility
+PS000|1|1|16|1|2
+PS060|2|1|16|1|2
+PS120|3|1|16|1|2
+PS180|4|1|16|1|2
+PS240|5|1|16|1|2
+PS300|1|1|16|3|4
+PS360|2|1|16|3|4
+PS420|3|1|16|3|4
+PS480|4|1|16|3|4
+PS540|5|1|16|3|4
+ENDROWS
+ROWS|base|roster
+P00021|合成学生00021
+P00081|合成学生00081
+P00141|合成学生00141
+P00201|合成学生00201
+P00261|合成学生00261
+P00321|合成学生00321
+P00381|合成学生00381
+P00441|合成学生00441
+P00501|合成学生00501
+P00561|合成学生00561
+P00621|合成学生00621
+P00681|合成学生00681
+P00741|合成学生00741
+P00801|合成学生00801
+P00861|合成学生00861
+P00921|合成学生00921
+P00981|合成学生00981
+P01041|合成学生01041
+P01101|合成学生01101
+P01161|合成学生01161
+P01221|合成学生01221
+P01281|合成学生01281
+P01341|合成学生01341
+P01401|合成学生01401
+P01461|合成学生01461
+P01521|合成学生01521
+P01581|合成学生01581
+P01641|合成学生01641
+P01701|合成学生01701
+P01761|合成学生01761
+P01821|合成学生01821
+P01881|合成学生01881
+P01941|合成学生01941
+P02001|合成学生02001
+P02061|合成学生02061
+P02121|合成学生02121
+P02181|合成学生02181
+P02241|合成学生02241
+P02301|合成学生02301
+P02361|合成学生02361
+P02421|合成学生02421
+P02481|合成学生02481
+P02541|合成学生02541
+P02601|合成学生02601
+P02661|合成学生02661
+P02721|合成学生02721
+P02781|合成学生02781
+P02841|合成学生02841
+P02901|合成学生02901
+P02961|合成学生02961
+P03021|合成学生03021
+P03081|合成学生03081
+P03141|合成学生03141
+P03201|合成学生03201
+P03261|合成学生03261
+P03321|合成学生03321
+P03381|合成学生03381
+P03441|合成学生03441
+P03501|合成学生03501
+P03561|合成学生03561
+P03621|合成学生03621
+P03681|合成学生03681
+P03741|合成学生03741
+P03801|合成学生03801
+P03861|合成学生03861
+P03921|合成学生03921
+P03981|合成学生03981
+P04041|合成学生04041
+P04101|合成学生04101
+P04161|合成学生04161
+P04221|合成学生04221
+P04281|合成学生04281
+P04341|合成学生04341
+P04401|合成学生04401
+P04461|合成学生04461
+P04521|合成学生04521
+P04581|合成学生04581
+P04641|合成学生04641
+P04701|合成学生04701
+P04761|合成学生04761
+P04821|合成学生04821
+P04881|合成学生04881
+P04941|合成学生04941
+P05001|合成学生05001
+P05061|合成学生05061
+P05121|合成学生05121
+P05181|合成学生05181
+P05241|合成学生05241
+P05301|合成学生05301
+P05361|合成学生05361
+P05421|合成学生05421
+P05481|合成学生05481
+P05541|合成学生05541
+P05601|合成学生05601
+P05661|合成学生05661
+P05721|合成学生05721
+P05781|合成学生05781
+P05841|合成学生05841
+P05901|合成学生05901
+P05961|合成学生05961
+ENDROWS
+ROWS|base|admin_offerings
+PO000|合成课程000||
+PO001|合成课程001||
+PO002|合成课程002||
+PO003|合成课程003||
+PO004|合成课程004||
+PO005|合成课程005||
+PO006|合成课程006||
+PO007|合成课程007||
+PO008|合成课程008||
+PO009|合成课程009||
+PO010|合成课程010||
+PO011|合成课程011||
+PO012|合成课程012||
+PO013|合成课程013||
+PO014|合成课程014||
+PO015|合成课程015||
+PO016|合成课程016||
+PO017|合成课程017||
+PO018|合成课程018||
+PO019|合成课程019||
+PO020|合成课程020||
+PO021|合成课程021||
+PO022|合成课程022||
+PO023|合成课程023||
+PO024|合成课程024||
+PO025|合成课程025||
+PO026|合成课程026||
+PO027|合成课程027||
+PO028|合成课程028||
+PO029|合成课程029||
+PO030|合成课程030||
+PO031|合成课程031||
+PO032|合成课程032||
+PO033|合成课程033||
+PO034|合成课程034||
+PO035|合成课程035||
+PO036|合成课程036||
+PO037|合成课程037||
+PO038|合成课程038||
+PO039|合成课程039||
+PO040|合成课程040||
+PO041|合成课程041||
+PO042|合成课程042||
+PO043|合成课程043||
+PO044|合成课程044||
+PO045|合成课程045||
+PO046|合成课程046||
+PO047|合成课程047||
+PO048|合成课程048||
+PO049|合成课程049||
+PO050|合成课程050||
+PO051|合成课程051||
+PO052|合成课程052||
+PO053|合成课程053||
+PO054|合成课程054||
+PO055|合成课程055||
+PO056|合成课程056||
+PO057|合成课程057||
+PO058|合成课程058||
+PO059|合成课程059||
+PO060|合成课程060||
+PO061|合成课程061||
+PO062|合成课程062||
+PO063|合成课程063||
+PO064|合成课程064||
+PO065|合成课程065||
+PO066|合成课程066||
+PO067|合成课程067||
+PO068|合成课程068||
+PO069|合成课程069||
+PO070|合成课程070||
+PO071|合成课程071||
+PO072|合成课程072||
+PO073|合成课程073||
+PO074|合成课程074||
+PO075|合成课程075||
+PO076|合成课程076||
+PO077|合成课程077||
+PO078|合成课程078||
+PO079|合成课程079||
+PO080|合成课程080||
+PO081|合成课程081||
+PO082|合成课程082||
+PO083|合成课程083||
+PO084|合成课程084||
+PO085|合成课程085||
+PO086|合成课程086||
+PO087|合成课程087||
+PO088|合成课程088||
+PO089|合成课程089||
+PO090|合成课程090||
+PO091|合成课程091||
+PO092|合成课程092||
+PO093|合成课程093||
+PO094|合成课程094||
+PO095|合成课程095||
+PO096|合成课程096||
+PO097|合成课程097||
+PO098|合成课程098||
+PO099|合成课程099||
+ENDROWS
+ROWS|base|term_stats
+PO000|500
+PO001|500
+PO002|500
+PO003|500
+PO004|500
+PO005|500
+PO006|500
+PO007|500
+PO008|500
+PO009|500
+PO010|500
+PO011|500
+PO012|500
+PO013|500
+PO014|500
+PO015|500
+PO016|500
+PO017|500
+PO018|500
+PO019|500
+PO020|500
+PO021|500
+PO022|500
+PO023|500
+PO024|500
+PO025|500
+PO026|500
+PO027|500
+PO028|500
+PO029|500
+PO030|500
+PO031|500
+PO032|500
+PO033|500
+PO034|500
+PO035|500
+PO036|500
+PO037|500
+PO038|500
+PO039|500
+PO040|500
+PO041|500
+PO042|500
+PO043|500
+PO044|500
+PO045|500
+PO046|500
+PO047|500
+PO048|500
+PO049|500
+PO050|500
+PO051|500
+PO052|500
+PO053|500
+PO054|500
+PO055|500
+PO056|500
+PO057|500
+PO058|500
+PO059|500
+PO060|500
+PO061|500
+PO062|500
+PO063|500
+PO064|500
+PO065|500
+PO066|500
+PO067|500
+PO068|500
+PO069|500
+PO070|500
+PO071|500
+PO072|500
+PO073|500
+PO074|500
+PO075|500
+PO076|500
+PO077|500
+PO078|500
+PO079|500
+PO080|500
+PO081|500
+PO082|500
+PO083|500
+PO084|500
+PO085|500
+PO086|500
+PO087|500
+PO088|500
+PO089|500
+PO090|500
+PO091|500
+PO092|500
+PO093|500
+PO094|500
+PO095|500
+PO096|500
+PO097|500
+PO098|500
+PO099|500
+PO100|500
+PO101|500
+PO102|500
+PO103|500
+PO104|500
+PO105|500
+PO106|500
+PO107|500
+PO108|500
+PO109|500
+PO110|500
+PO111|500
+PO112|500
+PO113|500
+PO114|500
+PO115|500
+PO116|500
+PO117|500
+PO118|500
+PO119|500
+PO120|500
+PO121|500
+PO122|500
+PO123|500
+PO124|500
+PO125|500
+PO126|500
+PO127|500
+PO128|500
+PO129|500
+PO130|500
+PO131|500
+PO132|500
+PO133|500
+PO134|500
+PO135|500
+PO136|500
+PO137|500
+PO138|500
+PO139|500
+PO140|500
+PO141|500
+PO142|500
+PO143|500
+PO144|500
+PO145|500
+PO146|500
+PO147|500
+PO148|500
+PO149|500
+PO150|500
+PO151|500
+PO152|500
+PO153|500
+PO154|500
+PO155|500
+PO156|500
+PO157|500
+PO158|500
+PO159|500
+PO160|500
+PO161|500
+PO162|500
+PO163|500
+PO164|500
+PO165|500
+PO166|500
+PO167|500
+PO168|500
+PO169|500
+PO170|500
+PO171|500
+PO172|500
+PO173|500
+PO174|500
+PO175|500
+PO176|500
+PO177|500
+PO178|500
+PO179|500
+PO180|500
+PO181|500
+PO182|500
+PO183|500
+PO184|500
+PO185|500
+PO186|500
+PO187|500
+PO188|500
+PO189|500
+PO190|500
+PO191|500
+PO192|500
+PO193|500
+PO194|500
+PO195|500
+PO196|500
+PO197|500
+PO198|500
+PO199|500
+ENDROWS
+PLAN|base|catalog|0
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=0.699..0.701 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=0.698..0.698 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.299..0.609 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.141..0.309 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.006..0.091 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.044..0.044 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.003..0.022 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.045..0.045 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.005..0.022 rows=200 loops=1)
+Total runtime: 0.768 ms
+PLAN|base|catalog|1
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=0.775..0.777 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=0.775..0.775 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.379..0.681 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.155..0.325 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.008..0.086 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.045..0.045 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.003..0.024 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.059..0.059 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.008..0.027 rows=200 loops=1)
+Total runtime: 0.863 ms
+PLAN|base|catalog|2
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.465..1.469 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.465..1.465 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.677..1.306 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.368..0.754 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.010..0.218 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.135..0.135 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.012..0.047 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.080..0.080 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.010..0.038 rows=200 loops=1)
+Total runtime: 1.694 ms
+PLAN|base|catalog|3
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.496..1.499 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.494..1.496 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.728..1.356 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.317..0.735 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.012..0.265 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.086..0.086 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.012..0.048 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.083..0.083 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.037 rows=200 loops=1)
+Total runtime: 1.598 ms
+PLAN|base|catalog|4
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.012..1.014 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.010..1.011 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.390..0.879 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.202..0.489 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.006..0.120 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.070..0.070 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.005..0.037 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.062..0.062 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.006..0.034 rows=200 loops=1)
+Total runtime: 1.086 ms
+PLAN|base|catalog|5
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=0.690..0.692 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=0.690..0.692 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.297..0.600 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.141..0.316 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.005..0.082 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.045..0.045 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.003..0.023 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.052..0.052 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.004..0.019 rows=200 loops=1)
+Total runtime: 0.745 ms
+PLAN|base|catalog|6
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=0.657..0.659 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=0.656..0.656 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.270..0.571 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.139..0.309 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.004..0.086 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.045..0.045 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.003..0.026 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.040..0.040 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.004..0.022 rows=200 loops=1)
+Total runtime: 0.708 ms
+PLAN|base|catalog|7
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=0.756..0.756 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=0.755..0.755 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.320..0.670 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.179..0.384 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.004..0.098 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.047..0.047 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.005..0.028 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.040..0.040 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.003..0.020 rows=200 loops=1)
+Total runtime: 0.808 ms
+PLAN|base|eligibility|0
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.506..0.506 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.316..0.453 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.007..0.055 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.039..0.039 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.026..0.032 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.583 ms
+PLAN|base|eligibility|1
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.224..0.224 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.126..0.198 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.003..0.032 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.018..0.018 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.012..0.014 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.316 ms
+PLAN|base|eligibility|2
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.342..0.342 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.180..0.300 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.006..0.054 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.027..0.027 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.016..0.019 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.511 ms
+PLAN|base|eligibility|3
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.204..0.204 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.111..0.182 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.003..0.034 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.015..0.015 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.009..0.012 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.243 ms
+PLAN|base|eligibility|4
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.370..0.371 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.161..0.333 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.005..0.060 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.023..0.023 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.013..0.016 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.432 ms
+PLAN|base|eligibility|5
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.215..0.216 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.119..0.192 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.004..0.036 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.015..0.015 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.009..0.013 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.256 ms
+PLAN|base|eligibility|6
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.209..0.209 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.115..0.187 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.002..0.026 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.015..0.015 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.009..0.012 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.295 ms
+PLAN|base|eligibility|7
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.212..0.212 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.121..0.192 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.003..0.032 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.013..0.013 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.007..0.009 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.248 ms
+PLAN|base|roster|0
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.317..1.644 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.316..1.638 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.004..0.965 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.304..0.306 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.043..0.270 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.027..0.027 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 1.686 ms
+PLAN|base|roster|1
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.281..1.953 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.280..1.939 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.005..1.230 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.269..0.276 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.041..0.231 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.026..0.026 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 2.029 ms
+PLAN|base|roster|2
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.413..2.333 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.412..2.317 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.008..1.330 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.393..0.397 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.078..0.352 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.047..0.047 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 2.416 ms
+PLAN|base|roster|3
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.283..1.647 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.282..1.640 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.004..0.956 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.271..0.274 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.041..0.236 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.026..0.026 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 1.689 ms
+PLAN|base|roster|4
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.474..3.242 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.473..3.224 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.014..2.001 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.444..0.450 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.078..0.383 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.047..0.047 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 3.340 ms
+PLAN|base|roster|5
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.568..3.023 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.567..3.016 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.015..1.849 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.538..0.551 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.161..0.482 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.123..0.123 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 3.146 ms
+PLAN|base|roster|6
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.515..2.347 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.514..2.335 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.010..1.311 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.475..0.487 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.066..0.407 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.044..0.044 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 2.433 ms
+PLAN|base|roster|7
+Limit  (cost=492.45..737.73 rows=100 width=25) (actual time=0.313..1.699 rows=100 loops=1)
+  ->  Merge Join  (cost=492.45..897.17 rows=165 width=25) (actual time=0.312..1.688 rows=100 loops=1)
+        Merge Cond: ((s.id)::text = (e.student_id)::text)
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.005..0.988 rows=5962 loops=1)
+        ->  Sort  (cost=492.45..492.86 rows=165 width=7) (actual time=0.300..0.305 rows=100 loops=1)
+              Sort Key: e.student_id
+              Sort Method: quicksort  Memory: 35kB
+              ->  Bitmap Heap Scan on cs2_enrollment e  (cost=5.94..486.37 rows=165 width=7) (actual time=0.044..0.265 rows=167 loops=1)
+                    Recheck Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+                    Heap Blocks: exact=167
+                    ->  Bitmap Index Scan on cs2_enrollment_section_idx  (cost=0.00..5.90 rows=165 width=0) (actual time=0.029..0.029 rows=167 loops=1)
+                          Index Cond: (((section_id)::text = 'PS123'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 1.756 ms
+PLAN|base|admin_offerings|0
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.794..0.795 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.676..0.724 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.418..0.418 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.333..0.398 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.009..0.028 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.102..0.102 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.022..0.078 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.020..0.067 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 0.898 ms
+PLAN|base|admin_offerings|1
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.639..0.642 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.568..0.603 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.000..0.000 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.333..0.333 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.280..0.318 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.009..0.022 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.061..0.061 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.017..0.043 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.016..0.037 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 0.748 ms
+PLAN|base|admin_offerings|2
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.376..0.378 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.312..0.339 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.192..0.192 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.146..0.181 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.004..0.014 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.048..0.048 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.008..0.034 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.006..0.028 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 0.437 ms
+PLAN|base|admin_offerings|3
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.372..0.377 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.317..0.337 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.190..0.190 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.143..0.181 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.004..0.019 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.049..0.049 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.009..0.040 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.008..0.030 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 0.468 ms
+PLAN|base|admin_offerings|4
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=1.002..1.006 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.826..0.928 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.000..0.000 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.511..0.511 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.409..0.483 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.010..0.035 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.160..0.160 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.025..0.126 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.023..0.116 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.147 ms
+PLAN|base|admin_offerings|5
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=1.010..1.013 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.891..0.942 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.000..0.000 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.607..0.607 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.434..0.578 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.036 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.096..0.096 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.024..0.064 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.023..0.057 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.208 ms
+PLAN|base|admin_offerings|6
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.856..0.863 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.705..0.758 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.444..0.444 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.352..0.415 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.024..0.042 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.100..0.100 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.022..0.077 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.019..0.067 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.004 ms
+PLAN|base|admin_offerings|7
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.970..0.974 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.801..0.880 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.472..0.472 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.377..0.445 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.033 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.102..0.102 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.024..0.075 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.021..0.066 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.110 ms
+PLAN|base|term_stats|0
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=81.399..81.408 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=81.279..81.304 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.426..54.023 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.007..23.517 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.103..0.103 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.020..0.053 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 81.540 ms
+PLAN|base|term_stats|1
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=86.490..86.500 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=86.374..86.399 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.411..58.766 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.008..25.409 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.101..0.101 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.023..0.063 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 86.627 ms
+PLAN|base|term_stats|2
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=92.844..92.861 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=92.620..92.663 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.344..62.255 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.008..27.801 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.098..0.098 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.020..0.051 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 93.055 ms
+PLAN|base|term_stats|3
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=102.641..102.652 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=102.426..102.481 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.551..68.442 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.006..29.956 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.111..0.111 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.028..0.070 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 102.871 ms
+PLAN|base|term_stats|4
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=84.014..84.020 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=83.892..83.926 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.269..56.121 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.007..24.953 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.113..0.113 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.014..0.052 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 84.142 ms
+PLAN|base|term_stats|5
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=93.907..93.918 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=93.774..93.803 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.250..63.595 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.007..27.706 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.091..0.091 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.016..0.044 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 94.049 ms
+PLAN|base|term_stats|6
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=101.274..101.282 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=100.861..100.914 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.251..67.852 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.007..29.922 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.091..0.091 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.013..0.045 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 101.488 ms
+PLAN|base|term_stats|7
+Sort  (cost=4688.64..4689.14 rows=200 width=25) (actual time=102.797..102.802 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4679.00..4681.00 rows=200 width=25) (actual time=102.680..102.702 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4179.00 rows=100000 width=17) (actual time=0.487..67.989 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2797.00 rows=100000 width=17) (actual time=0.012..30.101 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.224..0.224 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.028..0.109 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 103.044 ms
+PLAN|base|write_1000|0
+Update on cs2_enrollment  (cost=71.30..2891.93 rows=1000 width=88) (actual time=2.325..165.713 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=71.30..2891.93 rows=1000 width=88) (actual time=1.718..74.234 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2547.00 rows=100000 width=77) (actual time=0.010..39.260 rows=100000 loops=1)
+        ->  Hash  (cost=58.80..58.80 rows=1000 width=11) (actual time=1.568..1.568 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..48.80 rows=1000 width=11) (actual time=0.017..1.356 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..4880.25 rows=100000 width=11) (actual time=0.015..1.264 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 166.305 ms
+PLAN|base|write_1000|1
+Update on cs2_enrollment  (cost=71.17..2915.40 rows=1000 width=88) (actual time=3.029..109.253 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=71.17..2915.40 rows=1000 width=88) (actual time=2.583..55.911 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2568.40 rows=100840 width=77) (actual time=0.017..31.337 rows=100000 loops=1)
+        ->  Hash  (cost=58.67..58.67 rows=1000 width=11) (actual time=2.305..2.305 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..48.67 rows=1000 width=11) (actual time=0.025..1.988 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..4907.95 rows=100840 width=11) (actual time=0.024..1.885 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 109.774 ms
+PLAN|base|write_1000|2
+Update on cs2_enrollment  (cost=71.03..2940.69 rows=1000 width=88) (actual time=2.351..96.755 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=71.03..2940.69 rows=1000 width=88) (actual time=1.954..51.350 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2591.45 rows=101745 width=77) (actual time=0.019..27.906 rows=100000 loops=1)
+        ->  Hash  (cost=58.53..58.53 rows=1000 width=11) (actual time=1.758..1.758 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..48.53 rows=1000 width=11) (actual time=0.024..1.523 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..4937.79 rows=101745 width=11) (actual time=0.023..1.424 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 97.331 ms
+PLAN|base|write_1000|3
+Update on cs2_enrollment  (cost=70.90..2964.18 rows=1000 width=88) (actual time=4.170..113.252 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=70.90..2964.18 rows=1000 width=88) (actual time=3.746..54.534 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2612.86 rows=102586 width=77) (actual time=0.137..29.070 rows=100000 loops=1)
+        ->  Hash  (cost=58.40..58.40 rows=1000 width=11) (actual time=3.187..3.187 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..48.40 rows=1000 width=11) (actual time=0.041..2.759 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..4965.51 rows=102586 width=11) (actual time=0.037..2.563 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 113.977 ms
+PLAN|base|write_1000|4
+Update on cs2_enrollment  (cost=70.78..2987.66 rows=1000 width=88) (actual time=2.541..91.493 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=70.78..2987.66 rows=1000 width=88) (actual time=2.090..45.860 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2634.26 rows=103426 width=77) (actual time=0.016..24.398 rows=100000 loops=1)
+        ->  Hash  (cost=58.28..58.28 rows=1000 width=11) (actual time=1.905..1.905 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..48.28 rows=1000 width=11) (actual time=0.040..1.626 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..4993.20 rows=103426 width=11) (actual time=0.039..1.523 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 91.911 ms
+PLAN|base|write_1000|5
+Update on cs2_enrollment  (cost=70.65..3012.95 rows=1000 width=88) (actual time=2.344..97.908 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=70.65..3012.95 rows=1000 width=88) (actual time=2.063..52.705 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2657.31 rows=104331 width=77) (actual time=0.016..29.068 rows=100000 loops=1)
+        ->  Hash  (cost=58.15..58.15 rows=1000 width=11) (actual time=1.878..1.878 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..48.15 rows=1000 width=11) (actual time=0.020..1.600 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5023.04 rows=104331 width=11) (actual time=0.019..1.504 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 98.521 ms
+PLAN|base|write_1000|6
+Update on cs2_enrollment  (cost=70.52..3036.43 rows=1000 width=88) (actual time=2.399..79.367 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=70.52..3036.43 rows=1000 width=88) (actual time=2.014..41.783 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2678.71 rows=105171 width=77) (actual time=0.016..23.847 rows=100000 loops=1)
+        ->  Hash  (cost=58.02..58.02 rows=1000 width=11) (actual time=1.839..1.839 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..48.02 rows=1000 width=11) (actual time=0.020..1.463 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5050.74 rows=105171 width=11) (actual time=0.018..1.349 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 79.732 ms
+PLAN|base|write_1000|7
+Update on cs2_enrollment  (cost=70.40..3059.93 rows=1000 width=88) (actual time=3.420..105.762 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=70.40..3059.93 rows=1000 width=88) (actual time=2.896..46.866 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2700.12 rows=106012 width=77) (actual time=0.019..25.046 rows=100000 loops=1)
+        ->  Hash  (cost=57.90..57.90 rows=1000 width=11) (actual time=2.600..2.600 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..47.90 rows=1000 width=11) (actual time=0.030..2.146 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5078.46 rows=106012 width=11) (actual time=0.028..2.026 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 106.155 ms
+index_bytes|cs3_section_roster|4087808
+index_bytes|cs3_offering_state|3186688
+ROWS|v3|catalog
+PS000|合成课程000|833
+PS001|合成课程000|834
+PS002|合成课程000|833
+PS003|合成课程001|833
+PS004|合成课程001|833
+PS005|合成课程001|834
+PS006|合成课程002|834
+PS007|合成课程002|833
+PS008|合成课程002|833
+PS009|合成课程003|833
+PS010|合成课程003|834
+PS011|合成课程003|833
+PS012|合成课程004|833
+PS013|合成课程004|833
+PS014|合成课程004|834
+PS015|合成课程005|834
+PS016|合成课程005|833
+PS017|合成课程005|833
+PS018|合成课程006|833
+PS019|合成课程006|834
+ENDROWS
+ROWS|v3|eligibility
+PS000|1|1|16|1|2
+PS060|2|1|16|1|2
+PS120|3|1|16|1|2
+PS180|4|1|16|1|2
+PS240|5|1|16|1|2
+PS300|1|1|16|3|4
+PS360|2|1|16|3|4
+PS420|3|1|16|3|4
+PS480|4|1|16|3|4
+PS540|5|1|16|3|4
+ENDROWS
+ROWS|v3|roster
+P00021|合成学生00021
+P00081|合成学生00081
+P00141|合成学生00141
+P00201|合成学生00201
+P00261|合成学生00261
+P00321|合成学生00321
+P00381|合成学生00381
+P00441|合成学生00441
+P00501|合成学生00501
+P00561|合成学生00561
+P00621|合成学生00621
+P00681|合成学生00681
+P00741|合成学生00741
+P00801|合成学生00801
+P00861|合成学生00861
+P00921|合成学生00921
+P00981|合成学生00981
+P01041|合成学生01041
+P01101|合成学生01101
+P01161|合成学生01161
+P01221|合成学生01221
+P01281|合成学生01281
+P01341|合成学生01341
+P01401|合成学生01401
+P01461|合成学生01461
+P01521|合成学生01521
+P01581|合成学生01581
+P01641|合成学生01641
+P01701|合成学生01701
+P01761|合成学生01761
+P01821|合成学生01821
+P01881|合成学生01881
+P01941|合成学生01941
+P02001|合成学生02001
+P02061|合成学生02061
+P02121|合成学生02121
+P02181|合成学生02181
+P02241|合成学生02241
+P02301|合成学生02301
+P02361|合成学生02361
+P02421|合成学生02421
+P02481|合成学生02481
+P02541|合成学生02541
+P02601|合成学生02601
+P02661|合成学生02661
+P02721|合成学生02721
+P02781|合成学生02781
+P02841|合成学生02841
+P02901|合成学生02901
+P02961|合成学生02961
+P03021|合成学生03021
+P03081|合成学生03081
+P03141|合成学生03141
+P03201|合成学生03201
+P03261|合成学生03261
+P03321|合成学生03321
+P03381|合成学生03381
+P03441|合成学生03441
+P03501|合成学生03501
+P03561|合成学生03561
+P03621|合成学生03621
+P03681|合成学生03681
+P03741|合成学生03741
+P03801|合成学生03801
+P03861|合成学生03861
+P03921|合成学生03921
+P03981|合成学生03981
+P04041|合成学生04041
+P04101|合成学生04101
+P04161|合成学生04161
+P04221|合成学生04221
+P04281|合成学生04281
+P04341|合成学生04341
+P04401|合成学生04401
+P04461|合成学生04461
+P04521|合成学生04521
+P04581|合成学生04581
+P04641|合成学生04641
+P04701|合成学生04701
+P04761|合成学生04761
+P04821|合成学生04821
+P04881|合成学生04881
+P04941|合成学生04941
+P05001|合成学生05001
+P05061|合成学生05061
+P05121|合成学生05121
+P05181|合成学生05181
+P05241|合成学生05241
+P05301|合成学生05301
+P05361|合成学生05361
+P05421|合成学生05421
+P05481|合成学生05481
+P05541|合成学生05541
+P05601|合成学生05601
+P05661|合成学生05661
+P05721|合成学生05721
+P05781|合成学生05781
+P05841|合成学生05841
+P05901|合成学生05901
+P05961|合成学生05961
+ENDROWS
+ROWS|v3|admin_offerings
+PO000|合成课程000||
+PO001|合成课程001||
+PO002|合成课程002||
+PO003|合成课程003||
+PO004|合成课程004||
+PO005|合成课程005||
+PO006|合成课程006||
+PO007|合成课程007||
+PO008|合成课程008||
+PO009|合成课程009||
+PO010|合成课程010||
+PO011|合成课程011||
+PO012|合成课程012||
+PO013|合成课程013||
+PO014|合成课程014||
+PO015|合成课程015||
+PO016|合成课程016||
+PO017|合成课程017||
+PO018|合成课程018||
+PO019|合成课程019||
+PO020|合成课程020||
+PO021|合成课程021||
+PO022|合成课程022||
+PO023|合成课程023||
+PO024|合成课程024||
+PO025|合成课程025||
+PO026|合成课程026||
+PO027|合成课程027||
+PO028|合成课程028||
+PO029|合成课程029||
+PO030|合成课程030||
+PO031|合成课程031||
+PO032|合成课程032||
+PO033|合成课程033||
+PO034|合成课程034||
+PO035|合成课程035||
+PO036|合成课程036||
+PO037|合成课程037||
+PO038|合成课程038||
+PO039|合成课程039||
+PO040|合成课程040||
+PO041|合成课程041||
+PO042|合成课程042||
+PO043|合成课程043||
+PO044|合成课程044||
+PO045|合成课程045||
+PO046|合成课程046||
+PO047|合成课程047||
+PO048|合成课程048||
+PO049|合成课程049||
+PO050|合成课程050||
+PO051|合成课程051||
+PO052|合成课程052||
+PO053|合成课程053||
+PO054|合成课程054||
+PO055|合成课程055||
+PO056|合成课程056||
+PO057|合成课程057||
+PO058|合成课程058||
+PO059|合成课程059||
+PO060|合成课程060||
+PO061|合成课程061||
+PO062|合成课程062||
+PO063|合成课程063||
+PO064|合成课程064||
+PO065|合成课程065||
+PO066|合成课程066||
+PO067|合成课程067||
+PO068|合成课程068||
+PO069|合成课程069||
+PO070|合成课程070||
+PO071|合成课程071||
+PO072|合成课程072||
+PO073|合成课程073||
+PO074|合成课程074||
+PO075|合成课程075||
+PO076|合成课程076||
+PO077|合成课程077||
+PO078|合成课程078||
+PO079|合成课程079||
+PO080|合成课程080||
+PO081|合成课程081||
+PO082|合成课程082||
+PO083|合成课程083||
+PO084|合成课程084||
+PO085|合成课程085||
+PO086|合成课程086||
+PO087|合成课程087||
+PO088|合成课程088||
+PO089|合成课程089||
+PO090|合成课程090||
+PO091|合成课程091||
+PO092|合成课程092||
+PO093|合成课程093||
+PO094|合成课程094||
+PO095|合成课程095||
+PO096|合成课程096||
+PO097|合成课程097||
+PO098|合成课程098||
+PO099|合成课程099||
+ENDROWS
+ROWS|v3|term_stats
+PO000|500
+PO001|500
+PO002|500
+PO003|500
+PO004|500
+PO005|500
+PO006|500
+PO007|500
+PO008|500
+PO009|500
+PO010|500
+PO011|500
+PO012|500
+PO013|500
+PO014|500
+PO015|500
+PO016|500
+PO017|500
+PO018|500
+PO019|500
+PO020|500
+PO021|500
+PO022|500
+PO023|500
+PO024|500
+PO025|500
+PO026|500
+PO027|500
+PO028|500
+PO029|500
+PO030|500
+PO031|500
+PO032|500
+PO033|500
+PO034|500
+PO035|500
+PO036|500
+PO037|500
+PO038|500
+PO039|500
+PO040|500
+PO041|500
+PO042|500
+PO043|500
+PO044|500
+PO045|500
+PO046|500
+PO047|500
+PO048|500
+PO049|500
+PO050|500
+PO051|500
+PO052|500
+PO053|500
+PO054|500
+PO055|500
+PO056|500
+PO057|500
+PO058|500
+PO059|500
+PO060|500
+PO061|500
+PO062|500
+PO063|500
+PO064|500
+PO065|500
+PO066|500
+PO067|500
+PO068|500
+PO069|500
+PO070|500
+PO071|500
+PO072|500
+PO073|500
+PO074|500
+PO075|500
+PO076|500
+PO077|500
+PO078|500
+PO079|500
+PO080|500
+PO081|500
+PO082|500
+PO083|500
+PO084|500
+PO085|500
+PO086|500
+PO087|500
+PO088|500
+PO089|500
+PO090|500
+PO091|500
+PO092|500
+PO093|500
+PO094|500
+PO095|500
+PO096|500
+PO097|500
+PO098|500
+PO099|500
+PO100|500
+PO101|500
+PO102|500
+PO103|500
+PO104|500
+PO105|500
+PO106|500
+PO107|500
+PO108|500
+PO109|500
+PO110|500
+PO111|500
+PO112|500
+PO113|500
+PO114|500
+PO115|500
+PO116|500
+PO117|500
+PO118|500
+PO119|500
+PO120|500
+PO121|500
+PO122|500
+PO123|500
+PO124|500
+PO125|500
+PO126|500
+PO127|500
+PO128|500
+PO129|500
+PO130|500
+PO131|500
+PO132|500
+PO133|500
+PO134|500
+PO135|500
+PO136|500
+PO137|500
+PO138|500
+PO139|500
+PO140|500
+PO141|500
+PO142|500
+PO143|500
+PO144|500
+PO145|500
+PO146|500
+PO147|500
+PO148|500
+PO149|500
+PO150|500
+PO151|500
+PO152|500
+PO153|500
+PO154|500
+PO155|500
+PO156|500
+PO157|500
+PO158|500
+PO159|500
+PO160|500
+PO161|500
+PO162|500
+PO163|500
+PO164|500
+PO165|500
+PO166|500
+PO167|500
+PO168|500
+PO169|500
+PO170|500
+PO171|500
+PO172|500
+PO173|500
+PO174|500
+PO175|500
+PO176|500
+PO177|500
+PO178|500
+PO179|500
+PO180|500
+PO181|500
+PO182|500
+PO183|500
+PO184|500
+PO185|500
+PO186|500
+PO187|500
+PO188|500
+PO189|500
+PO190|500
+PO191|500
+PO192|500
+PO193|500
+PO194|500
+PO195|500
+PO196|500
+PO197|500
+PO198|500
+PO199|500
+ENDROWS
+PLAN|v3|catalog|0
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.181..1.185 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.179..1.180 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.437..1.044 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.211..0.587 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.010..0.228 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.080..0.080 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.005..0.040 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.077..0.077 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.009..0.041 rows=200 loops=1)
+Total runtime: 1.311 ms
+PLAN|v3|catalog|1
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.112..1.116 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.110..1.111 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.540..0.998 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.229..0.484 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.011..0.129 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.097..0.097 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.007..0.065 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.105..0.105 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.008..0.043 rows=200 loops=1)
+Total runtime: 1.251 ms
+PLAN|v3|catalog|2
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.090..1.090 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.089..1.089 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.397..0.936 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.200..0.506 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.008..0.155 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.073..0.073 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.007..0.041 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.070..0.070 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.008..0.032 rows=200 loops=1)
+Total runtime: 1.200 ms
+PLAN|v3|catalog|3
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.671..1.673 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.668..1.669 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.724..1.482 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.354..0.841 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.013..0.271 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.099..0.099 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.011..0.069 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.085..0.085 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.012..0.032 rows=200 loops=1)
+Total runtime: 1.777 ms
+PLAN|v3|catalog|4
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.175..1.178 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.173..1.173 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.495..1.034 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.274..0.602 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.010..0.165 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.136..0.136 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.007..0.043 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.080..0.080 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.036 rows=200 loops=1)
+Total runtime: 1.399 ms
+PLAN|v3|catalog|5
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.607..1.612 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.606..1.608 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.700..1.466 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.343..0.870 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.014..0.306 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.091..0.091 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.013..0.048 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.090..0.090 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.012..0.036 rows=200 loops=1)
+Total runtime: 1.765 ms
+PLAN|v3|catalog|6
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.134..1.138 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.131..1.132 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.386..0.938 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.175..0.496 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.009..0.180 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.052..0.052 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.005..0.032 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.069..0.069 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.010..0.032 rows=200 loops=1)
+Total runtime: 1.243 ms
+PLAN|v3|catalog|7
+Limit  (cost=42.82..42.87 rows=20 width=30) (actual time=1.370..1.373 rows=20 loops=1)
+  ->  Sort  (cost=42.82..43.32 rows=200 width=30) (actual time=1.368..1.370 rows=20 loops=1)
+        Sort Key: c.title, s.id
+        Sort Method: top-N heapsort  Memory: 26kB
+        ->  Hash Join  (cost=14.50..37.50 rows=200 width=30) (actual time=0.684..1.237 rows=600 loops=1)
+              Hash Cond: ((o.course_id)::text = (c.id)::text)
+              ->  Hash Join  (cost=7.00..26.75 rows=200 width=20) (actual time=0.353..0.676 rows=600 loops=1)
+                    Hash Cond: ((s.offering_id)::text = (o.id)::text)
+                    ->  Seq Scan on cs2_section s  (cost=0.00..17.00 rows=200 width=20) (actual time=0.012..0.166 rows=600 loops=1)
+                          Filter: ((enrolled_count < capacity) AND ((state)::text = 'PUBLISHED'::text))
+                    ->  Hash  (cost=4.50..4.50 rows=200 width=12) (actual time=0.090..0.090 rows=200 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 265kB
+                          ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=12) (actual time=0.013..0.056 rows=200 loops=1)
+                                Filter: ((term_id)::text = 'PERF2026'::text)
+              ->  Hash  (cost=5.00..5.00 rows=200 width=22) (actual time=0.080..0.080 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 267kB
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.013..0.042 rows=200 loops=1)
+Total runtime: 1.482 ms
+PLAN|v3|eligibility|0
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.449..0.449 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.259..0.395 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.008..0.074 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.034..0.034 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.020..0.026 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.543 ms
+PLAN|v3|eligibility|1
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.577..0.577 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.319..0.506 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.008..0.072 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.042..0.042 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.029..0.035 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.681 ms
+PLAN|v3|eligibility|2
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.384..0.385 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.205..0.325 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.007..0.059 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.036..0.036 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.022..0.025 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.476 ms
+PLAN|v3|eligibility|3
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.614..0.615 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.320..0.548 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.007..0.130 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.043..0.043 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.028..0.034 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.707 ms
+PLAN|v3|eligibility|4
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.355..0.356 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.182..0.309 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.006..0.066 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.028..0.028 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.018..0.024 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.429 ms
+PLAN|v3|eligibility|5
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.538..0.538 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.316..0.481 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.006..0.069 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.057..0.057 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.027..0.032 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.620 ms
+PLAN|v3|eligibility|6
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.331..0.331 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.208..0.289 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.007..0.040 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.036..0.036 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.024..0.029 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.413 ms
+PLAN|v3|eligibility|7
+Sort  (cost=38.37..38.39 rows=10 width=32) (actual time=0.439..0.440 rows=10 loops=1)
+  Sort Key: e.section_id, m.id
+  Sort Method: quicksort  Memory: 25kB
+  ->  Hash Join  (cost=24.33..38.20 rows=10 width=32) (actual time=0.224..0.342 rows=10 loops=1)
+        Hash Cond: ((m.section_id)::text = (e.section_id)::text)
+        ->  Seq Scan on cs2_meeting m  (cost=0.00..12.00 rows=600 width=32) (actual time=0.007..0.064 rows=600 loops=1)
+        ->  Hash  (cost=24.20..24.20 rows=10 width=6) (actual time=0.035..0.035 rows=10 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 257kB
+              ->  Index Scan using cs2_enrollment_student_idx on cs2_enrollment e  (cost=0.00..24.20 rows=10 width=6) (actual time=0.023..0.026 rows=10 loops=1)
+                    Index Cond: (((student_id)::text = 'P00120'::text) AND ((state)::text = 'ENROLLED'::text))
+Total runtime: 0.534 ms
+PLAN|v3|roster|0
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.039..2.364 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.038..2.353 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.020..0.265 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.006..1.442 rows=5962 loops=1)
+Total runtime: 2.452 ms
+PLAN|v3|roster|1
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.037..3.202 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.036..3.184 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.019..0.292 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.006..2.025 rows=5962 loops=1)
+Total runtime: 3.300 ms
+PLAN|v3|roster|2
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.104..4.907 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.102..4.883 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.019..0.322 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.006..3.251 rows=5962 loops=1)
+Total runtime: 5.020 ms
+PLAN|v3|roster|3
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.040..3.087 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.038..3.075 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.019..0.290 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.006..2.080 rows=5962 loops=1)
+Total runtime: 3.192 ms
+PLAN|v3|roster|4
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.041..3.614 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.040..3.492 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.020..0.410 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.006..2.147 rows=5962 loops=1)
+Total runtime: 3.733 ms
+PLAN|v3|roster|5
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.420..3.696 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.419..3.673 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.020..0.387 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.375..2.368 rows=5962 loops=1)
+Total runtime: 3.798 ms
+PLAN|v3|roster|6
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.043..2.580 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.041..2.558 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.021..0.238 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.007..1.598 rows=5962 loops=1)
+Total runtime: 2.681 ms
+PLAN|v3|roster|7
+Limit  (cost=0.00..632.64 rows=100 width=25) (actual time=0.057..3.519 rows=100 loops=1)
+  ->  Merge Join  (cost=0.00..1043.85 rows=165 width=25) (actual time=0.056..3.504 rows=100 loops=1)
+        Merge Cond: ((e.student_id)::text = (s.id)::text)
+        ->  Index Only Scan using cs3_section_roster on cs2_enrollment e  (cost=0.00..639.54 rows=165 width=7) (actual time=0.028..0.288 rows=100 loops=1)
+              Index Cond: ((section_id = 'PS123'::text) AND (state = 'ENROLLED'::text))
+              Heap Fetches: 100
+        ->  Index Scan using cs2_student_pkey on cs2_student s  (cost=0.00..377.25 rows=10000 width=25) (actual time=0.011..2.350 rows=5962 loops=1)
+Total runtime: 3.674 ms
+PLAN|v3|admin_offerings|0
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.862..0.867 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.552..0.635 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.339..0.339 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.244..0.318 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.036 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.099..0.099 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.020..0.073 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.019..0.059 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.031 ms
+PLAN|v3|admin_offerings|1
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.999..1.002 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.871..0.927 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.570..0.570 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.446..0.529 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.014..0.036 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.216..0.216 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.029..0.125 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.027..0.109 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.250 ms
+PLAN|v3|admin_offerings|2
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=1.421..1.430 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=1.243..1.299 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.888..0.888 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.389..0.495 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.013..0.048 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.120..0.120 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.030..0.094 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.027..0.079 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.588 ms
+PLAN|v3|admin_offerings|3
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.635..0.638 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.536..0.572 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.000..0.000 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.323..0.323 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.240..0.299 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.028 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.094..0.094 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.021..0.073 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.019..0.058 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 0.838 ms
+PLAN|v3|admin_offerings|4
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=1.017..1.019 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.883..0.937 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.002..0.002 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.556..0.556 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.374..0.519 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.012..0.115 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.108..0.108 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.026..0.085 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.024..0.068 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.220 ms
+PLAN|v3|admin_offerings|5
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.607..0.609 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.533..0.564 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.001..0.001 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.303..0.303 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.243..0.288 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.008..0.020 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.117..0.117 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.015..0.103 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.014..0.092 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 0.711 ms
+PLAN|v3|admin_offerings|6
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=1.026..1.032 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.904..0.962 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.000..0.000 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.548..0.548 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.397..0.508 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.038 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.124..0.124 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.028..0.087 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.027..0.077 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 1.177 ms
+PLAN|v3|admin_offerings|7
+Sort  (cost=43.24..43.74 rows=198 width=116) (actual time=0.672..0.677 rows=100 loops=1)
+  Sort Key: cs2_offering.id, p.course_id
+  Sort Method: quicksort  Memory: 34kB
+  ->  Hash Right Join  (cost=18.50..35.69 rows=198 width=116) (actual time=0.550..0.612 rows=100 loops=1)
+        Hash Cond: ((p.offering_id)::text = (cs2_offering.id)::text)
+        ->  Seq Scan on cs2_prerequisite p  (cost=0.00..13.97 rows=397 width=176) (actual time=0.000..0.000 rows=0 loops=1)
+        ->  Hash  (cost=17.25..17.25 rows=100 width=22) (actual time=0.324..0.324 rows=100 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 262kB
+              ->  Hash Join  (cost=10.62..17.25 rows=100 width=22) (actual time=0.232..0.295 rows=100 loops=1)
+                    Hash Cond: ((c.id)::text = (cs2_offering.course_id)::text)
+                    ->  Seq Scan on cs2_course c  (cost=0.00..5.00 rows=200 width=22) (actual time=0.011..0.033 rows=200 loops=1)
+                    ->  Hash  (cost=9.38..9.38 rows=100 width=12) (actual time=0.092..0.092 rows=100 loops=1)
+                           Buckets: 32768  Batches: 1  Memory Usage: 261kB
+                          ->  Limit  (cost=0.00..8.38 rows=100 width=12) (actual time=0.019..0.064 rows=100 loops=1)
+                                ->  Index Scan using cs2_offering_pkey on cs2_offering  (cost=0.00..16.75 rows=200 width=12) (actual time=0.017..0.057 rows=100 loops=1)
+                                      Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 0.792 ms
+PLAN|v3|term_stats|0
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=83.616..83.628 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=83.485..83.523 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.237..56.081 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.004..25.703 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.107..0.107 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.035..0.073 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 83.751 ms
+PLAN|v3|term_stats|1
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=86.448..86.459 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=86.325..86.347 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.477..58.326 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.008..25.812 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.119..0.119 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.026..0.067 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 86.599 ms
+PLAN|v3|term_stats|2
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=106.955..106.966 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=106.826..106.860 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.483..71.899 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.008..31.209 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.120..0.120 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.028..0.063 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 107.101 ms
+PLAN|v3|term_stats|3
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=100.579..100.588 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=100.382..100.481 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.255..67.004 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.004..30.690 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.087..0.087 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.014..0.043 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 100.734 ms
+PLAN|v3|term_stats|4
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=110.926..110.932 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=110.801..110.830 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.414..75.821 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.009..35.055 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.174..0.174 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.022..0.107 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 111.074 ms
+PLAN|v3|term_stats|5
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=94.100..94.105 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=93.979..94.000 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.293..64.707 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.034..27.970 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.098..0.098 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.019..0.061 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 94.252 ms
+PLAN|v3|term_stats|6
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=81.389..81.399 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=81.222..81.273 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.455..54.680 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.013..24.423 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.170..0.170 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.023..0.070 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 81.528 ms
+PLAN|v3|term_stats|7
+Sort  (cost=4795.64..4796.14 rows=200 width=25) (actual time=81.394..81.408 rows=200 loops=1)
+  Sort Key: o.id
+  Sort Method: quicksort  Memory: 37kB
+  ->  HashAggregate  (cost=4786.00..4788.00 rows=200 width=25) (actual time=81.254..81.296 rows=200 loops=1)
+        Group By Key: o.id
+        ->  Hash Right Join  (cost=7.00..4286.00 rows=100000 width=17) (actual time=0.249..54.658 rows=100000 loops=1)
+              Hash Cond: ((e.offering_id)::text = (o.id)::text)
+              ->  Seq Scan on cs2_enrollment e  (cost=0.00..2904.00 rows=100000 width=17) (actual time=0.005..25.019 rows=100000 loops=1)
+                    Filter: ((state)::text = 'ENROLLED'::text)
+              ->  Hash  (cost=4.50..4.50 rows=200 width=6) (actual time=0.089..0.089 rows=200 loops=1)
+                     Buckets: 32768  Batches: 1  Memory Usage: 264kB
+                    ->  Seq Scan on cs2_offering o  (cost=0.00..4.50 rows=200 width=6) (actual time=0.014..0.049 rows=200 loops=1)
+                          Filter: ((term_id)::text = 'PERF2026'::text)
+Total runtime: 81.534 ms
+PLAN|v3|write_1000|0
+Update on cs2_enrollment  (cost=72.37..3000.00 rows=1000 width=88) (actual time=3.944..139.465 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=72.37..3000.00 rows=1000 width=88) (actual time=3.474..49.428 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2654.00 rows=100000 width=77) (actual time=0.015..25.307 rows=100000 loops=1)
+        ->  Hash  (cost=59.87..59.87 rows=1000 width=11) (actual time=3.170..3.170 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.87 rows=1000 width=11) (actual time=0.060..2.708 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..4987.25 rows=100000 width=11) (actual time=0.057..2.605 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 140.157 ms
+PLAN|v3|write_1000|1
+Update on cs2_enrollment  (cost=72.25..3022.80 rows=1000 width=88) (actual time=2.429..108.076 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=72.25..3022.80 rows=1000 width=88) (actual time=2.031..50.240 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2674.86 rows=100786 width=77) (actual time=0.016..26.425 rows=100000 loops=1)
+        ->  Hash  (cost=59.75..59.75 rows=1000 width=11) (actual time=1.851..1.851 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.75 rows=1000 width=11) (actual time=0.021..1.546 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5014.01 rows=100786 width=11) (actual time=0.019..1.457 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 108.658 ms
+PLAN|v3|write_1000|2
+Update on cs2_enrollment  (cost=72.13..3045.60 rows=1000 width=88) (actual time=2.536..113.147 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=72.13..3045.60 rows=1000 width=88) (actual time=2.099..52.601 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2695.72 rows=101572 width=77) (actual time=0.022..27.338 rows=100000 loops=1)
+        ->  Hash  (cost=59.63..59.63 rows=1000 width=11) (actual time=1.768..1.768 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.63 rows=1000 width=11) (actual time=0.022..1.434 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5040.76 rows=101572 width=11) (actual time=0.020..1.347 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 113.552 ms
+PLAN|v3|write_1000|3
+Update on cs2_enrollment  (cost=72.00..3070.15 rows=1000 width=88) (actual time=6.093..117.989 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=72.00..3070.15 rows=1000 width=88) (actual time=4.462..52.139 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2718.18 rows=102418 width=77) (actual time=0.090..25.951 rows=100000 loops=1)
+        ->  Hash  (cost=59.50..59.50 rows=1000 width=11) (actual time=4.037..4.037 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.50 rows=1000 width=11) (actual time=0.092..3.382 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5069.57 rows=102418 width=11) (actual time=0.091..3.190 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 118.594 ms
+PLAN|v3|write_1000|4
+Update on cs2_enrollment  (cost=71.88..3092.96 rows=1000 width=88) (actual time=3.272..102.396 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=71.88..3092.96 rows=1000 width=88) (actual time=2.783..44.500 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2739.04 rows=103204 width=77) (actual time=0.022..23.053 rows=100000 loops=1)
+        ->  Hash  (cost=59.38..59.38 rows=1000 width=11) (actual time=2.443..2.443 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.38 rows=1000 width=11) (actual time=0.041..1.976 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5096.32 rows=103204 width=11) (actual time=0.039..1.871 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 102.893 ms
+PLAN|v3|write_1000|5
+Update on cs2_enrollment  (cost=71.77..3115.76 rows=1000 width=88) (actual time=3.422..136.903 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=71.77..3115.76 rows=1000 width=88) (actual time=2.856..46.602 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2759.90 rows=103990 width=77) (actual time=0.021..24.975 rows=100000 loops=1)
+        ->  Hash  (cost=59.27..59.27 rows=1000 width=11) (actual time=2.493..2.493 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.27 rows=1000 width=11) (actual time=0.043..2.001 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5123.07 rows=103990 width=11) (actual time=0.040..1.878 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 137.370 ms
+PLAN|v3|write_1000|6
+Update on cs2_enrollment  (cost=71.64..3140.33 rows=1000 width=88) (actual time=2.271..102.615 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=71.64..3140.33 rows=1000 width=88) (actual time=1.906..40.539 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2782.37 rows=104837 width=77) (actual time=0.015..21.839 rows=100000 loops=1)
+        ->  Hash  (cost=59.14..59.14 rows=1000 width=11) (actual time=1.665..1.665 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.14 rows=1000 width=11) (actual time=0.021..1.482 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5151.90 rows=104837 width=11) (actual time=0.020..1.369 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 102.921 ms
+PLAN|v3|write_1000|7
+Update on cs2_enrollment  (cost=71.53..3163.14 rows=1000 width=88) (actual time=1.348..132.488 rows=1000 loops=1)
+  ->  Hash Semi Join  (cost=71.53..3163.14 rows=1000 width=88) (actual time=1.113..49.521 rows=1000 loops=1)
+        Hash Cond: ((public.cs2_enrollment.id)::text = (public.cs2_enrollment.id)::text)
+        ->  Seq Scan on cs2_enrollment  (cost=0.00..2803.23 rows=105623 width=77) (actual time=0.009..27.073 rows=100000 loops=1)
+        ->  Hash  (cost=59.03..59.03 rows=1000 width=11) (actual time=0.975..0.975 rows=1000 loops=1)
+               Buckets: 32768  Batches: 1  Memory Usage: 298kB
+              ->  Limit  (cost=0.00..49.03 rows=1000 width=11) (actual time=0.010..0.858 rows=1000 loops=1)
+                    ->  Index Scan using cs2_enrollment_pkey on cs2_enrollment  (cost=0.00..5178.65 rows=105623 width=11) (actual time=0.009..0.779 rows=1000 loops=1)
+                          Filter: ((state)::text = 'ENROLLED'::text)
+Total runtime: 132.868 ms
+FINISHED

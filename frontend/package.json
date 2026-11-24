@@ -1,11 +1,14 @@
 {
-  "name": "course-studio-v2",
+  "name": "course-studio-v3",
   "private": true,
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vue-tsc --noEmit && vite build",
+    "test:live": "node scripts/verify-live.mjs",
+    "test:preview": "node scripts/verify-preview.mjs",
+    "build:preview": "vue-tsc --noEmit && vite build --mode pages --base ./ --outDir dist-preview",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest run",
     "preview": "vite preview --host 127.0.0.1"
@@ -20,6 +23,7 @@
   "devDependencies": {
     "@types/node": "^24.10.4",
     "@vitejs/plugin-vue": "^6.0.3",
+    "playwright": "1.61.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
     "vitest": "^3.2.4",

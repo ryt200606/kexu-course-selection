@@ -9,7 +9,7 @@ import { useAsync } from '../lib/useAsync'
 import { formatTime } from '../lib/format'
 const { loading, error, run } = useAsync(), items = ref<Notification[]>([]), page = ref(0), total = ref(0), busy = ref(false), size = 15
 const unread = computed(() => items.value.filter(item => !item.readAt)), pages = computed(() => Math.max(1, Math.ceil(total.value / size)))
-async function load() { await run(async () => { const result = await api<Page<Notification>>('/notifications' + query({ page: page.value, size })); items.value = result.items; total.value = result.total }) }
+async function load() { await run(() => api<Page<Notification>>('/notifications' + query({ page: page.value, size })), result => { items.value = result.items; total.value = result.total }) }
 async function mark(item: Notification) { busy.value = true; try { await api('/notifications/' + encode(item.id) + '/read', { method: 'PUT' }); await load() } catch (e) { toast(e instanceof Error ? e.message : '标记失败', true) } finally { busy.value = false } }
 async function markPage() { busy.value = true; try { for (const item of unread.value) await api('/notifications/' + encode(item.id) + '/read', { method: 'PUT' }); toast('本页消息已全部标为已读。'); await load() } catch (e) { toast(e instanceof Error ? e.message : '标记失败，部分消息可能已成功处理。', true); await load() } finally { busy.value = false } }
 function paginate(delta: number) { page.value += delta; void load() }

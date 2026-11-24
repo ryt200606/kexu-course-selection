@@ -53,46 +53,26 @@ public class Bootstrap implements ApplicationRunner {
   @Override
   public void run(ApplicationArguments ignored) throws Exception {
     String mode = env.getProperty("app.mode", "serve");
-    if (!Set.of("serve", "init", "verify", "test").contains(mode))
+    if (!Set.of("serve", "init", "verify", "test", "migrate").contains(mode))
       throw new IllegalStateException("Unknown APP_MODE");
     if (mode.equals("init") || mode.equals("test")) {
       if (mode.equals("test") && !identity.surrogate())
         throw new IllegalStateException(
             "Automatic test init is H2 surrogate only; native tests initialize explicit owner CLI");
-      initialize(mode.equals("test"));
+      if (!mode.equals("test")) confirmTarget();
+      tx.executeWithoutResult(status -> initialize());
+    }
+    if (Set.of("init", "test", "migrate").contains(mode)) {
+      if (mode.equals("migrate")) confirmTarget();
+      tx.executeWithoutResult(status -> migrate());
     }
     verify();
   }
 
-  private void initialize(boolean test) throws Exception {
+  private void initialize() {
     String admin = requiredPassword("app.bootstrap.admin-password"),
         teacher = requiredPassword("app.bootstrap.teacher-password"),
         student = requiredPassword("app.bootstrap.student-password");
-    String confirm = env.getProperty("app.init.confirm", "");
-    if (!test) {
-      String actual =
-          identity.surrogate()
-              ? "h2-demo"
-              : db.jdbc.queryForObject("SELECT current_database()", String.class);
-      if (!confirm.equals(actual)
-          || (!identity.surrogate()
-              && !Set.of(
-                      "course_app_v2",
-                      "course_app_v2_test",
-                      "course_app_v2_perf",
-                      "course_app_v2_perf_test")
-                  .contains(actual)))
-        throw new IllegalStateException(
-            "Explicit init confirmation must equal actual dedicated database name");
-    }
-    try (Connection c = ds.getConnection();
-        ResultSet tables =
-            c.getMetaData().getTables(null, "PUBLIC", null, new String[] {"TABLE"})) {
-      while (tables.next())
-        if (tables.getString("TABLE_NAME").toLowerCase(Locale.ROOT).startsWith("cs2_"))
-          throw new IllegalStateException(
-              "cs2 schema already exists; initialization never resets data");
-    }
     // openGauss reports lowercase public, H2 uppercase PUBLIC; check both via information schema.
     if (db.count(
             "SELECT COUNT(*) FROM information_schema.tables WHERE LOWER(table_schema)='public' AND"
@@ -111,37 +91,75 @@ public class Bootstrap implements ApplicationRunner {
               schemaHash());
           seed(admin, teacher, student);
         });
-    String runtime = env.getProperty("app.init.runtime-role", "");
-    if (!runtime.isBlank()) {
-      if (identity.surrogate() || !runtime.equals("course_v2_app"))
-        throw new IllegalStateException(
-            "Only explicit course_v2_app grant target is supported on openGauss");
-      db.jdbc.execute("REVOKE CREATE ON SCHEMA public FROM PUBLIC");
-      db.jdbc.execute("GRANT USAGE ON SCHEMA public TO course_v2_app");
-      for (String table :
-          List.of(
-              "cs2_student",
-              "cs2_teacher",
-              "cs2_user",
-              "cs2_term",
-              "cs2_round",
-              "cs2_course",
-              "cs2_offering",
-              "cs2_prerequisite",
-              "cs2_section",
-              "cs2_meeting",
-              "cs2_student_term",
-              "cs2_enrollment",
-              "cs2_waitlist",
-              "cs2_audit",
-              "cs2_notification",
-              "cs2_idempotency"))
-        db.jdbc.execute(
-            "GRANT SELECT,INSERT,UPDATE,DELETE ON TABLE " + table + " TO course_v2_app");
-      db.jdbc.execute("GRANT SELECT ON TABLE cs2_schema_version TO course_v2_app");
-      for (String view :
-          List.of("cs2_v_student_timetable", "cs2_v_transcript", "cs2_v_term_summary"))
-        db.jdbc.execute("GRANT SELECT ON TABLE " + view + " TO course_v2_app");
+  }
+
+  private void confirmTarget() {
+    String database = identity.surrogate() ? "h2-demo"
+        : db.jdbc.queryForObject("SELECT current_database()", String.class);
+    if (!Objects.equals(database, env.getProperty("app.init.confirm"))
+        || (!identity.surrogate() && !Set.of("course_app_v3", "course_app_v3_test",
+            "course_app_v3_perf_test", "course_app_v3_restore").contains(database)))
+      throw new IllegalStateException("Owner operation requires confirmation of the dedicated V3 database");
+  }
+
+  private static final List<String> MIGRATIONS = List.of(
+      "db/v3-core.sql", "db/v3-planning.sql", "db/v3-academic.sql", "db/v3-demo-academic.sql");
+
+  static String migrationHash() {
+    try {
+      MessageDigest hash = MessageDigest.getInstance("SHA-256");
+      for (String path : MIGRATIONS) {
+        hash.update(path.getBytes(java.nio.charset.StandardCharsets.UTF_8));
+        hash.update((byte) 0);
+        try (var in = new ClassPathResource(path).getInputStream()) { hash.update(in.readAllBytes()); }
+        hash.update((byte) 0);
+      }
+      return HexFormat.of().formatHex(hash.digest());
+    } catch (Exception e) { throw new IllegalStateException("Cannot read V3 migration", e); }
+  }
+
+  private void migrate() {
+    db.one("SELECT version FROM cs2_schema_version WHERE version=1 FOR UPDATE");
+    verifyBase();
+    if (db.count("SELECT COUNT(*) FROM cs2_schema_version WHERE version=3") == 0) {
+      ResourceDatabasePopulator scripts = new ResourceDatabasePopulator();
+      scripts.setSqlScriptEncoding("UTF-8");
+      MIGRATIONS.forEach(path -> scripts.addScript(new ClassPathResource(path)));
+      scripts.execute(ds);
+      db.update("INSERT INTO cs2_schema_version(version,source_version,schema_sha256,installed_at)"
+          + " VALUES(3,'3.0.0',?,CURRENT_TIMESTAMP)", migrationHash());
+    }
+    verify();
+    String role = env.getProperty("app.init.runtime-role", "");
+    if (!identity.surrogate()) {
+      if (!"course_v3_app".equals(role)) throw new IllegalStateException("APP_RUNTIME_ROLE must be course_v3_app");
+      grantRuntime();
+    }
+  }
+
+  private void grantRuntime() {
+    db.jdbc.execute("REVOKE CREATE ON SCHEMA public FROM PUBLIC");
+    db.jdbc.execute("GRANT USAGE ON SCHEMA public TO course_v3_app");
+    // Only objects declared by the shipped DDL receive permissions.
+    var ddlObject = java.util.regex.Pattern.compile("(?im)^CREATE\\s+(TABLE|VIEW)\\s+(cs[23]_[a-z0-9_]+)\\b");
+    for (String path : List.of("db/schema.sql", "db/v3-core.sql", "db/v3-planning.sql", "db/v3-academic.sql")) {
+      try (var in = new ClassPathResource(path).getInputStream()) {
+        var matches = ddlObject.matcher(new String(in.readAllBytes(), java.nio.charset.StandardCharsets.UTF_8));
+        while (matches.find()) {
+          String name = matches.group(2);
+          String privileges = switch (name) {
+            case "cs2_schema_version" -> "SELECT";
+            case "cs2_audit", "cs3_allocation_award" -> "SELECT,INSERT";
+            case "cs3_preference_round", "cs3_preference_form", "cs3_planning_run",
+                 "cs3_grade_review" -> "SELECT,INSERT,UPDATE";
+            case "cs3_preference_choice" -> "SELECT,INSERT,DELETE";
+            case "cs3_promotion_cursor", "cs3_curriculum_gate" -> "SELECT,UPDATE";
+            default -> matches.group(1).equalsIgnoreCase("VIEW") ? "SELECT" : "SELECT,INSERT,UPDATE,DELETE";
+          };
+          db.jdbc.execute("REVOKE ALL PRIVILEGES ON TABLE " + name + " FROM course_v3_app");
+          db.jdbc.execute("GRANT " + privileges + " ON TABLE " + name + " TO course_v3_app");
+        }
+      } catch (java.io.IOException e) { throw new IllegalStateException("Grant manifest unavailable", e); }
     }
   }
 
@@ -154,14 +172,22 @@ public class Bootstrap implements ApplicationRunner {
     return p;
   }
 
-  public void verify() {
+  private void verifyBase() {
     Map<String, Object> row =
-        db.one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version");
+        db.one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version WHERE version=1");
     if (Db.num(row, "version") != 1
         || !Db.str(row, "sourceVersion").equals("2.0.0")
         || !Db.str(row, "schemaSha256").equals(schemaHash()))
       throw new IllegalStateException(
           "Schema/source checksum mismatch; explicit reviewed migration required");
+  }
+
+  public void verify() {
+    verifyBase();
+    var latest = db.one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version ORDER BY version DESC LIMIT 1");
+    if (Db.num(latest, "version") != 3 || !"3.0.0".equals(Db.str(latest, "sourceVersion"))
+        || !migrationHash().equals(Db.str(latest, "schemaSha256")))
+      throw new IllegalStateException("V3 migration missing or checksum mismatch");
   }
 
   private void account(

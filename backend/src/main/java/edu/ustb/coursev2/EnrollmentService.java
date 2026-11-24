@@ -61,7 +61,8 @@ public class EnrollmentService {
     List<Map<String, Object>> rounds =
         db.rows(
             "SELECT id,term_id,state,starts_at,ends_at,withdrawal_ends_at,credit_limit FROM"
-                + " cs2_round WHERE term_id=? AND state='OPEN' ORDER BY starts_at DESC",
+                + " cs2_round r WHERE term_id=? AND state='OPEN' AND NOT EXISTS"
+                + " (SELECT 1 FROM cs3_preference_round p WHERE p.round_id=r.id) ORDER BY starts_at DESC",
             term);
     Instant now = db.now();
     for (Map<String, Object> r : rounds) {
@@ -241,6 +242,28 @@ public class EnrollmentService {
         student,
         s.get("termId"));
     s.put("enrolledCount", num(s, "enrolledCount") - 1);
+  }
+
+  /** Called by a transactional batch publisher. Lock every affected section before any student. */
+  void lockForAllocation(Collection<String> sections, Collection<String> students, String term, int limit) {
+    for (String id : new TreeSet<>(sections))
+      db.one("SELECT id FROM cs2_section WHERE id=? FOR UPDATE", id);
+    lockStudents(students);
+    for (String id : new TreeSet<>(students)) lockTerm(id, term, limit);
+  }
+
+  /** Uses the same locked eligibility rules, counters and notification transaction as direct enroll. */
+  void applyAllocatedSeat(String student, String section, String roundId, String runId) {
+    Map<String, Object> s = queries.section(section);
+    if (db.count("SELECT COUNT(*) FROM cs3_preference_round p JOIN cs2_round r ON r.id=p.round_id"
+        + " WHERE r.id=? AND r.term_id=? AND p.phase='FROZEN'",roundId,s.get("termId")) != 1)
+      throw Api.conflict("STALE_PREVIEW","选课轮次已经变化");
+    requireQualified(student,s,null);
+    if (liveQueue(section)>0) throw Api.conflict("WAITLIST_FIRST","已有候补享有优先权");
+    if (num(s,"enrolledCount")>=num(s,"capacity")) throw Api.conflict("SECTION_FULL","教学班已满");
+    addEnrollment(student,s);
+    journal.audit("ALLOCATE_SEAT", section, "志愿分配 "+runId+" · "+student, str(s,"termId"));
+    journal.notifyStudent(student,"志愿分配成功",s.get("courseTitle")+" · "+section);
   }
 
   @Transactional(timeout = 10)

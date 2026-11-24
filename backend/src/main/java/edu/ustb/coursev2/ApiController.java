@@ -32,7 +32,7 @@ public class ApiController {
   @GetMapping("/health")
   public Map<String, Object> health() {
     Map<String, Object> schema =
-        db.one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version");
+        db.one("SELECT version,source_version,schema_sha256 FROM cs2_schema_version ORDER BY version DESC LIMIT 1");
     return Api.object(
         "status",
         "UP",

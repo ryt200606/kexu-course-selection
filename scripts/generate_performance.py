@@ -12,7 +12,7 @@ import sys
 
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
-DATABASE = 'course_app_v2_perf_test'
+DATABASE = 'course_app_v3_perf_test'
 COUNT = {'students': 10000, 'courses': 200, 'sections': 600, 'enrollments': 100000}
 
 
@@ -20,6 +20,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--output', type=Path)
     p.add_argument('--execute', action='store_true', help='Write files only; never runs SQL')
+    p.add_argument('--password-hash-file', type=Path, help='Private bcrypt hash of the synthetic benchmark account password')
     a = p.parse_args()
     if not a.execute:
         print(json.dumps({'status': 'PLAN_ONLY', 'database': DATABASE, 'rows': COUNT, 'database_actions': False}))
@@ -33,20 +34,31 @@ def main():
     index_statement = re.search(r'CREATE\s+INDEX\s+cs2_enrollment_section_idx\s+ON\s+cs2_enrollment\s*\(\s*section_id\s*,\s*state\s*\)\s*;', schema_text, re.I)
     if not index_statement:
         raise ValueError('Expected nonconstraint section/state index must be present in the exact backend schema')
+    if not a.password_hash_file:
+        raise ValueError('A private bcrypt hash file is required to provision benchmark logins')
+    password_hash = a.password_hash_file.read_text(encoding='ascii').strip()
+    if not re.fullmatch(r'\$2[aby]\$\d{2}\$[./A-Za-z0-9]{53}', password_hash):
+        raise ValueError('Not a bcrypt digest')
     a.output.mkdir(parents=True, exist_ok=False)
     target = a.output / 'load.sql'
     with target.open('x', encoding='utf-8', newline='\n') as f:
         f.write("\\set ON_ERROR_STOP on\nSET TIME ZONE 'UTC';\nSELECT 1/CASE WHEN current_database()='" + DATABASE + "' THEN 1 ELSE 0 END;\n")
         f.write("SELECT 1/CASE WHEN (SELECT count(*) FROM pg_tables WHERE schemaname='public')=0 THEN 1 ELSE 0 END;\nBEGIN;\n")
         f.write(schema_text + '\n')
+        fingerprint = hashlib.sha256(schema.read_bytes()).hexdigest()
+        f.write("INSERT INTO cs2_schema_version VALUES(1,'2.0.0','" + fingerprint + "',CURRENT_TIMESTAMP);\n")
         def copy(table, columns, rows):
             f.write('COPY ' + table + '(' + columns + ") FROM STDIN WITH (FORMAT CSV);\n")
             for row in rows:
                 f.write(','.join(str(x) for x in row) + '\n')
             f.write('\\.\n')
         copy('cs2_student', 'id,name,department,state', ((f'P{i:05}', f'合成学生{i:05}', '性能测试系', 'ACTIVE') for i in range(10000)))
+        copy('cs2_user', 'id,username,password_hash,display_name,role,student_id',
+             ((f'PU{i:05}', f'perf{i:05}', password_hash, f'合成学生{i:05}', 'STUDENT', f'P{i:05}') for i in range(10000)))
         copy('cs2_teacher', 'id,name,department', ((f'PT{i:03}', f'合成教师{i:03}', '性能测试系') for i in range(60)))
         copy('cs2_term', 'id,name,state', [('PERF2026', '独立性能合成学期', 'ACTIVE')])
+        f.write("INSERT INTO cs2_round(id,term_id,name,state,starts_at,ends_at,withdrawal_ends_at,credit_limit)"
+                " VALUES('PERFROUND','PERF2026','合成性能轮','OPEN','2020-01-01','2099-01-01','2099-02-01',60);\n")
         copy('cs2_course', 'id,title,department,description', ((f'PC{i:03}', f'合成课程{i:03}', '性能测试系', '固定随机无关的性能测试数据') for i in range(200)))
         copy('cs2_offering', 'id,course_id,term_id,credits,state', ((f'PO{i:03}', f'PC{i:03}', 'PERF2026', 3, 'PUBLISHED') for i in range(200)))
         counts = [0] * 600

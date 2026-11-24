@@ -12,7 +12,7 @@ server:
     include-stacktrace: never
 spring:
   application:
-    name: course-selection-v2
+    name: course-selection-v3
   jackson:
     time-zone: UTC
   sql:
@@ -22,8 +22,8 @@ app:
   mode: ${APP_MODE:serve}
   database:
     type: ${DB_TYPE:opengauss}
-    url: ${DB_URL:jdbc:opengauss://127.0.0.1:26000/course_app_v2}
-    user: ${DB_USER:course_v2_app}
+    url: ${DB_URL:jdbc:opengauss://127.0.0.1:26000/course_app_v3}
+    user: ${DB_USER:course_v3_app}
     password: ${DB_PASSWORD:}
   init:
     confirm: ${INIT_CONFIRM:}

@@ -1,0 +1,324 @@
+.workflow-tabs,
+.workflow-actions,
+.workflow-track,
+.lookup-pages {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.workflow-tabs {
+  border-bottom: 1px solid var(--line);
+  margin: 0 0 1.3rem;
+  gap: 0;
+}
+.workflow-tabs button {
+  border: 0;
+  background: none;
+  color: #52665d;
+  padding: 0.8rem 1.1rem 0.75rem;
+  border-bottom: 3px solid transparent;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+.workflow-tabs button[aria-pressed='true'] {
+  color: #194e39;
+  border-color: #327052;
+}
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.workflow-card {
+  min-width: 0;
+  padding: clamp(1rem, 2.5vw, 1.8rem);
+  overflow: visible;
+}
+.workflow-card h2,
+.workflow-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.workflow-card h2,
+.workflow-card h3,
+.workflow-card p {
+  margin: 0 0 0.8rem;
+}
+.workflow-card .field {
+  margin: 0.65rem 0;
+}
+.workflow-card .table-wrap {
+  margin-top: 1rem;
+}
+.workflow-card progress {
+  width: 100%;
+  height: 0.55rem;
+  accent-color: #43745c;
+  margin: 0.7rem 0;
+}
+.workflow-hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.3rem;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #1c4738;
+  color: #f6f3e9;
+  border-radius: 14px;
+  padding: clamp(1.4rem, 3.4vw, 2.8rem);
+  border-left: 5px solid #c5b377;
+}
+.workflow-hero h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
+  letter-spacing: -0.04em;
+  margin: 0.4rem 0;
+}
+.workflow-hero p,
+.workflow-hero small,
+.hero-metric span {
+  color: #d9e5d8;
+}
+.hero-metric {
+  display: grid;
+  gap: 0.3rem;
+}
+.hero-metric strong {
+  font-size: 2.7rem;
+  line-height: 1.1;
+  font-weight: 650;
+}
+.hero-metric strong small {
+  font-size: 1.15rem;
+}
+.record-list {
+  padding: 0;
+  list-style: none;
+  margin: 0.7rem 0;
+}
+.record-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  border-top: 1px solid var(--line);
+  padding: 0.65rem 0;
+  overflow-wrap: anywhere;
+}
+.record-list li > span:last-child {
+  flex-shrink: 0;
+  font-size: 0.83rem;
+}
+.record-list small,
+.run-heading small,
+.verdict-row span {
+  display: block;
+  color: #53665b;
+}
+.workflow-form {
+  display: grid;
+  gap: 0.8rem;
+}
+.workflow-form label.field {
+  margin: 0;
+}
+.workflow-form .button {
+  justify-self: start;
+}
+.workflow-actions {
+  margin-top: 1rem;
+}
+.workflow-note,
+.workflow-muted {
+  color: #53665b;
+  font-size: 0.9rem;
+}
+.workflow-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.workflow-fieldset,
+.candidate-slot,
+.plan-verdict {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  min-width: 0;
+}
+.workflow-fieldset legend {
+  padding: 0 0.5rem;
+  font-weight: 650;
+}
+.candidate-slot,
+.plan-verdict {
+  margin: 0.7rem 0;
+  background: #f5f7f1;
+}
+.verdict-row {
+  border-top: 1px solid var(--line);
+  padding-top: 0.65rem;
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.3rem;
+}
+.inline-fields,
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  align-items: end;
+  gap: 0.65rem;
+}
+.inline-fields .button,
+.inline-fields .icon-button {
+  justify-self: start;
+  margin-bottom: 0.65rem;
+}
+.workflow-track {
+  background: #ecf1e9;
+  border: 1px solid #dbe5d7;
+  border-radius: 10px;
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  color: #335643;
+  font-size: 0.85rem;
+}
+.workflow-track b {
+  color: #71866c;
+}
+.run-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.run-metrics {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: #edf3ea;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.run-metrics dt {
+  font-size: 0.78rem;
+  color: #49624d;
+}
+.run-metrics dd {
+  margin: 0.3rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 650;
+}
+.hash-line {
+  display: block;
+  font-family: ui-monospace, monospace;
+  overflow-wrap: anywhere;
+  color: #52645b;
+  margin: 0.6rem 0;
+}
+.workflow-details {
+  margin: 0.8rem 0;
+}
+.workflow-details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.remote-select {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+.remote-search {
+  position: relative;
+  display: block;
+}
+.remote-search svg {
+  position: absolute;
+  top: 50%;
+  left: 0.65rem;
+  transform: translateY(-50%);
+  color: #61776b;
+}
+.field .remote-search input {
+  padding-left: 1.9rem;
+  width: 100%;
+}
+.remote-select select {
+  width: 100%;
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .workflow-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workflow-tabs button {
+    padding: 0.65rem 0.7rem;
+    font-size: 0.84rem;
+  }
+  .workflow-track {
+    gap: 0.4rem;
+  }
+  .workflow-hero {
+    align-items: start;
+  }
+  .workflow-card .row-between {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .workflow-card .table-wrap {
+    max-width: 100%;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  table.mobile-records {
+    display: block;
+    min-width: 0;
+    width: 100%;
+    white-space: normal;
+  }
+  table.mobile-records thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  table.mobile-records tbody,
+  table.mobile-records tr {
+    display: block;
+    width: 100%;
+  }
+  table.mobile-records tbody tr {
+    margin: 0.6rem 0;
+    border: 1px solid #dce5d9;
+    border-radius: 7px;
+    padding: 0.45rem 0.65rem;
+  }
+  table.mobile-records tbody td {
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(5.7rem, 34%) 1fr;
+    align-items: baseline;
+    gap: 0.2rem 0.55rem;
+    padding: 0.33rem 0;
+    white-space: normal;
+    border: 0;
+  }
+  table.mobile-records td:before {
+    content: attr(data-label);
+    font-size: 0.76rem;
+    color: #516759;
+  }
+  table.mobile-records td small {
+    grid-column: 2;
+  }
+}

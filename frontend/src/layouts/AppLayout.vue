@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
-import { LayoutDashboard, BookOpen, CalendarDays, GraduationCap, LibraryBig, Users, ChartColumn, ShieldCheck, Settings2, Bell, ChevronDown, ChevronRight, LogOut, UserRound, Menu, PanelLeftClose, ClipboardList, Leaf } from 'lucide-vue-next'
+import { LayoutDashboard, BookOpen, CalendarDays, GraduationCap, LibraryBig, Users, ChartColumn, ShieldCheck, Settings2, Bell, ChevronDown, ChevronRight, LogOut, UserRound, Menu, PanelLeftClose, ClipboardList, Leaf, Layers3, Telescope, FileCheck2, CalendarRange } from 'lucide-vue-next'
 import { useAuth } from '../stores/auth'
 import { useWorkspace } from '../stores/workspace'
 import { roleLabel, avatarText } from '../lib/format'
@@ -12,11 +12,14 @@ const auth = useAuth(), workspace = useWorkspace(), route = useRoute(), router =
 const menuOpen = ref(false), userMenu = ref(false), unread = ref(false), shellError = ref('')
 const common = [{ to: '/', label: '工作台', icon: LayoutDashboard }]
 const navigation = computed(() => [...common, ...(auth.user?.role === 'STUDENT' ? [
+  { to: '/student/planning', label: '学业规划', icon: Telescope }, { to: '/student/reviews', label: '成绩复核', icon: FileCheck2 },
   { to: '/student/catalog', label: '选课中心', icon: BookOpen }, { to: '/student/timetable', label: '我的课表', icon: CalendarDays }, { to: '/student/courses', label: '我的课程', icon: LibraryBig }, { to: '/student/grades', label: '成绩与学分', icon: GraduationCap },
 ] : auth.user?.role === 'TEACHER' ? [
+  { to: '/teacher/reviews', label: '成绩复核', icon: FileCheck2 },
   { to: '/teacher/sections', label: '授课与成绩', icon: ClipboardList },
 ] : [
-  { to: '/admin/manage', label: '教学管理', icon: Settings2 }, { to: '/admin/enrollments', label: '选课与递补', icon: Users }, { to: '/admin/analytics', label: '教学分析', icon: ChartColumn }, { to: '/admin/audit', label: '操作记录', icon: ShieldCheck }, { to: '/admin/system', label: '运行与一致性', icon: Leaf },
+  { to: '/admin/curricula', label: '培养方案', icon: Layers3 }, { to: '/admin/planning', label: '排课与分配', icon: CalendarRange }, { to: '/admin/reviews', label: '成绩复核', icon: FileCheck2 }, { to: '/admin/indicators', label: '指标明细', icon: ChartColumn },
+  { to: '/admin/manage', label: '教学管理', icon: Settings2 }, { to: '/admin/enrollments', label: '选课与递补', icon: Users }, { to: '/admin/analytics', label: '教学分析', icon: ChartColumn }, { to: '/admin/audit', label: '操作记录', icon: ShieldCheck }, { to: '/admin/system', label: '运行与一致性', icon: Leaf, Layers3, Telescope, FileCheck2, CalendarRange },
 ]), { to: '/notifications', label: '消息中心', icon: Bell }])
 async function loadShell() { try { shellError.value = ''; await workspace.loadTerms(); const notices = await api<Page<Notification>>('/notifications?size=20'); unread.value = notices.items.some(item => !item.readAt) } catch (e) { shellError.value = e instanceof Error ? e.message : '学期信息加载失败' } }
 async function logout() { try { await auth.logout(); await router.replace('/login') } catch (e) { toast(e instanceof Error ? e.message : '退出失败，请重试。', true) } }

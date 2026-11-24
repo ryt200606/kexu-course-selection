@@ -1,0 +1,201 @@
+{
+  "dataset": {
+    "students": 10000,
+    "sections": 600,
+    "enrollments": 100000
+  },
+  "resultEquality": {
+    "catalog": {
+      "rows": 20,
+      "sha256": "4b019733f30ab5c232480778eb4536339a8ec66883c05eb0ee9a245a649c4205"
+    },
+    "eligibility": {
+      "rows": 10,
+      "sha256": "02e18709c5fdced2e23556d5af1f34a71cbe58324df8f2de2a2cabf2e0f51896"
+    },
+    "roster": {
+      "rows": 100,
+      "sha256": "e79f6f069d0bc2ba87bebb1915f3d67126fd97b49b2d0bc52ba159bb5377c560"
+    },
+    "admin_offerings": {
+      "rows": 100,
+      "sha256": "d47454d50c99c4ed3f350b1ca3b9689adc3db604d68efd942e48da3fa60f7f21"
+    },
+    "term_stats": {
+      "rows": 200,
+      "sha256": "cf8fa6d3faa7f476ad2ccba5976c957ce5ea2d6a6e3c20f32e3a1b904eb61462"
+    }
+  },
+  "extraIndexBytes": {
+    "cs3_section_roster": 4087808,
+    "cs3_offering_state": 3186688
+  },
+  "phases": {
+    "base": {
+      "catalog": {
+        "warmupMs": 0.768,
+        "samplesMs": [
+          0.863,
+          1.694,
+          1.598,
+          1.086,
+          0.745,
+          0.708,
+          0.808
+        ],
+        "medianMs": 0.863
+      },
+      "eligibility": {
+        "warmupMs": 0.583,
+        "samplesMs": [
+          0.316,
+          0.511,
+          0.243,
+          0.432,
+          0.256,
+          0.295,
+          0.248
+        ],
+        "medianMs": 0.295
+      },
+      "roster": {
+        "warmupMs": 1.686,
+        "samplesMs": [
+          2.029,
+          2.416,
+          1.689,
+          3.34,
+          3.146,
+          2.433,
+          1.756
+        ],
+        "medianMs": 2.416
+      },
+      "admin_offerings": {
+        "warmupMs": 0.898,
+        "samplesMs": [
+          0.748,
+          0.437,
+          0.468,
+          1.147,
+          1.208,
+          1.004,
+          1.11
+        ],
+        "medianMs": 1.004
+      },
+      "term_stats": {
+        "warmupMs": 81.54,
+        "samplesMs": [
+          86.627,
+          93.055,
+          102.871,
+          84.142,
+          94.049,
+          101.488,
+          103.044
+        ],
+        "medianMs": 94.049
+      },
+      "write_1000": {
+        "warmupMs": 166.305,
+        "samplesMs": [
+          109.774,
+          97.331,
+          113.977,
+          91.911,
+          98.521,
+          79.732,
+          106.155
+        ],
+        "medianMs": 98.521
+      }
+    },
+    "v3": {
+      "catalog": {
+        "warmupMs": 1.311,
+        "samplesMs": [
+          1.251,
+          1.2,
+          1.777,
+          1.399,
+          1.765,
+          1.243,
+          1.482
+        ],
+        "medianMs": 1.399
+      },
+      "eligibility": {
+        "warmupMs": 0.543,
+        "samplesMs": [
+          0.681,
+          0.476,
+          0.707,
+          0.429,
+          0.62,
+          0.413,
+          0.534
+        ],
+        "medianMs": 0.534
+      },
+      "roster": {
+        "warmupMs": 2.452,
+        "samplesMs": [
+          3.3,
+          5.02,
+          3.192,
+          3.733,
+          3.798,
+          2.681,
+          3.674
+        ],
+        "medianMs": 3.674
+      },
+      "admin_offerings": {
+        "warmupMs": 1.031,
+        "samplesMs": [
+          1.25,
+          1.588,
+          0.838,
+          1.22,
+          0.711,
+          1.177,
+          0.792
+        ],
+        "medianMs": 1.177
+      },
+      "term_stats": {
+        "warmupMs": 83.751,
+        "samplesMs": [
+          86.599,
+          107.101,
+          100.734,
+          111.074,
+          94.252,
+          81.528,
+          81.534
+        ],
+        "medianMs": 94.252
+      },
+      "write_1000": {
+        "warmupMs": 140.157,
+        "samplesMs": [
+          108.658,
+          113.552,
+          118.594,
+          102.893,
+          137.37,
+          102.921,
+          132.868
+        ],
+        "medianMs": 113.552
+      }
+    }
+  },
+  "writeCost": "1000 state changes rolled back after each run",
+  "environment": "openEuler 22.03 LTS SP4, 4 vCPU, 8 GiB allocated, openGauss 6.0.2",
+  "labels": {
+    "base": "existing production indexes",
+    "v3": "two evaluated candidate indexes, not deployed"
+  }
+}

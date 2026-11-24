@@ -1,3 +1,5 @@
+> 归档约定：下列是 V2 初版接口。V3 保留业务路径；数据库命名、迁移、软件版本以新版部署说明为准。
+
 # 课序 V2 API contract (2026-11-01)
 
 Base `/api/v2`; UTF-8 JSON; IDs are case-sensitive strings. Dates use ISO-8601 UTC (`2026-11-01T08:00:00Z`). Roles are `ADMIN`, `TEACHER`, `STUDENT`. Authentication is server-side session; fetch `/auth/csrf` before login and after login/logout. Send its token in `X-CSRF-TOKEN` on every write, with same-origin cookies. No credentials in browser storage.

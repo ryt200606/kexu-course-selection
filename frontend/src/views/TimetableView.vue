@@ -14,7 +14,7 @@ const workspace = useWorkspace(), { loading, error, run } = useAsync()
 const lessons = ref<Lesson[]>([]), week = ref(1), detail = ref<Lesson>(), periods = Array.from({ length: 14 }, (_, i) => i + 1), weekdays = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日']
 const shown = computed(() => lessons.value.filter(item => item.startWeek <= week.value && item.endWeek >= week.value))
 
-async function load() { await run(async () => { lessons.value = (await api<{ termId: string; items: Lesson[] }>('/student/timetable' + query({ termId: workspace.termId }))).items }) }
+async function load() { await run(() => api<{ termId: string; items: Lesson[] }>('/student/timetable' + query({ termId: workspace.termId })), result => { lessons.value = result.items }) }
 watch(() => workspace.termId, load, { immediate: true })
 function download() { csvDownload(`课序-${workspace.currentTerm?.name || '我的课表'}.csv`, [['课程', '教学班', '教师', '星期', '起始节次', '结束节次', '开始周', '结束周', '地点'], ...lessons.value.map(item => [item.courseTitle, item.sectionId, item.teacherName, item.weekday, item.startPeriod, item.endPeriod, item.startWeek, item.endWeek, item.room])]) }
 </script>

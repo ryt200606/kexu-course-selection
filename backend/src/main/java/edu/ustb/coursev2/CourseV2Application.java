@@ -12,6 +12,6 @@ public class CourseV2Application {
     java.util.TimeZone.setDefault(java.util.TimeZone.getTimeZone("UTC"));
     ConfigurableApplicationContext context = SpringApplication.run(CourseV2Application.class, args);
     String mode = context.getEnvironment().getProperty("app.mode", "serve");
-    if (mode.equals("init") || mode.equals("verify")) context.close();
+    if (mode.equals("init") || mode.equals("verify") || mode.equals("migrate")) context.close();
   }
 }

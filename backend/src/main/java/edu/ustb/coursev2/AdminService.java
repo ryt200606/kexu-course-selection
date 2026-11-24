@@ -124,15 +124,11 @@ public class AdminService {
 
   private void decorate(String resource, List<Map<String, Object>> rows) {
     if (resource.equals("sections")) queries.decorateSections(rows);
-    if (resource.equals("offerings"))
-      for (Map<String, Object> r : rows)
-        r.put(
-            "prerequisites",
-            db.rows(
-                "SELECT p.course_id,p.min_grade,c.title AS course_title FROM cs2_prerequisite p"
-                    + " JOIN cs2_course c ON c.id=p.course_id WHERE offering_id=? ORDER BY"
-                    + " p.course_id",
-                r.get("id")));
+    if (resource.equals("offerings")) {
+      var prerequisites = queries.prerequisites(rows.stream().map(row -> row.get("id")).toList());
+      for (var row : rows)
+        row.put("prerequisites", prerequisites.getOrDefault(str(row, "id"), List.of()));
+    }
     if (resource.equals("users"))
       for (Map<String, Object> r : rows) r.put("enabled", num(r, "enabled") == 1);
   }
@@ -270,6 +266,8 @@ public class AdminService {
           || !str(old, "withdrawalEndsAt").equals(withdrawal.toInstant().toString())
           || num(old, "creditLimit") != limit)
         throw conflict("FROZEN_RESOURCE", "已开放轮次的时间和学分规则已冻结");
+      if (str(old,"state").equals("OPEN") && state.equals("DRAFT"))
+        throw conflict("FROZEN_RESOURCE","已开放轮次不可退回草稿");
       if (str(old, "state").equals("CLOSED") && !state.equals("CLOSED"))
         throw conflict("FROZEN_RESOURCE", "关闭的轮次不能重开，请建立新轮次");
     }
@@ -523,6 +521,19 @@ public class AdminService {
 
   private void checkSchedule(
       String id, String offering, String teacher, List<Map<String, Object>> ms, String term) {
+    for (int left = 0; left < ms.size(); left++) {
+      Map<String,Object> a = ms.get(left);
+      for (int right = left + 1; right < ms.size(); right++) {
+        Map<String,Object> b = ms.get(right);
+        if (num(a,"weekday") == num(b,"weekday")
+            && num(a,"startWeek") <= num(b,"endWeek") && num(b,"startWeek") <= num(a,"endWeek")
+            && num(a,"startPeriod") <= num(b,"endPeriod") && num(b,"startPeriod") <= num(a,"endPeriod"))
+          throw conflict("TEACHING_SCHEDULE_CONFLICT", "同一教学班的第" + (left+1) + "与第"
+              + (right+1) + "时段重叠：周" + num(a,"weekday") + "，第"
+              + Math.max(num(a,"startWeek"),num(b,"startWeek")) + "周，第"
+              + Math.max(num(a,"startPeriod"),num(b,"startPeriod")) + "节");
+      }
+    }
     for (Map<String, Object> m : ms) {
       if (db.count(
               "SELECT COUNT(*) FROM cs2_meeting x JOIN cs2_section s ON s.id=x.section_id JOIN"

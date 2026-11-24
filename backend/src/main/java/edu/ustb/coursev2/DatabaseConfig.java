@@ -21,8 +21,8 @@ public class DatabaseConfig {
     if (type.equals("opengauss")
         && (!url.startsWith("jdbc:opengauss:")
             || !url.matches(
-                ".*\\/(course_app_v2|course_app_v2_test|course_app_v2_perf|course_app_v2_perf_test)(?:\\?.*)?$")))
-      throw new IllegalArgumentException("Explicit dedicated course_app_v2 database name required");
+                ".*/course_app_v3(?:_test|_perf_test|_restore)?(?:\\?.*)?$")))
+      throw new IllegalArgumentException("A dedicated course_app_v3 database is required");
     String password = env.getProperty("app.database.password", "");
     if (type.equals("opengauss") && password.isBlank())
       throw new IllegalArgumentException("DB_PASSWORD required");

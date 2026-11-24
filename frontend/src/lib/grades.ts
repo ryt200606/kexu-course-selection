@@ -15,3 +15,7 @@ export function parseGradePaste(text: string, allowedIds: Set<string>): Map<stri
   if (!result.size) throw new Error('未找到可填入的成绩行。')
   return result
 }
+
+export function formatScore(value: number | string | null | undefined): string {
+  return value == null ? '—' : Number(value).toFixed(2)
+}

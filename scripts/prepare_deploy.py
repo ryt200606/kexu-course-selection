@@ -1,4 +1,4 @@
-"""Prepare V2 Compose files and secrets, without starting Docker or a database."""
+"""Prepare V3 Compose files and secrets, without starting Docker or a database."""
 import argparse
 import hashlib
 import json
@@ -35,21 +35,21 @@ def model(project, output, images, instance, web_bind_address='127.0.0.1'):
     secret = lambda name, target: {'source': name, 'target': target}
     api = dict(image=images['api'], pull_policy='never', restart='no', read_only=True,
         mem_limit='1g', cpus=2, cap_drop=['ALL'], security_opt=['no-new-privileges:true'],
-        tmpfs=['/tmp:rw,nosuid,nodev,size=64m'], stop_grace_period='60s',
-        environment=dict(DB_TYPE='opengauss', DB_URL='jdbc:opengauss://database:5432/course_app_v2',
-                         DB_USER='course_v2_app', APP_MODE='serve', BIND_ADDRESS='0.0.0.0',
+        tmpfs=['/tmp:rw,exec,nosuid,nodev,size=160m'], stop_grace_period='60s',
+        environment=dict(DB_TYPE='opengauss', DB_URL='jdbc:opengauss://database:5432/course_app_v3',
+                         DB_USER='course_v3_app', APP_MODE='serve', BIND_ADDRESS='0.0.0.0',
                          PORT='8080', JAVA_TOOL_OPTIONS='-Xms128m -Xmx640m'),
         secrets=[secret('runtime_password', 'db_password')],
-        networks={'backend': {'ipv4_address': '172.30.134.3'}, 'frontend': {}},
+        networks={'backend': {'ipv4_address': '172.30.136.3'}, 'frontend': {}},
         depends_on={'database': {'condition': 'service_healthy'}})
-    migration = {**api, 'profiles': ['init'], 'networks': {'backend': {'ipv4_address': '172.30.134.3'}},
-        'environment': {**api['environment'], 'DB_USER': 'course_v2_owner', 'APP_MODE': 'init',
-                        'APP_RUNTIME_ROLE': 'course_v2_app'},
+    migration = {**api, 'profiles': ['init'], 'networks': {'backend': {'ipv4_address': '172.30.136.3'}},
+        'environment': {**api['environment'], 'DB_USER': 'course_v3_owner', 'APP_MODE': 'init',
+                        'APP_RUNTIME_ROLE': 'course_v3_app'},
         'secrets': [secret('owner_password', 'db_password')] + [secret('bootstrap_' + n + '_password', 'bootstrap_' + n + '_password')
                                                                   for n in ('admin', 'teacher', 'student')]}
     database = dict(image=images['database'], pull_policy='never', restart='no',
         entrypoint=['bash', '/opt/course/bin/pg-entrypoint-v2.sh'],
-        environment={'COURSE34_V2_INSTANCE_ID': instance}, mem_limit='4g', shm_size='1g',
+        environment={'COURSE34_V3_INSTANCE_ID': instance}, mem_limit='4g', shm_size='1g',
         security_opt=['seccomp=' + str(output / 'runtime/seccomp-mbind-mode3-flags32zero.json')],
         volumes=[{'type': 'volume', 'source': 'data', 'target': '/var/lib/course'},
                  bind(output / 'runtime/pg-entrypoint-v2.sh', '/opt/course/bin/pg-entrypoint-v2.sh'),
@@ -57,19 +57,19 @@ def model(project, output, images, instance, web_bind_address='127.0.0.1'):
                  bind(output / 'runtime/mot-container-r2.conf', '/opt/course/bin/mot-container-r2.conf')],
         tmpfs=['/run/course-db:rw,nosuid,nodev,size=16m,mode=0700'],
         secrets=[secret(n + '_password', n + '_password') for n in ('admin', 'owner', 'runtime')],
-        networks={'backend': {'ipv4_address': '172.30.134.2', 'aliases': ['database']}},
+        networks={'backend': {'ipv4_address': '172.30.136.2', 'aliases': ['database']}},
         healthcheck=dict(test=['CMD', 'bash', '/opt/course/bin/pg-health-v2.sh'], interval='5s', timeout='15s', retries=60, start_period='45s'),
         stop_signal='SIGINT', stop_grace_period='180s', ulimits={'nofile': {'soft': 65536, 'hard': 65536}, 'core': 0})
     database['volumes'].append({'type': 'bind', 'source': str(output / 'db-private'), 'target': '/run/course-private',
                                 'bind': {'create_host_path': False}})
     frontend = dict(image=images['frontend'], pull_policy='never', restart='no', mem_limit='128m',
-        ports=[web_bind_address + ':18095:80'], networks=['frontend'], stop_grace_period='30s',
+        ports=[web_bind_address + ':18096:80'], networks=['frontend'], stop_grace_period='30s',
         volumes=[bind(project / 'deploy/nginx.conf', '/etc/nginx/conf.d/default.conf'),
                  bind(project / 'frontend/dist', '/usr/share/nginx/html')], depends_on=['api'])
-    return dict(name='course34-v2', services={'database': database, 'migration': migration, 'api': api, 'frontend': frontend},
-        networks={'backend': {'internal': True, 'ipam': {'config': [{'subnet': '172.30.134.0/28'}]}},
-                  'frontend': {'ipam': {'config': [{'subnet': '172.30.135.0/28'}]}}},
-        volumes={'data': {'name': 'course34-v2-data-' + instance, 'labels': {'org.ustb.course34.v2.instance': instance}}},
+    return dict(name='course34-v3', services={'database': database, 'migration': migration, 'api': api, 'frontend': frontend},
+        networks={'backend': {'internal': True, 'ipam': {'config': [{'subnet': '172.30.136.0/28'}]}},
+                  'frontend': {'ipam': {'config': [{'subnet': '172.30.137.0/28'}]}}},
+        volumes={'data': {'name': 'course34-v3-data-' + instance, 'labels': {'org.ustb.course34.v3.instance': instance}}},
         secrets={n + '_password': {'file': str(output / 'private' / (n + '_password'))}
                  for n in ('admin', 'owner', 'runtime', 'bootstrap_admin', 'bootstrap_teacher', 'bootstrap_student')})
 
@@ -84,7 +84,7 @@ def main():
     p.add_argument('--web-bind-address', choices=['127.0.0.1', '192.168.189.56'], default=os.environ.get('WEB_BIND_ADDRESS', '127.0.0.1'))
     args = p.parse_args()
     if not args.execute:
-        print(json.dumps({'status': 'PLAN_ONLY', 'database': 'course_app_v2', 'port': '127.0.0.1:18095',
+        print(json.dumps({'status': 'PLAN_ONLY', 'database': 'course_app_v3', 'port': '127.0.0.1:18096',
                           'budget': 'VM8GiB/DB4GiB/API1GiB/Nginx128MiB', 'starts_services': False}))
         return
     require(sys.platform == 'linux' and os.geteuid() == 0, 'Prepare as Linux root to set private file ownership')
@@ -128,7 +128,7 @@ def main():
         require((out / 'runtime' / name).stat().st_mode & 0o777 == 0o644, 'Final MOT/seccomp data files must stay 0644')
     (out / 'compose.json').write_text(json.dumps(compose, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (out / 'instance.json').write_text(json.dumps({'instance': instance, 'images': images,
-        'status': 'PREPARED_NOT_STARTED', 'project': 'course34-v2', 'database': 'course_app_v2',
+        'status': 'PREPARED_NOT_STARTED', 'project': 'course34-v3', 'database': 'course_app_v3',
         'source_files': {str(x.relative_to(ROOT)): sha(x) for x in (ROOT / 'deploy').glob('*') if x.is_file()}}
         , ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'status': 'PREPARED_NOT_STARTED', 'output': str(out), 'instance': instance, 'credentials_printed': False}))

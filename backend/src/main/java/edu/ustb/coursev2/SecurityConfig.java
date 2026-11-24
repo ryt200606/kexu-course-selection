@@ -82,12 +82,14 @@ public class SecurityConfig {
         a ->
             a.requestMatchers("/api/v2/auth/csrf", "/api/v2/auth/login", "/api/v2/health", "/error")
                 .permitAll()
-                .requestMatchers("/api/v2/admin/**")
+                .requestMatchers("/api/v2/admin/**", "/api/v3/admin/**")
                 .hasRole("ADMIN")
-                .requestMatchers("/api/v2/student/**")
+                .requestMatchers("/api/v2/student/**", "/api/v3/student/**")
                 .hasRole("STUDENT")
                 .requestMatchers("/api/v2/teacher/**")
                 .hasAnyRole("TEACHER", "ADMIN")
+                .requestMatchers("/api/v3/teacher/**")
+                .hasRole("TEACHER")
                 .anyRequest()
                 .authenticated());
     http.exceptionHandling(

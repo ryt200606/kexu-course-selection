@@ -20,7 +20,19 @@ const activeRound = computed(() => rounds.value.find(round => isRoundOpen(round,
 let clock: ReturnType<typeof setInterval> | undefined
 onMounted(() => { clock = setInterval(() => { now.value = Date.now() }, 15000) })
 onBeforeUnmount(() => { if (clock) clearInterval(clock) })
-async function load() { await run(async () => { const suffix = query({ termId: workspace.termId }); const result = await Promise.all([api<Dashboard>('/dashboard' + suffix), api<Page<Round>>('/rounds' + suffix), api<Page<Notification>>('/notifications?size=3')]); dashboard.value = result[0]; rounds.value = result[1].items; notices.value = result[2].items; if (student.value) { const [s, e] = await Promise.all([api<StudentSummary>('/student/summary' + suffix), api<Page<Enrollment>>('/student/enrollments' + query({ termId: workspace.termId, size: 5 }))]); summary.value = s; enrollments.value = e.items } else { sections.value = (await api<Page<Section>>((teacher.value ? '/teacher/sections' : '/admin/sections') + query({ termId: workspace.termId, size: 5 }))).items } }) }
+async function load() {
+  const suffix = query({ termId: workspace.termId }), list = query({ termId: workspace.termId, size: 5 })
+  await run(() => Promise.all([
+    api<Dashboard>('/dashboard' + suffix), api<Page<Round>>('/rounds' + suffix), api<Page<Notification>>('/notifications?size=3'),
+    student.value ? api<StudentSummary>('/student/summary' + suffix) : undefined,
+    student.value ? api<Page<Enrollment>>('/student/enrollments' + list) : undefined,
+    student.value ? undefined : api<Page<Section>>((teacher.value ? '/teacher/sections' : '/admin/sections') + list),
+  ]), ([d, r, n, s, e, classes]) => {
+    dashboard.value = d; rounds.value = r.items; notices.value = n.items
+    if (s) summary.value = s
+    enrollments.value = e?.items || []; sections.value = classes?.items || []
+  })
+}
 watch(() => workspace.termId, load, { immediate: true })
 const links = computed(() => student.value ? [{ to: '/student/catalog', title: '寻找心仪课程', sub: '发现下一段学习旅程', icon: BookOpen }, { to: '/student/timetable', title: '查看每周课表', sub: '把时间安排得刚刚好', icon: CalendarDays }, { to: '/student/courses', title: '管理我的课程', sub: '选课、换班与候补进度', icon: Layers }, { to: '/student/grades', title: '回顾学习收获', sub: '已发布成绩与通过学分', icon: GraduationCap }] : teacher.value ? [{ to: '/teacher/sections', title: '我的授课班级', sub: '班级名单与教学安排', icon: Users }, { to: '/teacher/sections', title: '成绩工作台', sub: '草稿保存与成绩发布', icon: ClipboardList }, { to: '/notifications', title: '查看教学消息', sub: '及时了解教学动态', icon: Bell }, { to: '/profile', title: '我的教师档案', sub: '查看账户与身份信息', icon: GraduationCap }] : [{ to: '/admin/manage', title: '管理教学安排', sub: '课程、排课与选课轮次', icon: BookOpen }, { to: '/admin/enrollments', title: '选课与候补', sub: '查看名额与有序递补', icon: Users }, { to: '/admin/analytics', title: '阅读教学数据', sub: '从真实数据发现变化', icon: ChartColumn }, { to: '/admin/audit', title: '追溯操作记录', sub: '重要变更都有迹可循', icon: ShieldCheck }])
 </script>

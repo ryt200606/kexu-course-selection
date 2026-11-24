@@ -113,9 +113,8 @@ public class QueryService {
         new ArrayList<>(
             new LinkedHashSet<>(sections.stream().map(row -> row.get("offeringId")).toList()));
     String sectionPlaceholders = String.join(",", Collections.nCopies(sectionIds.size(), "?"));
-    String offeringPlaceholders = String.join(",", Collections.nCopies(offeringIds.size(), "?"));
-    Map<String, List<Map<String, Object>>> meetings = new HashMap<>(),
-        prerequisites = new HashMap<>();
+    Map<String, List<Map<String, Object>>> meetings = new HashMap<>();
+    var prerequisites = prerequisites(offeringIds);
     for (Map<String, Object> m :
         db.rows(
             "SELECT section_id,weekday,start_period,end_period,start_week,end_week,room FROM"
@@ -126,18 +125,6 @@ public class QueryService {
       String sid = str(m, "sectionId");
       m.remove("sectionId");
       meetings.computeIfAbsent(sid, x -> new ArrayList<>()).add(m);
-    }
-    for (Map<String, Object> p :
-        db.rows(
-            "SELECT p.offering_id,p.course_id,c.title AS course_title,p.min_grade FROM"
-                + " cs2_prerequisite p JOIN cs2_course c ON c.id=p.course_id WHERE p.offering_id IN"
-                + " ("
-                + offeringPlaceholders
-                + ") ORDER BY p.course_id",
-            offeringIds.toArray())) {
-      String oid = str(p, "offeringId");
-      p.remove("offeringId");
-      prerequisites.computeIfAbsent(oid, x -> new ArrayList<>()).add(p);
     }
     Map<String, Long> counts = new HashMap<>();
     for (Map<String, Object> c :
@@ -155,6 +142,25 @@ public class QueryService {
       row.put("waitingCount", counts.getOrDefault(id, 0L));
       row.put("promotionPending", num(row, "promotionPending") == 1);
     }
+  }
+
+  Map<String, List<Map<String, Object>>> prerequisites(List<?> offeringIds) {
+    Map<String, List<Map<String, Object>>> prerequisites = new HashMap<>();
+    if (offeringIds.isEmpty()) return prerequisites;
+    String offeringPlaceholders = String.join(",", Collections.nCopies(offeringIds.size(), "?"));
+    for (Map<String, Object> p :
+        db.rows(
+            "SELECT p.offering_id,p.course_id,c.title AS course_title,p.min_grade FROM"
+                + " cs2_prerequisite p JOIN cs2_course c ON c.id=p.course_id WHERE p.offering_id IN"
+                + " ("
+                + offeringPlaceholders
+                + ") ORDER BY p.course_id",
+            offeringIds.toArray())) {
+      String oid = str(p, "offeringId");
+      p.remove("offeringId");
+      prerequisites.computeIfAbsent(oid, x -> new ArrayList<>()).add(p);
+    }
+    return prerequisites;
   }
 
   public Api.Page enrollments(

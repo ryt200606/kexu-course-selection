@@ -9,7 +9,7 @@ RUN mvn ${MAVEN_ARGS}
 
 FROM ${JRE_IMAGE}
 WORKDIR /app
-COPY --from=build /build/target/course-selection-v2-2.0.0.jar /app/application.jar
+COPY --from=build /build/target/course-selection-v3-3.0.0.jar /app/application.jar
 COPY deploy/start-api.sh /app/start-api.sh
 USER 10001:10001
 EXPOSE 8080

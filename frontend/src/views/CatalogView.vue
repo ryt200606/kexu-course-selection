@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { Search, BookOpen, UserRound, MapPin, ArrowUpRight, LayoutGrid, List, ChevronLeft, ChevronRight, CheckCircle2, CircleAlert, Clock3, Info, LoaderCircle } from 'lucide-vue-next'
 import PageHeading from '../components/PageHeading.vue'
 import StatePanel from '../components/StatePanel.vue'
@@ -13,9 +14,11 @@ const workspace = useWorkspace(), { loading, error, run } = useAsync()
 const items = ref<Section[]>([]), total = ref(0), page = ref(0), size = 12, q = ref(''), department = ref(''), availableOnly = ref(false), mode = ref('grid')
 const detail = ref<Section>(), eligibility = ref<Eligibility>(), modalOpen = ref(false), detailLoading = ref(false), detailError = ref(''), busy = ref(false)
 const pages = computed(() => Math.max(1, Math.ceil(total.value / size)))
-async function load(reset = false) { if (reset) page.value = 0; await run(async () => { const result = await api<Page<Section>>('/catalog' + query({ termId: workspace.termId, q: q.value.trim(), department: department.value.trim(), availableOnly: availableOnly.value || undefined, page: page.value, size })); items.value = result.items; total.value = result.total }) }
+async function load(reset = false) { if (reset) page.value = 0; await run(() => api<Page<Section>>('/catalog' + query({ termId: workspace.termId, q: q.value.trim(), department: department.value.trim(), availableOnly: availableOnly.value || undefined, page: page.value, size })), result => { items.value = result.items; total.value = result.total }) }
 watch(() => workspace.termId, () => load(true), { immediate: true })
-async function open(section: Section) { modalOpen.value = true; detailLoading.value = true; detailError.value = ''; detail.value = undefined; eligibility.value = undefined; try { const result = await Promise.all([api<Section>('/sections/' + encode(section.id)), api<Eligibility>('/student/sections/' + encode(section.id) + '/eligibility')]); detail.value = result[0]; eligibility.value = result[1] } catch (e) { detailError.value = e instanceof Error ? e.message : '课程详情加载失败' } finally { detailLoading.value = false } }
+const route=useRoute()
+watch(()=>route.query.section,id=>{if(typeof id==='string'&&id)void open({id})},{immediate:true})
+async function open(section: Pick<Section,'id'>) { modalOpen.value = true; detailLoading.value = true; detailError.value = ''; detail.value = undefined; eligibility.value = undefined; try { const result = await Promise.all([api<Section>('/sections/' + encode(section.id)), api<Eligibility>('/student/sections/' + encode(section.id) + '/eligibility')]); detail.value = result[0]; eligibility.value = result[1] } catch (e) { detailError.value = e instanceof Error ? e.message : '课程详情加载失败' } finally { detailLoading.value = false } }
 async function enroll(waitlist = false) { if (!detail.value) return; busy.value = true; detailError.value = ''; try { await api(waitlist ? '/student/waitlist' : '/student/enrollments', { method: 'POST', body: { sectionId: detail.value.id }, idempotent: true }); toast(waitlist ? '已加入候补队列，递补结果会通过消息通知。' : '选课成功，课程已加入你的课表。'); modalOpen.value = false; await load() } catch (e) { detailError.value = e instanceof Error ? e.message : '操作失败'; try { eligibility.value = await api<Eligibility>('/student/sections/' + encode(detail.value.id) + '/eligibility') } catch { /* original error remains visible */ } } finally { busy.value = false } }
 function changePage(delta: number) { page.value += delta; void load() }
 </script>

@@ -12,7 +12,7 @@ interface Audit { id: string; actorId: string; actorName: string; action: string
 const workspace = useWorkspace(), { loading, error, run } = useAsync(), items = ref<Audit[]>([]), selected = ref<Audit>(), page = ref(0), total = ref(0), q = ref(''), size = 20
 const pages = computed(() => Math.max(1, Math.ceil(total.value / size)))
 const actionLabel = (action: string) => ({ ENROLL: '选课', WITHDRAW: '退课', SWAP: '换课', WAITLIST_JOIN: '申请候补', WAITLIST_CANCEL: '取消候补', PROMOTE: '候补递补', GRADE_SAVE: '保存成绩草稿', GRADE_PUBLISH: '正式发布成绩', GRADE_REOPEN: '开放成绩更正', GRADES_DRAFT: '保存成绩草稿', GRADES_PUBLISH: '正式发布成绩', GRADES_REOPEN: '开放成绩更正', CREATE: '新增教学记录', UPDATE: '修改教学记录', DELETE: '删除教学记录', LOGIN: '账户登录' }[action] || action)
-async function load(reset = false) { if (reset) page.value = 0; await run(async () => { const result = await api<Page<Audit>>('/admin/audit' + query({ q: q.value.trim(), termId: workspace.termId, page: page.value, size })); items.value = result.items; total.value = result.total }) }
+async function load(reset = false) { if (reset) page.value = 0; await run(() => api<Page<Audit>>('/admin/audit' + query({ q: q.value.trim(), termId: workspace.termId, page: page.value, size })), result => { items.value = result.items; total.value = result.total }) }
 function paginate(delta: number) { page.value += delta; void load() }
 watch(() => workspace.termId, () => load(true), { immediate: true })
 </script>
