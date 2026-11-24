@@ -1,0 +1,72 @@
+{
+  "term": "Z390a2512e9TERM",
+  "status": "PASS",
+  "measures": {
+    "CAPACITY": {
+      "sql": [
+        "4",
+        "17"
+      ],
+      "api": [
+        "4",
+        "17"
+      ],
+      "match": true
+    },
+    "GRADES": {
+      "sql": [
+        "0",
+        "1"
+      ],
+      "api": [
+        "0",
+        "1"
+      ],
+      "match": true
+    },
+    "PREFERENCE": {
+      "sql": [
+        "2",
+        "2"
+      ],
+      "api": [
+        "2",
+        "2"
+      ],
+      "match": true
+    },
+    "UNASSIGNED": {
+      "sql": [
+        "0",
+        "2"
+      ],
+      "api": [
+        "0",
+        "2"
+      ],
+      "match": true
+    },
+    "WAITLIST": {
+      "sql": [
+        "0",
+        "17"
+      ],
+      "api": [
+        "0",
+        "17"
+      ],
+      "match": true
+    },
+    "WAIT_TIME": {
+      "sql": [
+        "0.075303",
+        "1"
+      ],
+      "api": [
+        "0.075303",
+        "1"
+      ],
+      "match": true
+    }
+  }
+}

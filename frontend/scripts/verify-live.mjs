@@ -104,6 +104,9 @@ async function go(page, path, heading) {
   }
 }
 async function snap(page, file) {
+  const layout = await page.evaluate(() => ({viewport:innerWidth,document:document.documentElement.scrollWidth}))
+  assert(layout.document <= layout.viewport + 1, file + ' overflows: ' + JSON.stringify(layout))
+
   await page.screenshot({ path: resolve(output, file + '.png'), fullPage: true })
   evidence.screens.push(file + '.png')
 }

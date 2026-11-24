@@ -1,0 +1,228 @@
+{
+  "finishedUtc": "2026-11-24T11:46:42.263942827Z",
+  "seed": 20261124,
+  "solverBudgetSeconds": 20,
+  "stages": [
+    {
+      "choices": 1600,
+      "elapsedMs": 3006,
+      "greedy": {
+        "covered": 318,
+        "rankHits": [
+          51,
+          225,
+          91,
+          33,
+          23,
+          0,
+          0,
+          0
+        ],
+        "assigned": 423
+      },
+      "inputSha256": "5e9ebfdd75213ee946624f32348cc4dee54dd4cdaf029c5919855d13a32d5064",
+      "lexicographicStages": [
+        {
+          "name": "covered",
+          "status": "OPTIMAL",
+          "objective": 320,
+          "bestBound": 320.0,
+          "elapsedMs": 283
+        },
+        {
+          "name": "rank1",
+          "status": "OPTIMAL",
+          "objective": 52,
+          "bestBound": 52.0,
+          "elapsedMs": 156
+        },
+        {
+          "name": "rank2",
+          "status": "OPTIMAL",
+          "objective": 243,
+          "bestBound": 243.0,
+          "elapsedMs": 222
+        },
+        {
+          "name": "rank3",
+          "status": "OPTIMAL",
+          "objective": 104,
+          "bestBound": 104.0,
+          "elapsedMs": 139
+        },
+        {
+          "name": "rank4",
+          "status": "OPTIMAL",
+          "objective": 22,
+          "bestBound": 22.0,
+          "elapsedMs": 218
+        },
+        {
+          "name": "rank5",
+          "status": "OPTIMAL",
+          "objective": 2,
+          "bestBound": 2.0,
+          "elapsedMs": 248
+        },
+        {
+          "name": "rank6",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 145
+        },
+        {
+          "name": "rank7",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 147
+        },
+        {
+          "name": "rank8",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 200
+        },
+        {
+          "name": "seedTie",
+          "status": "OPTIMAL",
+          "objective": 384304,
+          "bestBound": 384304.0,
+          "elapsedMs": 229
+        }
+      ],
+      "metrics": {
+        "covered": 320,
+        "rankHits": [
+          52,
+          243,
+          104,
+          22,
+          2,
+          0,
+          0,
+          0
+        ],
+        "assigned": 423
+      },
+      "sections": 106,
+      "solverStatus": "OPTIMAL",
+      "students": 320
+    },
+    {
+      "choices": 3200,
+      "elapsedMs": 20235,
+      "greedy": {
+        "covered": 638,
+        "rankHits": [
+          100,
+          459,
+          163,
+          79,
+          39,
+          0,
+          0,
+          0
+        ],
+        "assigned": 840
+      },
+      "inputSha256": "da0a2c527ead77017f205424177cb2f2e8f80d88da8993e38ea90484be762cb4",
+      "lexicographicStages": [
+        {
+          "name": "covered",
+          "status": "OPTIMAL",
+          "objective": 640,
+          "bestBound": 640.0,
+          "elapsedMs": 932
+        },
+        {
+          "name": "rank1",
+          "status": "OPTIMAL",
+          "objective": 104,
+          "bestBound": 104.0,
+          "elapsedMs": 555
+        },
+        {
+          "name": "rank2",
+          "status": "OPTIMAL",
+          "objective": 498,
+          "bestBound": 498.0,
+          "elapsedMs": 771
+        },
+        {
+          "name": "rank3",
+          "status": "OPTIMAL",
+          "objective": 190,
+          "bestBound": 190.0,
+          "elapsedMs": 530
+        },
+        {
+          "name": "rank4",
+          "status": "OPTIMAL",
+          "objective": 48,
+          "bestBound": 48.0,
+          "elapsedMs": 821
+        },
+        {
+          "name": "rank5",
+          "status": "OPTIMAL",
+          "objective": 9,
+          "bestBound": 9.0,
+          "elapsedMs": 630
+        },
+        {
+          "name": "rank6",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 838
+        },
+        {
+          "name": "rank7",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 886
+        },
+        {
+          "name": "rank8",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 915
+        },
+        {
+          "name": "seedTie",
+          "status": "FEASIBLE",
+          "objective": 1517229,
+          "bestBound": 1533434.0,
+          "elapsedMs": 13112
+        }
+      ],
+      "metrics": {
+        "covered": 640,
+        "rankHits": [
+          104,
+          498,
+          190,
+          48,
+          9,
+          0,
+          0,
+          0
+        ],
+        "assigned": 849
+      },
+      "sections": 213,
+      "solverStatus": "FEASIBLE",
+      "students": 640
+    }
+  ],
+  "startedUtc": "2026-11-24T11:46:18.177614760Z",
+  "workerThreads": 1,
+  "image": "sha256:b428eb089ff43532937d957f882b7c58b25966d9dbf804bba242cac8626ae430",
+  "machine": "openEuler / 4 vCPU / 8 GiB, isolated 1-CPU worker",
+  "scope": "solver only"
+}

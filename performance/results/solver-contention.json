@@ -1,0 +1,250 @@
+{
+  "status": "MEASURED",
+  "clients": 8,
+  "profile": "uniform",
+  "mix": "3 reads / 1 alternating write",
+  "secondsPerRound": 6,
+  "pairs": 3,
+  "rounds": [
+    {
+      "pair": 1,
+      "condition": "alone",
+      "startedAt": "2026-11-24T11:45:14.993382+00:00",
+      "http": {
+        "endUtc": "2026-11-24T11:45:21.021776+00:00",
+        "seconds": 6.026,
+        "requests": 1065,
+        "reads": 798,
+        "writes": 267,
+        "requestsPerSecond": 176.74,
+        "read": {
+          "p50Ms": 32.249,
+          "p95Ms": 84.304,
+          "p99Ms": 146.442
+        },
+        "write": {
+          "p50Ms": 59.082,
+          "p95Ms": 134.833,
+          "p99Ms": 196.402
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "finishedAt": "2026-11-24T11:45:21.022147+00:00",
+      "mismatches": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 1,
+      "condition": "solver",
+      "startedAt": "2026-11-24T11:45:24.285220+00:00",
+      "http": {
+        "endUtc": "2026-11-24T11:45:30.329401+00:00",
+        "seconds": 6.041,
+        "requests": 626,
+        "reads": 469,
+        "writes": 157,
+        "requestsPerSecond": 103.63,
+        "read": {
+          "p50Ms": 51.208,
+          "p95Ms": 149.012,
+          "p99Ms": 220.174
+        },
+        "write": {
+          "p50Ms": 98.992,
+          "p95Ms": 257.865,
+          "p99Ms": 322.449
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "finishedAt": "2026-11-24T11:45:30.329533+00:00",
+      "solverOverlapSeconds": 4.432,
+      "solverRuns": 1,
+      "overlapFraction": 0.733,
+      "mismatches": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 2,
+      "condition": "solver",
+      "startedAt": "2026-11-24T11:45:34.759335+00:00",
+      "http": {
+        "endUtc": "2026-11-24T11:45:40.792596+00:00",
+        "seconds": 6.031,
+        "requests": 827,
+        "reads": 621,
+        "writes": 206,
+        "requestsPerSecond": 137.12,
+        "read": {
+          "p50Ms": 38.924,
+          "p95Ms": 120.973,
+          "p99Ms": 155.961
+        },
+        "write": {
+          "p50Ms": 79.105,
+          "p95Ms": 172.606,
+          "p99Ms": 235.519
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "finishedAt": "2026-11-24T11:45:40.792864+00:00",
+      "solverOverlapSeconds": 4.935,
+      "solverRuns": 1,
+      "overlapFraction": 0.818,
+      "mismatches": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 2,
+      "condition": "alone",
+      "startedAt": "2026-11-24T11:45:44.219563+00:00",
+      "http": {
+        "endUtc": "2026-11-24T11:45:50.257816+00:00",
+        "seconds": 6.035,
+        "requests": 1472,
+        "reads": 1102,
+        "writes": 370,
+        "requestsPerSecond": 243.91,
+        "read": {
+          "p50Ms": 23.773,
+          "p95Ms": 55.684,
+          "p99Ms": 79.629
+        },
+        "write": {
+          "p50Ms": 43.135,
+          "p95Ms": 94.496,
+          "p99Ms": 150.106
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "finishedAt": "2026-11-24T11:45:50.258146+00:00",
+      "mismatches": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 3,
+      "condition": "alone",
+      "startedAt": "2026-11-24T11:45:52.595896+00:00",
+      "http": {
+        "endUtc": "2026-11-24T11:45:58.620332+00:00",
+        "seconds": 6.021,
+        "requests": 1673,
+        "reads": 1255,
+        "writes": 418,
+        "requestsPerSecond": 277.87,
+        "read": {
+          "p50Ms": 21.908,
+          "p95Ms": 48.939,
+          "p99Ms": 78.555
+        },
+        "write": {
+          "p50Ms": 38.125,
+          "p95Ms": 78.979,
+          "p99Ms": 113.595
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "finishedAt": "2026-11-24T11:45:58.620677+00:00",
+      "mismatches": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    },
+    {
+      "pair": 3,
+      "condition": "solver",
+      "startedAt": "2026-11-24T11:46:01.524006+00:00",
+      "http": {
+        "endUtc": "2026-11-24T11:46:07.567458+00:00",
+        "seconds": 6.04,
+        "requests": 1126,
+        "reads": 844,
+        "writes": 282,
+        "requestsPerSecond": 186.42,
+        "read": {
+          "p50Ms": 29.1,
+          "p95Ms": 89.526,
+          "p99Ms": 138.248
+        },
+        "write": {
+          "p50Ms": 50.148,
+          "p95Ms": 135.942,
+          "p99Ms": 195.576
+        },
+        "technicalErrors": 0,
+        "businessRefusals": 0,
+        "outcomes": {},
+        "technicalErrorRate": 0.0
+      },
+      "finishedAt": "2026-11-24T11:46:07.567738+00:00",
+      "solverOverlapSeconds": 4.721,
+      "solverRuns": 2,
+      "overlapFraction": 0.781,
+      "mismatches": {
+        "seatErrors": 0,
+        "duplicateCourses": 0,
+        "creditErrors": 0
+      }
+    }
+  ],
+  "origin": "http://192.168.189.56:18096",
+  "database": "course_app_v3_perf_test",
+  "mode": "api-container-second-jvm",
+  "sharedProcess": false,
+  "image": "sha256:b428eb089ff43532937d957f882b7c58b25966d9dbf804bba242cac8626ae430",
+  "headroom": {
+    "containerBytes": 853397504,
+    "tmpFreeBytes": 124755968,
+    "guestAvailableBytes": 5358989312
+  },
+  "clock": {
+    "guestMinusHostSeconds": 0.07239341735839844,
+    "clockUncertaintySeconds": 0.06536149978637695
+  },
+  "finalReconciliation": {
+    "seatErrors": 0,
+    "duplicateCourses": 0,
+    "creditErrors": 0
+  },
+  "medianByCondition": {
+    "alone": {
+      "requestsPerSecond": 243.91,
+      "readP95Ms": 55.684,
+      "writeP95Ms": 94.496,
+      "technicalErrorRate": 0.0
+    },
+    "solver": {
+      "requestsPerSecond": 137.12,
+      "readP95Ms": 120.973,
+      "writeP95Ms": 172.606,
+      "technicalErrorRate": 0.0
+    }
+  }
+}

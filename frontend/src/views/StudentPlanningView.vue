@@ -330,16 +330,18 @@ async function act(action: 'save' | 'compare' | 'rank') {
                   : '本轮已结束，可查看个人结果。'
         }}
       </p>
-      <ul v-if="allocated.length" class="record-list">
+      <h3 v-if="phase === 'PUBLISHED'">本轮分配结果</h3>
+      <ul v-if="allocated.length" class="record-list allocation-list">
         <li v-for="a in allocated" :key="a.sectionId">获分配 {{ a.sectionId }} · 第 {{ a.rank }} 志愿</li>
       </ul>
-      <small v-if="commitment" class="hash-line">种子承诺 {{ commitment }}</small>
-      <ul v-if="missed.length" class="record-list">
+      <ul v-if="missed.length" class="record-list allocation-list">
         <li v-for="m in missed" :key="m.sectionId">
           <strong>第 {{ m.rank }} 志愿 · {{ m.sectionId }}</strong
           ><span>{{ m.explanation }}</span>
         </li>
       </ul>
+      <details v-if="commitment" class="workflow-details"><summary>查看轮次种子承诺</summary><small class="hash-line">{{ commitment }}</small></details>
+      <template v-if="acceptsRank">
       <label class="field"
         >志愿教学班<RemoteSelect
           v-model="sectionPick.preference"
@@ -392,13 +394,22 @@ async function act(action: 'save' | 'compare' | 'rank') {
           </span>
         </li>
       </ol>
-      <button class="button" :disabled="busy || !acceptsRank" @click="act('rank')">保存志愿顺序</button>
+      <button class="button" :disabled="busy" @click="act('rank')">保存志愿顺序</button>
+      </template>
+      <template v-else-if="ranked.length && phase !== 'PUBLISHED'">
+        <h3>已提交的志愿顺序</h3>
+        <ol class="record-list"><li v-for="(id,i) in ranked" :key="id">第 {{i+1}} 志愿 · {{sectionLabel(id)}}</li></ol>
+      </template>
     </template>
     <p v-else class="workflow-note"><CircleAlert :size="15" />当前学期没有可查看的轮次。</p>
   </article>
 </template>
 
 <style scoped>
+/* Published explanations may contain several constraints and long identifiers. */
+.allocation-list li { display: grid; grid-template-columns: minmax(0, 1fr); gap: .35rem; justify-items: start; }
+.allocation-list li > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.allocation-list li span { line-height: 1.6; }
 .curriculum-offerings { flex: 0 0 auto; text-align: right; }
 .curriculum-offerings a { display: inline-block; padding: .25rem 0; color: var(--green, #20573e); font-size: .85rem; text-decoration: underline; text-underline-offset: .16rem; }
 </style>

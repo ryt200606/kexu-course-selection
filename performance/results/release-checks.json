@@ -1,0 +1,551 @@
+{
+  "status": "PASS",
+  "sourceVersion": "3.0.0",
+  "artifactSha256": "1d205741d317499f6aabfac4fdcd984b04c0ed2b9b9b053fb1f6e6f92f908014",
+  "apiImageId": "sha256:c520d77243f09e25fd183d258109650832e271889d712f8dd0804a10d8f8a96d",
+  "nginxIndexSha256": "30733825d1256cc6d7f28e5353684dbcc9739db9c1552c190bc6a1e3d29f56cd",
+  "environment": "openEuler VM Linux x86_64 / openGauss 6.0.2",
+  "fourSessionStatesAndExactCatalog": {
+    "status": "PASS",
+    "fixtureTerm": "XCcc16c5a0TM",
+    "checks": {
+      "oldSubstring": [
+        "XCcc16c5a0C",
+        "XCcc16c5a0C2"
+      ],
+      "exact": [
+        "XCcc16c5a0C"
+      ],
+      "secondExact": [
+        "XCcc16c5a0C2"
+      ],
+      "combinedFilters": [
+        "XCcc16c5a0C"
+      ],
+      "oldNoFilter": [
+        "XCcc16c5a0C",
+        "XCcc16c5a0C2"
+      ],
+      "unknown": []
+    },
+    "roleMatrix": {
+      "anonymous": {
+        "/catalog": 401,
+        "/student/curriculum": 401,
+        "/teacher/sections": 401,
+        "/admin/curricula": 401
+      },
+      "student": {
+        "/catalog": 200,
+        "/student/curriculum": 200,
+        "/teacher/sections": 403,
+        "/admin/curricula": 403
+      },
+      "teacher": {
+        "/catalog": 200,
+        "/student/curriculum": 403,
+        "/teacher/sections": 200,
+        "/admin/curricula": 403
+      },
+      "admin": {
+        "/catalog": 200,
+        "/student/curriculum": 403,
+        "/teacher/sections": 200,
+        "/admin/curricula": 200
+      }
+    },
+    "httpRequestCount": 38
+  },
+  "threeRoleWorkflow": {
+    "normalHttpResponses": 81,
+    "intentionalLostResponseCount": 1,
+    "checks": [
+      "TWO_STORED_PLANS_ROUNDTRIP_AND_ZERO_SEAT_SIDE_EFFECT",
+      "REAL_CONNECTION_CLOSED_BEFORE_REPLY_COMMIT_FOUND_BEFORE_REPLAY",
+      "FOUR_STAGE_GRADE_REVIEW_59_TO_64_RECALCULATES_CREDITS_ONLY_AFTER_PUBLICATION",
+      "REAL_LINUX_CP_SAT_CONFLICT_REJECTED_THEN_FULL_SCHEDULE_PUBLISHED",
+      "COMMIT_OPEN_PREFERENCES_CLOSE_PREVIEW_PUBLISH_SEED_VERIFIED",
+      "THREE_SETTLEMENT_METRICS_RECONCILE_TO_DETAIL"
+    ],
+    "observations": {
+      "health": {
+        "status": "UP",
+        "database": "opengauss",
+        "serverVersion": "(openGauss 6.0.2 build 6285c0ef) compiled at 2025-07-15 16:58:31 commit 0 last mr 8059  on x86_64-unknown-linux-gnu, compiled by g++ (GCC) 10.3.0, 64-bit",
+        "schemaVersion": 3,
+        "sourceVersion": "3.0.0",
+        "schemaSha256": "7534389ceae21d39a50972d6f5650d18398d34725eabf27e316992c303e132db",
+        "surrogate": false
+      },
+      "termId": "Z385c56f249TERM",
+      "lostResponse": {
+        "upstream": {
+          "status": 201,
+          "requestId": "25f03611-6ed2-4d23-93b9-44fefefc1f71"
+        },
+        "downstreamAcknowledgementReceived": false,
+        "id": "e263e62f-cb42-4d47-9f33-14eef50ee91a",
+        "observedBeforeRetry": true,
+        "retrySameId": true
+      },
+      "gradeReview": {
+        "states": [
+          {
+            "id": "7fa80fa9-aab1-4905-a384-be14611ce835",
+            "state": "REQUESTED",
+            "version": 0
+          },
+          {
+            "id": "7fa80fa9-aab1-4905-a384-be14611ce835",
+            "state": "RECOMMENDED",
+            "version": 1
+          },
+          {
+            "id": "7fa80fa9-aab1-4905-a384-be14611ce835",
+            "state": "APPROVED",
+            "version": 2
+          },
+          {
+            "id": "7fa80fa9-aab1-4905-a384-be14611ce835",
+            "state": "PUBLISHED",
+            "version": 3
+          }
+        ],
+        "publishedGrades": [
+          59.0,
+          59.0,
+          64.0
+        ],
+        "afterEarnedCredits": 3
+      },
+      "schedule": {
+        "failedReason": "PARTIAL_SCHEDULE",
+        "publishedRun": "3ab37cd4-3d61-40fc-a784-2cff8327a534"
+      },
+      "settlement": {
+        "UNASSIGNED": {
+          "numerator": 0,
+          "denominator": 2,
+          "value": 0,
+          "total": 1
+        },
+        "PREFERENCE": {
+          "numerator": 2,
+          "denominator": 2,
+          "value": 100.0,
+          "total": 1
+        },
+        "WAIT_TIME": {
+          "numerator": 0.090217,
+          "denominator": 1,
+          "value": 0.09,
+          "total": 1
+        }
+      }
+    }
+  },
+  "backupRestore": {
+    "status": "PASS",
+    "tables": 34,
+    "totalRows": 2014,
+    "differentTables": [],
+    "schemaEqual": true,
+    "schemaDefinitionsSha256": "d513f7c26cc48bf390390c97b81d5f15ef8b13efbf0395b469304505d8a109b2",
+    "restoredSchemaDefinitionsSha256": "d513f7c26cc48bf390390c97b81d5f15ef8b13efbf0395b469304505d8a109b2",
+    "sourceDumpSha256": "5063c95fc295523b5016a467d203fdb879c61c1f817c0a84b29aef7a924d7f46",
+    "recoveredDumpSha256": "42e0041927924b4cd67b7c85bbf492f652f3f94062b3c3a6f1f4d29d6bdfcb9d",
+    "all34TablesOwnedBy": "course_v3_owner",
+    "timing": {
+      "events": [
+        {
+          "event": "DUMP_STARTED",
+          "utc": "2026-11-24T11:56:07.362252+00:00",
+          "monotonic": 3744.501572373
+        },
+        {
+          "event": "DUMP_COMPLETED",
+          "utc": "2026-11-24T11:56:09.199947+00:00",
+          "monotonic": 3746.339267422
+        },
+        {
+          "event": "CREATE_EMPTY_DATABASE_STARTED",
+          "utc": "2026-11-24T11:56:09.926079+00:00",
+          "monotonic": 3747.065400055
+        },
+        {
+          "event": "SQL_RESTORE_COMMITTED",
+          "utc": "2026-11-24T11:56:12.105344+00:00",
+          "monotonic": 3749.244664495
+        },
+        {
+          "event": "READBACK_VERIFIED",
+          "utc": "2026-11-24T11:56:14.112142+00:00",
+          "monotonic": 3751.251465476
+        },
+        {
+          "event": "AUTHENTICATED_BUSINESS_WRITE_READ_BACK",
+          "utc": "2026-11-24T11:56:31.168416+00:00",
+          "monotonic": 3768.307723897
+        }
+      ],
+      "snapshotWindowUtc": [
+        "2026-11-24T11:56:07.362252+00:00",
+        "2026-11-24T11:56:09.199947+00:00"
+      ],
+      "backupSeconds": 1.838,
+      "emptyToWritableVerifiedSeconds": 21.242,
+      "snapshotNote": "A transaction-consistent native dump taken in the stated interval; exact internal snapshot instant unavailable."
+    }
+  },
+  "beforeCommitKill": {
+    "status": "PASS",
+    "initial": "0|0|0|0",
+    "uncommittedAuditWriteObserved": true,
+    "clientAfterExit": "RemoteDisconnected",
+    "afterAbruptApiExit": "0|0|0|0",
+    "queueAfterRestart": "25|25|25|25|0",
+    "observedCommittedBatchSizes": [
+      20,
+      5
+    ],
+    "afterRetryAndRecovery": "1|1|6|1",
+    "afterAdditionalRestartUnchanged": true,
+    "schedulePrecommitExit": {
+      "runId": "78ac8529-a940-46c0-aab0-55839c710ea7",
+      "before": "PREVIEW|0|0",
+      "readByOtherSessionWhileBlocked": "PREVIEW|0|0",
+      "afterKill": "PREVIEW|0|0",
+      "auditCountAfterKill": 0,
+      "clientAfterExit": "RemoteDisconnected",
+      "retryAndReplay": "PUBLISHED|2|2",
+      "publishAuditAfterReplay": 1
+    }
+  },
+  "measurementColumns": {
+    "enrollment": [
+      "student section rows",
+      "section enrolled count",
+      "selected term credits incl promoted course",
+      "enroll audit count"
+    ],
+    "worker": [
+      "promoted rows",
+      "section enrolled count",
+      "promotion audit rows",
+      "promotion notifications",
+      "pending flag"
+    ],
+    "schedule": [
+      "run state",
+      "published sections",
+      "official meeting rows"
+    ]
+  },
+  "runtimeRights": {
+    "CREATE_TABLE": "42501",
+    "DROP_TABLE": "42501",
+    "DELETE_AUDIT": "42501",
+    "UPDATE_AUDIT": "42501",
+    "DELETE_MIGRATION": "42501",
+    "DELETE_GRADE_REVIEW": "42501"
+  },
+  "nativeTests": {
+    "database": "course_app_v3_test",
+    "engine": "openGauss 6.0.2",
+    "runtimeRole": "course_v3_app",
+    "environment": "openEuler VM Linux x86_64",
+    "tests": [
+      {
+        "class": "edu.ustb.coursev2.AcademicFlowTest",
+        "tests": 8,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "cases": [
+          {
+            "name": "onlyFinalTeacherPublicationChangesOfficialGradeAndFourStagesAreAudited",
+            "time": "0.251",
+            "outcome": "pass"
+          },
+          {
+            "name": "rejectedSuggestionLeavesOfficialGradeAndDrillCountsUnchanged",
+            "time": "0.094",
+            "outcome": "pass"
+          },
+          {
+            "name": "anotherStudentAndAnUnassignedTeacherCannotAccessTheReview",
+            "time": "0.069",
+            "outcome": "pass"
+          },
+          {
+            "name": "publishedCurriculumIsPinnedAndRetakesCountOnce",
+            "time": "0.137",
+            "outcome": "pass"
+          },
+          {
+            "name": "aNewerSourceGradePreventsPublishingAnOldRecommendation",
+            "time": "0.071",
+            "outcome": "pass"
+          },
+          {
+            "name": "pairSimulationFindsConflictsAcrossCandidatesAndFeasibleAlternative",
+            "time": "0.134",
+            "outcome": "pass"
+          },
+          {
+            "name": "savedPlansRejectStaleEditorsAndStayPrivate",
+            "time": "0.078",
+            "outcome": "pass"
+          },
+          {
+            "name": "pairSimulationChecksTotalCreditsAndCourseUniqueness",
+            "time": "0.096",
+            "outcome": "pass"
+          }
+        ]
+      },
+      {
+        "class": "edu.ustb.coursev2.BusinessContractTest",
+        "tests": 36,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "cases": [
+          {
+            "name": "concurrentLastSeatHasOneWinner",
+            "time": "3.622",
+            "outcome": "pass"
+          },
+          {
+            "name": "failureAfterWritesRollsBackEnrollmentCountersAuditAndIdempotency",
+            "time": "1.936",
+            "outcome": "pass"
+          },
+          {
+            "name": "passedCreditsCountRepeatedCourseOnlyOnceAcrossTerms",
+            "time": "1.473",
+            "outcome": "pass"
+          },
+          {
+            "name": "waitlistIsFifoAndWithdrawalPromotesHead",
+            "time": "1.469",
+            "outcome": "pass"
+          },
+          {
+            "name": "staleGradeBatchRollsBackEveryRow",
+            "time": "1.46",
+            "outcome": "pass"
+          },
+          {
+            "name": "persistentCursorPassesFailingHeadAndIndependentWorkersContinue",
+            "time": "1.744",
+            "outcome": "pass"
+          },
+          {
+            "name": "nativeDatabaseClockRejectsRequestThatExpiredWhileWaitingForSectionLock",
+            "time": "2.482",
+            "outcome": "pass"
+          },
+          {
+            "name": "teacherCannotReadOrWriteAnotherTeachersGrades",
+            "time": "1.374",
+            "outcome": "pass"
+          },
+          {
+            "name": "prerequisiteRequiresActualPreviouslyPublishedPassingGrade",
+            "time": "1.523",
+            "outcome": "pass"
+          },
+          {
+            "name": "offeringsLookupHasOnePrerequisiteQueryAtBothPageSizes",
+            "time": "1.959",
+            "outcome": "pass"
+          },
+          {
+            "name": "draftHiddenPublishVisibleCorrectionRetainsPreviousPublishedGrade",
+            "time": "1.805",
+            "outcome": "pass"
+          },
+          {
+            "name": "failedSwapPreservesOriginalAndSuccessfulSwapMovesCreditsAtomically",
+            "time": "1.616",
+            "outcome": "pass"
+          },
+          {
+            "name": "aggregateAuditChecksActualCountersAndFindsDeliberateDrift",
+            "time": "1.435",
+            "outcome": "pass"
+          },
+          {
+            "name": "resourceVersionAndSettlementUseTheSamePublishedSnapshot",
+            "time": "1.472",
+            "outcome": "pass"
+          },
+          {
+            "name": "duplicateEnrollmentDoesNotInflateAggregates",
+            "time": "2.282",
+            "outcome": "pass"
+          },
+          {
+            "name": "relationalViewsDriveTimetablePublishedTranscriptAndAdminSummary",
+            "time": "2.726",
+            "outcome": "pass"
+          },
+          {
+            "name": "sameStudentAcrossSectionsCannotExceedTermCreditLimit",
+            "time": "2.643",
+            "outcome": "pass"
+          },
+          {
+            "name": "oldRoundEntriesExpireEvenWhenNewRoundClassIsFull",
+            "time": "1.666",
+            "outcome": "pass"
+          },
+          {
+            "name": "timetableConflictUsesActualWeekAndPeriodOverlap",
+            "time": "1.947",
+            "outcome": "pass"
+          },
+          {
+            "name": "reverseConcurrentSwapsDoNotDeadlock",
+            "time": "2.523",
+            "outcome": "pass"
+          },
+          {
+            "name": "boundedQueuePersistsPendingAndResumesAfterTwentyCandidates",
+            "time": "3.16",
+            "outcome": "pass"
+          },
+          {
+            "name": "publishedOfferingAndTimetableRejectMutation",
+            "time": "1.814",
+            "outcome": "pass"
+          },
+          {
+            "name": "exactCourseLinkFiltersBeforeCountingAndPaging",
+            "time": "1.471",
+            "outcome": "pass"
+          },
+          {
+            "name": "concurrentSameKeyReplaysCommittedResult",
+            "time": "1.409",
+            "outcome": "pass"
+          },
+          {
+            "name": "searchSupportsCourseCodeAndAuditObjectWithoutSqlInterpolation",
+            "time": "1.425",
+            "outcome": "pass"
+          },
+          {
+            "name": "enrollmentIsAtomicAndSequentialIdempotencyReplaysOriginal",
+            "time": "1.335",
+            "outcome": "pass"
+          },
+          {
+            "name": "fractionalVersionsAreRejectedRatherThanTruncated",
+            "time": "1.35",
+            "outcome": "pass"
+          },
+          {
+            "name": "adminCannotArchiveActiveRoundOrChangeTermCreditPolicy",
+            "time": "1.365",
+            "outcome": "pass"
+          },
+          {
+            "name": "studentLookupFindsTheTenThousandAndFirstRecordOnPageOne",
+            "time": "1.466",
+            "outcome": "pass"
+          },
+          {
+            "name": "anonymousAndMissingCsrfDoNotWrite",
+            "time": "5.127",
+            "outcome": "pass"
+          },
+          {
+            "name": "httpPaginationHealthAndValidationNeverLeakPasswordHash",
+            "time": "2.071",
+            "outcome": "pass"
+          },
+          {
+            "name": "authenticationUsesCsrfSessionRotationAndRoleChecks",
+            "time": "2.523",
+            "outcome": "pass"
+          },
+          {
+            "name": "schemaChecksumMismatchIsRejectedWithoutRequiringDdlPrivileges",
+            "time": "1.513",
+            "outcome": "pass"
+          },
+          {
+            "name": "closedWindowRejectsAdmissionsAndLeavesNoIdempotencyClaim",
+            "time": "1.411",
+            "outcome": "pass"
+          },
+          {
+            "name": "sameClassIntersectionsAreRejectedButAdjacentWeeksAreAllowed",
+            "time": "1.579",
+            "outcome": "pass"
+          },
+          {
+            "name": "disabledAccountInvalidatesAnExistingSession",
+            "time": "1.45",
+            "outcome": "pass"
+          }
+        ]
+      },
+      {
+        "class": "edu.ustb.coursev2.PlanningContractTest",
+        "tests": 2,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "cases": [
+          {
+            "name": "sealPreviewStalenessPublishReplayAndOwnOnlyResults",
+            "time": "3.094",
+            "outcome": "pass"
+          },
+          {
+            "name": "conflictingBatchIsPreviewOnlyAndCompleteSchedulePublishesAtomically",
+            "time": "0.68",
+            "outcome": "pass"
+          }
+        ]
+      },
+      {
+        "class": "edu.ustb.coursev2.PlanningSolverTest",
+        "tests": 5,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "cases": [
+          {
+            "name": "maximumCoverageRearrangesFlexibleStudentAndPermitsMultipleCourses",
+            "time": "0.034",
+            "outcome": "pass"
+          },
+          {
+            "name": "coverageBeatsSeededGreedyWhenFlexibleStudentCanMove",
+            "time": "0.03",
+            "outcome": "pass"
+          },
+          {
+            "name": "matchesExhaustiveOracleWithCreditsCapacityTimesAndDuplicateCourse",
+            "time": "0.675",
+            "outcome": "pass"
+          },
+          {
+            "name": "weeklyTeacherGapsTakePriorityOverInputCandidateOrder",
+            "time": "0.01",
+            "outcome": "pass"
+          },
+          {
+            "name": "schedulingHonorsWeekRoomCapacityAvailabilityAndFixedSlots",
+            "time": "0.007",
+            "outcome": "pass"
+          }
+        ]
+      }
+    ]
+  }
+}

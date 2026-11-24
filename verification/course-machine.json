@@ -1,0 +1,145 @@
+{
+  "environment": "openEuler 22.03 LTS SP4 / 4 vCPU / 8 GiB, Nginx -> Spring Boot -> openGauss 6.0.2",
+  "version": "3.0.0",
+  "nativeBaselineImage": "sha256:b428eb089ff43532937d957f882b7c58b25966d9dbf804bba242cac8626ae430",
+  "schemaChecksum": "7534389ceae21d39a50972d6f5650d18398d34725eabf27e316992c303e132db",
+  "nativeIntegratedSuite": {
+    "edu.ustb.coursev2.AcademicFlowTest": {
+      "tests": 8,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "edu.ustb.coursev2.BusinessContractTest": {
+      "tests": 34,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "edu.ustb.coursev2.PlanningContractTest": {
+      "tests": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "edu.ustb.coursev2.PlanningSolverTest": {
+      "tests": 5,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "nativeReceiptSha256": "25adff3b3242d7d215a02655eafd9cb776863b75e65a2d6b0407a48df8748202",
+  "http": {
+    "receiptSha256": "229f9d6b9d9d0a7adc54057b4b54e89d0315372a80c6554aa0a445b5c2d9cefb",
+    "checks": [
+      "TWO_STORED_PLANS_ROUNDTRIP_AND_ZERO_SEAT_SIDE_EFFECT",
+      "REAL_CONNECTION_CLOSED_BEFORE_REPLY_COMMIT_FOUND_BEFORE_REPLAY",
+      "FOUR_STAGE_GRADE_REVIEW_59_TO_64_RECALCULATES_CREDITS_ONLY_AFTER_PUBLICATION",
+      "REAL_LINUX_CP_SAT_CONFLICT_REJECTED_THEN_FULL_SCHEDULE_PUBLISHED",
+      "COMMIT_OPEN_PREFERENCES_CLOSE_PREVIEW_PUBLISH_SEED_VERIFIED",
+      "THREE_SETTLEMENT_METRICS_RECONCILE_TO_DETAIL"
+    ],
+    "receivedRequests": 81,
+    "lostReply": {
+      "upstream": {
+        "status": 201,
+        "requestId": "a713f515-67c5-4021-975a-e524e52e57d4"
+      },
+      "downstreamAcknowledgementReceived": false,
+      "id": "b45e79e4-6334-41ca-8c5f-d7f47a57a103",
+      "observedBeforeRetry": true,
+      "retrySameId": true
+    },
+    "gradeReview": {
+      "states": [
+        {
+          "id": "a7877957-f3b7-4240-876a-6ec2ee82c77f",
+          "state": "REQUESTED",
+          "version": 0
+        },
+        {
+          "id": "a7877957-f3b7-4240-876a-6ec2ee82c77f",
+          "state": "RECOMMENDED",
+          "version": 1
+        },
+        {
+          "id": "a7877957-f3b7-4240-876a-6ec2ee82c77f",
+          "state": "APPROVED",
+          "version": 2
+        },
+        {
+          "id": "a7877957-f3b7-4240-876a-6ec2ee82c77f",
+          "state": "PUBLISHED",
+          "version": 3
+        }
+      ],
+      "publishedGrades": [
+        59.0,
+        59.0,
+        64.0
+      ],
+      "afterEarnedCredits": 3
+    },
+    "settlement": {
+      "UNASSIGNED": {
+        "numerator": 0,
+        "denominator": 2,
+        "value": 0,
+        "total": 1
+      },
+      "PREFERENCE": {
+        "numerator": 2,
+        "denominator": 2,
+        "value": 100.0,
+        "total": 1
+      },
+      "WAIT_TIME": {
+        "numerator": 0.075303,
+        "denominator": 1,
+        "value": 0.08,
+        "total": 1
+      }
+    }
+  },
+  "headlessLiveBrowser": {
+    "apiImage": "sha256:c520d77243f09e25fd183d258109650832e271889d712f8dd0804a10d8f8a96d",
+    "receiptSha256": "02b87e4753b98fb77feabbeb44c9579a5c0e7fae192d8ebac1506c25a9ac8d43",
+    "browser": "149.0.7827.55",
+    "checks": [
+      "authenticated user via real browser registrar",
+      "seed committed before preference round opened",
+      "authenticated user via real browser student",
+      "authenticated user via real browser teacher",
+      "curriculum to exact term/course offerings and live eligibility; unoffered course is empty",
+      "real saved drafts and checked eligibility",
+      "student enrolled via section deep link",
+      "teacher saved and published 59.99",
+      "approval preserves original public grade",
+      "published correction grants real curriculum credits",
+      "real browser scheduled and published versioned room/teacher assignment",
+      "real allocation committed before opening and published after closure",
+      "database consistency readback"
+    ],
+    "fixture": "WBA412D677",
+    "screens": [
+      "student-real-plans.png",
+      "teacher-real-review.png",
+      "admin-real-review.png",
+      "student-real-earned-credits.png",
+      "admin-real-analytics.png",
+      "admin-real-solver-preview.png",
+      "admin-real-allocation-preview.png",
+      "student-real-allocation.png"
+    ]
+  },
+  "earlierLogicalRestore": {
+    "status": "PASS",
+    "tables": 34,
+    "totalRows": 1554,
+    "schemaDefinitionsSha256": "77191ac81a5f198103d42351f1429236caf046ffe29f78dbd4ce7056ecafb3c3",
+    "sourceDumpSha256": "e4234f4072b9018e1e1c87e8ba3e37e8ac999f35145880021743ff8e04b32ffe",
+    "recoveredDumpSha256": "95b1c0e66a155bb8796ee2cc95e7a97af50346118a94969465ae7bfb18630f13"
+  },
+  "finalRecoveryEvidence": "../performance/results/recovery-and-runtime.json"
+}

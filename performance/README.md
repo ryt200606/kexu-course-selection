@@ -40,3 +40,35 @@ python3 performance/http_capacity.py --profile uniform --origin http://127.0.0.1
 这是指定查询在课程 openGauss 环境中测得的计划执行时间。无索引时需要扫描更多记录；重建后计划包含 Bitmap Index Scan。这些数据用于解释本查询的优化效果。
 
 原始 SQL 保存在 [measure.sql](measure.sql)。该历史样本仅描述一个班级名单查询。
+
+## 学期结算的独立对账
+
+在同一冻结学期取数。公开的 SQL 直接按原始选课、候补、志愿和分配明细计算席位利用、候补、成绩、未获课、志愿命中和转正等待六项指标。每项对照 API 分子、分母。使用具备只读权限的本地数据库连接和只在本机保存的教务凭据。
+
+```sh
+gsql -XqAt -v ON_ERROR_STOP=1 -v term_id=YOUR_TERM -d course_app_v3 -f performance/semester-metrics.sql > sql-measures.txt
+python3 scripts/check_semester_metrics.py --origin http://127.0.0.1:18096 --term YOUR_TERM --sql-output sql-measures.txt --admin-password-file /private/admin-password --output checked-measures.json
+```
+
+## 志愿求解的规模边界
+
+先用 `PlanningBenchmark` 运行三档志愿和三档排课。独立的扩容实验继续按 320、640、1280、2560、5120 名学生翻倍，每人五项志愿，使用同一正式求解器和 20 秒分阶段优化预算。在首次未证明全部优先级最优时停止。每档保留输入摘要、可行解、各阶段最优界、状态和同输入贪心。测量只计求解，不计数据库发布。下面的驱动依赖课程服务的实际 JAR，可在 Linux 用 JDK 17 编译。
+
+```sh
+project=$PWD
+jarfile=$project/backend/target/course-selection-v3-3.0.0.jar
+work=$(mktemp -d)
+(cd "$work" && jar xf "$jarfile" BOOT-INF/classes BOOT-INF/lib)
+mkdir -p "$work/driver"
+javac --release 17 -encoding UTF-8 -cp "$work/BOOT-INF/classes:$work/BOOT-INF/lib/*" -d "$work/driver" performance/java/AllocationCeiling.java
+jar --create --file "$work/ceiling.jar" -C "$work/driver" .
+java -XX:ActiveProcessorCount=1 -Xmx300m -Dloader.path="$work/ceiling.jar" -Dloader.main=edu.ustb.coursev2.AllocationCeiling -cp "$jarfile" org.springframework.boot.loader.launch.PropertiesLauncher "$work/result.json"
+```
+
+### 同时求解时的在线延迟
+
+将三容器 API 指向 `course_app_v3_perf_test`。测试使用八个相同的合成账号，比较仅有在线业务、同时执行求解两种情况，三对顺序为 AB、BA、AB。每个正式窗口有六秒客户端发包时间，另记录与求解的实际重叠秒数。课程机实测采用与 API 共用资源配额的第二个 JVM。公开驱动可在 Docker 主机本地运行，或用已配置的 SSH 主机和 Host-only 地址从外部发压。
+
+```sh
+python3 performance/solver_contention.py --execute --seconds 6 --pairs 3 --origin http://127.0.0.1:18096 --password-file /private/perf-password --output-dir ./new-solver-run
+```

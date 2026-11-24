@@ -65,3 +65,11 @@ course_compose up -d --wait api frontend
 ```
 
 服务启动只核对原始 DDL 与升级摘要。迁移持有版本记录锁，在同一事务内建立增量表、教学种子、版本戳和最低运行权限；重复迁移须得到同一摘要。恢复演练另用 `course_app_v3_restore`。核对正式成绩、人数、学分、审计与通知，再用三个角色实际登录办理业务。若升级验证失败，保留新卷供检查，使用 V2 固定提交、原 Compose 和原卷恢复业务。已在 V3 发生的业务须以 V3 备份恢复，切回旧卷不会自动带回这些新增记录。
+
+还原完成后，使用相同版本的 `gs_dump -Fp -O -x -f` 将恢复库导出为第二份 SQL。执行以下命令可以离线比较每张表的全部行、重复行数量及 DDL，并得到可公开的核验摘要。原始 SQL 含演示账号密码哈希，保存在权限受限的目录。
+
+```sh
+python3 scripts/compare_gauss_dumps.py /private/source.sql /private/restored.sql --output restore-summary.json
+```
+
+脚本对每行计算摘要，再排序汇总，因此物理行顺序不影响结果。openGauss 重导出后，枚举型 CHECK 可将整个文字数组的类型转换写成逐元素转换；脚本只归一化这一等价形式，保留字段名、约束操作符及每个允许值。

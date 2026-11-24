@@ -285,7 +285,7 @@ export async function previewData(path: string, options: ApiOptions): Promise<un
       if(method!=='GET')fail('已结算轮次不可修改')
       return {roundId:round+'-CLOSED',phase:'PUBLISHED',version:1,sectionIds:['DS-B','OS-A'],
         seedCommitment:'此记录为历史静态样例',assignments:[{sectionId:'DS-B',rank:1}],
-        unassigned:[{sectionId:'OS-A',rank:2,explanation:'样例：本班席位已满'}]}
+        unassigned:[{sectionId:'OS-A',rank:2,explanation:'样例：本班席位已满。当前课表与该教学班的上课节次重叠，无法取得该席位。'}]}
     }
     if (method === 'PUT') {
       if (body.version !== data.preferenceVersion) fail('志愿版本冲突')

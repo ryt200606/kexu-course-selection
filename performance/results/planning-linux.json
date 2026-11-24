@@ -1,0 +1,460 @@
+{
+  "allocation": [
+    {
+      "choices": 120,
+      "elapsedMs": 565,
+      "greedy": {
+        "covered": 24,
+        "rankHits": [
+          8,
+          20,
+          7,
+          5,
+          4,
+          0,
+          0,
+          0
+        ],
+        "assigned": 44
+      },
+      "metrics": {
+        "covered": 24,
+        "rankHits": [
+          8,
+          23,
+          8,
+          5,
+          3,
+          0,
+          0,
+          0
+        ],
+        "assigned": 47
+      },
+      "sections": 12,
+      "sha256": "ca8ecb7240e371415d761a78f647315eea51c2e58ddca364074b5926e26894ee",
+      "solverStatus": "OPTIMAL",
+      "stages": [
+        {
+          "name": "covered",
+          "status": "OPTIMAL",
+          "objective": 24,
+          "bestBound": 24.0,
+          "elapsedMs": 95
+        },
+        {
+          "name": "rank1",
+          "status": "OPTIMAL",
+          "objective": 8,
+          "bestBound": 8.0,
+          "elapsedMs": 9
+        },
+        {
+          "name": "rank2",
+          "status": "OPTIMAL",
+          "objective": 23,
+          "bestBound": 23.0,
+          "elapsedMs": 9
+        },
+        {
+          "name": "rank3",
+          "status": "OPTIMAL",
+          "objective": 8,
+          "bestBound": 8.0,
+          "elapsedMs": 7
+        },
+        {
+          "name": "rank4",
+          "status": "OPTIMAL",
+          "objective": 5,
+          "bestBound": 5.0,
+          "elapsedMs": 5
+        },
+        {
+          "name": "rank5",
+          "status": "OPTIMAL",
+          "objective": 3,
+          "bestBound": 3.0,
+          "elapsedMs": 8
+        },
+        {
+          "name": "rank6",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 8
+        },
+        {
+          "name": "rank7",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 8
+        },
+        {
+          "name": "rank8",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 9
+        },
+        {
+          "name": "seedTie",
+          "status": "OPTIMAL",
+          "objective": 2579,
+          "bestBound": 2579.0,
+          "elapsedMs": 10
+        }
+      ],
+      "students": 24
+    },
+    {
+      "choices": 480,
+      "elapsedMs": 542,
+      "greedy": {
+        "covered": 96,
+        "rankHits": [
+          16,
+          73,
+          14,
+          17,
+          7,
+          0,
+          0,
+          0
+        ],
+        "assigned": 127
+      },
+      "metrics": {
+        "covered": 96,
+        "rankHits": [
+          16,
+          77,
+          23,
+          11,
+          1,
+          0,
+          0,
+          0
+        ],
+        "assigned": 128
+      },
+      "sections": 32,
+      "sha256": "59c651af331ba938ce4fdea70e9163d8e9c5f0bf40513cfbb1fbed1db935810d",
+      "solverStatus": "OPTIMAL",
+      "stages": [
+        {
+          "name": "covered",
+          "status": "OPTIMAL",
+          "objective": 96,
+          "bestBound": 96.0,
+          "elapsedMs": 63
+        },
+        {
+          "name": "rank1",
+          "status": "OPTIMAL",
+          "objective": 16,
+          "bestBound": 16.0,
+          "elapsedMs": 32
+        },
+        {
+          "name": "rank2",
+          "status": "OPTIMAL",
+          "objective": 77,
+          "bestBound": 77.0,
+          "elapsedMs": 33
+        },
+        {
+          "name": "rank3",
+          "status": "OPTIMAL",
+          "objective": 23,
+          "bestBound": 23.0,
+          "elapsedMs": 28
+        },
+        {
+          "name": "rank4",
+          "status": "OPTIMAL",
+          "objective": 11,
+          "bestBound": 11.0,
+          "elapsedMs": 31
+        },
+        {
+          "name": "rank5",
+          "status": "OPTIMAL",
+          "objective": 1,
+          "bestBound": 1.0,
+          "elapsedMs": 37
+        },
+        {
+          "name": "rank6",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 43
+        },
+        {
+          "name": "rank7",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 46
+        },
+        {
+          "name": "rank8",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 41
+        },
+        {
+          "name": "seedTie",
+          "status": "OPTIMAL",
+          "objective": 36265,
+          "bestBound": 36265.0,
+          "elapsedMs": 84
+        }
+      ],
+      "students": 96
+    },
+    {
+      "choices": 1600,
+      "elapsedMs": 1674,
+      "greedy": {
+        "covered": 318,
+        "rankHits": [
+          51,
+          225,
+          91,
+          33,
+          23,
+          0,
+          0,
+          0
+        ],
+        "assigned": 423
+      },
+      "metrics": {
+        "covered": 320,
+        "rankHits": [
+          52,
+          243,
+          104,
+          22,
+          2,
+          0,
+          0,
+          0
+        ],
+        "assigned": 423
+      },
+      "sections": 106,
+      "sha256": "5e9ebfdd75213ee946624f32348cc4dee54dd4cdaf029c5919855d13a32d5064",
+      "solverStatus": "OPTIMAL",
+      "stages": [
+        {
+          "name": "covered",
+          "status": "OPTIMAL",
+          "objective": 320,
+          "bestBound": 320.0,
+          "elapsedMs": 158
+        },
+        {
+          "name": "rank1",
+          "status": "OPTIMAL",
+          "objective": 52,
+          "bestBound": 52.0,
+          "elapsedMs": 133
+        },
+        {
+          "name": "rank2",
+          "status": "OPTIMAL",
+          "objective": 243,
+          "bestBound": 243.0,
+          "elapsedMs": 173
+        },
+        {
+          "name": "rank3",
+          "status": "OPTIMAL",
+          "objective": 104,
+          "bestBound": 104.0,
+          "elapsedMs": 97
+        },
+        {
+          "name": "rank4",
+          "status": "OPTIMAL",
+          "objective": 22,
+          "bestBound": 22.0,
+          "elapsedMs": 144
+        },
+        {
+          "name": "rank5",
+          "status": "OPTIMAL",
+          "objective": 2,
+          "bestBound": 2.0,
+          "elapsedMs": 171
+        },
+        {
+          "name": "rank6",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 152
+        },
+        {
+          "name": "rank7",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 147
+        },
+        {
+          "name": "rank8",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": -0.0,
+          "elapsedMs": 116
+        },
+        {
+          "name": "seedTie",
+          "status": "OPTIMAL",
+          "objective": 384304,
+          "bestBound": 384304.0,
+          "elapsedMs": 217
+        }
+      ],
+      "students": 320
+    }
+  ],
+  "finishedAt": "2026-11-24T11:45:10.521870007Z",
+  "format": "course-planning-benchmark-v1",
+  "java": "17.0.20.1+1",
+  "nativeLoadMs": 587,
+  "ortools": "9.14.6206",
+  "os": "Linux 5.10.0-216.0.0.115.oe2203sp4.x86_64 amd64",
+  "processorsVisible": 1,
+  "scheduling": [
+    {
+      "conflicts": {
+        "candidatePairs": 594,
+        "density": 0.006734006734006734,
+        "incompatiblePairs": 4
+      },
+      "elapsedMs": 43,
+      "greedyScheduled": 12,
+      "greedyTeacherGapPeriods": 0,
+      "optionsPerSection": 3,
+      "rooms": 8,
+      "scheduled": 12,
+      "sections": 12,
+      "sha256": "7e9e720b70e99d72f0cacbdcdb4aad0b2efd069fb0645635cc3929ad7d276d91",
+      "solverStatus": "OPTIMAL",
+      "stages": [
+        {
+          "name": "scheduled",
+          "status": "OPTIMAL",
+          "objective": 12,
+          "bestBound": 12.0,
+          "elapsedMs": 3
+        },
+        {
+          "name": "teacherGapPeriods",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": 0.0,
+          "elapsedMs": 2
+        },
+        {
+          "name": "slotPreferenceThenUnusedSeats",
+          "status": "OPTIMAL",
+          "objective": 100,
+          "bestBound": 100.0,
+          "elapsedMs": 2
+        }
+      ],
+      "teacherGapPeriods": 0
+    },
+    {
+      "conflicts": {
+        "candidatePairs": 10875,
+        "density": 0.024919540229885056,
+        "incompatiblePairs": 271
+      },
+      "elapsedMs": 105,
+      "greedyScheduled": 29,
+      "greedyTeacherGapPeriods": 224,
+      "optionsPerSection": 5,
+      "rooms": 5,
+      "scheduled": 30,
+      "sections": 30,
+      "sha256": "763d9b9c15e772f8fb8e37b8511231c0d5009d04897e34a4e903d0ea6673acb8",
+      "solverStatus": "OPTIMAL",
+      "stages": [
+        {
+          "name": "scheduled",
+          "status": "OPTIMAL",
+          "objective": 30,
+          "bestBound": 30.0,
+          "elapsedMs": 16
+        },
+        {
+          "name": "teacherGapPeriods",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": 0.0,
+          "elapsedMs": 49
+        },
+        {
+          "name": "slotPreferenceThenUnusedSeats",
+          "status": "OPTIMAL",
+          "objective": 4200464,
+          "bestBound": 4200464.0,
+          "elapsedMs": 25
+        }
+      ],
+      "teacherGapPeriods": 0
+    },
+    {
+      "conflicts": {
+        "candidatePairs": 72765,
+        "density": 0.08102796674225246,
+        "incompatiblePairs": 5896
+      },
+      "elapsedMs": 190,
+      "greedyScheduled": 18,
+      "greedyTeacherGapPeriods": 64,
+      "optionsPerSection": 7,
+      "rooms": 3,
+      "scheduled": 18,
+      "sections": 55,
+      "sha256": "13b5b0e5a4a4294f357bb7966d763640b0f48214505853dc866b12c99ce8e856",
+      "solverStatus": "OPTIMAL",
+      "stages": [
+        {
+          "name": "scheduled",
+          "status": "OPTIMAL",
+          "objective": 18,
+          "bestBound": 18.0,
+          "elapsedMs": 36
+        },
+        {
+          "name": "teacherGapPeriods",
+          "status": "OPTIMAL",
+          "objective": 0,
+          "bestBound": 0.0,
+          "elapsedMs": 59
+        },
+        {
+          "name": "slotPreferenceThenUnusedSeats",
+          "status": "OPTIMAL",
+          "objective": 550271,
+          "bestBound": 550271.0,
+          "elapsedMs": 75
+        }
+      ],
+      "teacherGapPeriods": 0
+    }
+  ],
+  "seed": 20261124,
+  "startedAt": "2026-11-24T11:45:06.744099511Z",
+  "threads": 1
+}
