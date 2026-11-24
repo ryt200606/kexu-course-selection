@@ -37,6 +37,8 @@ npm run test:preview
 
 `test:preview` 启动临时静态服务器，检查 1440px 桌面和 390px 移动视口。设置 `COURSE_BROWSER_EVIDENCE` 可保存分角色截图和 JSON 收据；可选 `COURSE_BROWSER_EXECUTABLE` 指定本地 Chromium 可执行文件。
 
+网站完成部署后，使用同一提交重新执行 `npm run build:preview` 和 `npm run test:pages`。该命令在全新匿名 Chromium 会话中访问公开域名，切换三种角色、试排方案、提交虚构成绩复核意见，并逐项比较首页、入口脚本和全部已发布测量 JSON 的 SHA-256。
+
 完整部署的浏览器用例通过真实登录和 API 创建带唯一前缀的演示学期、课程和师生账号，核验两套试排、正式选课、成绩发布、更正及学分回读。应在专用验收数据库执行；样本资料保留以便排查和核验。设置以下环境变量后运行 `npm run test:live`。
 
 |变量|用途|

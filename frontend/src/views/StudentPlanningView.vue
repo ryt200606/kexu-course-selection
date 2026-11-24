@@ -221,7 +221,11 @@ async function act(action: 'save' | 'compare' | 'rank') {
           <li v-for="c in module.courses" :key="c.courseId">
             <span
               >{{ c.title }}<small>{{ c.courseId }}</small></span
-            ><span>{{ c.passed ? '已通过 · 计入 ' + c.credits + ' 学分' : '待修读' }}</span>
+            ><span v-if="c.passed">已通过 · 计入 {{ c.credits }} 学分</span>
+            <div v-else class="curriculum-offerings"><small>待修读</small>
+              <RouterLink v-if="workspace.termId" :to="{path:'/student/catalog',query:{courseId:c.courseId,termId:workspace.termId}}"
+                :aria-label="c.title+'：查看本学期教学班'">查看本学期教学班 →</RouterLink>
+            </div>
           </li>
         </ul>
       </article>
@@ -393,3 +397,8 @@ async function act(action: 'save' | 'compare' | 'rank') {
     <p v-else class="workflow-note"><CircleAlert :size="15" />当前学期没有可查看的轮次。</p>
   </article>
 </template>
+
+<style scoped>
+.curriculum-offerings { flex: 0 0 auto; text-align: right; }
+.curriculum-offerings a { display: inline-block; padding: .25rem 0; color: var(--green, #20573e); font-size: .85rem; text-decoration: underline; text-underline-offset: .16rem; }
+</style>

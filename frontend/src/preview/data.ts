@@ -184,12 +184,19 @@ export async function previewData(path: string, options: ApiOptions): Promise<un
           withdrawalEndsAt: new Date(Date.now() + 172800000).toISOString(),
           creditLimit: 24,
         },
+        {
+          id: round+'-CLOSED',termId:term,state:'CLOSED',name:'已结算志愿轮',
+          startsAt:new Date(Date.now()-6*86400000).toISOString(),endsAt:new Date(Date.now()-5*86400000).toISOString(),
+          withdrawalEndsAt:new Date(Date.now()-4*86400000).toISOString(),creditLimit:24
+        },
       ],
       url
     )
   if (p === '/catalog' || p === '/admin/sections')
     return page(
-      sections.filter((x) => [x.courseTitle, x.id, x.teacherName].join(' ').toLowerCase().includes(q)),
+      sections.filter((x) =>
+        (!url.searchParams.get('courseId') || x.courseId === url.searchParams.get('courseId')) &&
+        [x.courseId, x.courseTitle, x.id, x.teacherName].join(' ').toLowerCase().includes(q)),
       url
     )
   if (p === '/admin/students' || p === '/admin/courses' || p === '/admin/teachers')
@@ -253,7 +260,8 @@ export async function previewData(path: string, options: ApiOptions): Promise<un
           requiredCredits: 3,
           earnedCredits: 0,
           remainingCredits: 3,
-          courses: [{ courseId: 'DS', title: '数据结构', passed: false, credits: 3 }],
+          courses: [{ courseId: 'DS', title: '数据结构', passed: false, credits: 3 },
+            { courseId: 'ALG', title: '算法设计', passed: false, credits: 3 }],
         },
       ],
     }
@@ -273,6 +281,12 @@ export async function previewData(path: string, options: ApiOptions): Promise<un
   if (p === '/student/plans/compare')
     return { left: compare(body.left as string[]), right: compare(body.right as string[]) }
   if (p.startsWith('/student/preferences/')) {
+    if(p.endsWith('-CLOSED')){
+      if(method!=='GET')fail('已结算轮次不可修改')
+      return {roundId:round+'-CLOSED',phase:'PUBLISHED',version:1,sectionIds:['DS-B','OS-A'],
+        seedCommitment:'此记录为历史静态样例',assignments:[{sectionId:'DS-B',rank:1}],
+        unassigned:[{sectionId:'OS-A',rank:2,explanation:'样例：本班席位已满'}]}
+    }
     if (method === 'PUT') {
       if (body.version !== data.preferenceVersion) fail('志愿版本冲突')
       data.ranked = [...(body.sectionIds as string[])]

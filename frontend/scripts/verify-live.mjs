@@ -38,14 +38,16 @@ const browser = await chromium.launch({
   ...(process.env.COURSE_BROWSER_EXECUTABLE ? { executablePath: process.env.COURSE_BROWSER_EXECUTABLE } : {}),
 })
 evidence.browser = browser.version()
-const errors = [], opened=[]
+const errors = [],
+  opened = []
 async function login(username, secret, size) {
   const context = await browser.newContext({
     baseURL: target.origin,
     viewport: size,
     reducedMotion: 'reduce',
   })
-  const page = await context.newPage(); opened.push(page)
+  const page = await context.newPage()
+  opened.push(page)
   page.setDefaultTimeout(15000)
   page.on('pageerror', (e) => errors.push(e.message))
   page.on('response', (r) => {
@@ -66,7 +68,7 @@ async function login(username, secret, size) {
     throw Error('Expected a real openGauss deployment')
   evidence.checks.push(
     'authenticated user via real browser ' +
-      (username === 'admin' ? 'registrar' : username.endsWith('T') ? 'teacher' : 'student')
+      (username === 'admin' ? 'registrar' : username.endsWith('T') ? 'teacher' : 'student'),
   )
   return { context, page }
 }
@@ -131,8 +133,14 @@ try {
     }
   const roundDraft = await post('rounds', roundSpec)
   await request(a, 3, '/admin/planning/rounds/' + id + 'R/commit', 'POST')
-  const directSpec={...roundSpec,id:id+'FREE',name:'普通选课轮',state:'OPEN',startsAt:new Date(now-3600000).toISOString()}
-  const directRound=await post('rounds',directSpec)
+  const directSpec = {
+    ...roundSpec,
+    id: id + 'FREE',
+    name: '普通选课轮',
+    state: 'OPEN',
+    startsAt: new Date(now - 3600000).toISOString(),
+  }
+  const directRound = await post('rounds', directSpec)
   evidence.checks.push('seed committed before preference round opened')
   await post('teachers', { id: teacher, name: '流程验收任课教师', department: '虚构教学系' })
   await post('students', { id: student, name: '流程验收学生', department: '虚构教学系', state: 'ACTIVE' })
@@ -205,10 +213,17 @@ try {
     state: 'DRAFT',
     meetings: [],
   })
+  const unscheduledCourse = id + 'C3'
+  await post('courses', {
+    id: unscheduledCourse,
+    title: '下一学期专题',
+    department: '虚构教学系',
+    description: '本学期不设班的验收样例',
+  })
   const curr = await request(a, 3, '/admin/curricula', 'POST', {
     cohort: id,
     name: '浏览器验证培养方案',
-    modules: [{ name: '事务核心模块', requiredCredits: 3, courseIds: [course] }],
+    modules: [{ name: '事务核心模块', requiredCredits: 3, courseIds: [course, unscheduledCourse] }],
   })
   await request(a, 3, '/admin/curricula/' + curr.id + '/assign', 'POST', { studentIds: [student] })
   if (Date.now() < opens) await new Promise((resolve) => setTimeout(resolve, opens - Date.now() + 100))
@@ -219,6 +234,20 @@ try {
     reg = admin.page
   await go(s, '/student/planning', '学业规划')
   await s.getByRole('heading', { name: '浏览器验证培养方案' }).waitFor()
+  await s.getByRole('link', { name: '事务与审计实践：查看本学期教学班', exact: true }).click()
+  await s.locator('.course-card').first().waitFor()
+  assert.equal(await s.locator('.course-card').count(), 2)
+  assert.deepEqual(await s.locator('.course-card h3').allTextContents(), ['事务与审计实践', '事务与审计实践'])
+  await s.locator('.course-card button').first().click()
+  await s.getByRole('heading', { name: '你的选课资格', exact: true }).waitFor()
+  await s.getByRole('dialog').getByRole('button', { name: '关闭', exact: true }).click()
+  await s.goBack()
+  await s.getByRole('link', { name: '下一学期专题：查看本学期教学班', exact: true }).click()
+  await s.getByRole('heading', { name: '本学期尚未公布该课程的教学班', exact: true }).waitFor()
+  await s.goBack()
+  evidence.checks.push(
+    'curriculum to exact term/course offerings and live eligibility; unoffered course is empty',
+  )
   await btn(s, '方案对比').click()
   await pick(s, '方案A教学班', sec)
   await btn(s, '加入方案').nth(0).click()
@@ -267,6 +296,10 @@ try {
   await t.getByLabel('具体说明').fill('已核对实验评分记录，建议更正为六十分。')
   await btn(t, '提交教师核查意见').click()
   await t.getByText('待教务审核', { exact: true }).last().waitFor()
+  await t
+    .locator('tbody td')
+    .filter({ hasText: /^60.00$/ })
+    .waitFor()
   await snap(t, 'teacher-real-review')
   await go(reg, '/admin/reviews', '成绩复核')
   await btn(reg, '查看记录 →').first().click()
@@ -287,15 +320,24 @@ try {
   await s.getByText('已通过 · 计入 3 学分', { exact: true }).waitFor()
   await snap(s, 'student-real-earned-credits')
   evidence.checks.push('published correction grants real curriculum credits')
-  await request(a,2,'/admin/rounds/'+directSpec.id,'PUT',{...directSpec,state:'CLOSED',version:directRound.version})
+  await request(a, 2, '/admin/rounds/' + directSpec.id, 'PUT', {
+    ...directSpec,
+    state: 'CLOSED',
+    version: directRound.version,
+  })
   await request(a, 2, '/admin/rounds/' + roundSpec.id, 'PUT', {
     ...roundSpec,
     state: 'OPEN',
     version: roundDraft.version,
   })
   await btn(s, '选课志愿').click()
-  await s.locator('select').filter({has:s.locator('option[value="'+roundSpec.id+'"]')}).selectOption(roundSpec.id)
+  await s
+    .locator('select')
+    .filter({ has: s.locator('option[value="' + roundSpec.id + '"]') })
+    .selectOption(roundSpec.id)
   await pick(s, '志愿教学班', preferenceSection)
+  await btn(s, '添加志愿').click()
+  await pick(s, '志愿教学班', sec)
   await btn(s, '添加志愿').click()
   await btn(s, '保存志愿顺序').click()
   await s.getByText('志愿顺序已保存。').waitFor()
@@ -310,8 +352,15 @@ try {
     await btn(reg, '保存学期资源').click()
     await reg.getByText(/学期资源已保存/).waitFor()
     await pick(reg, '待排教学班', planningSection)
-    await reg.getByRole('combobox').filter({has:reg.getByRole('option',{name:'周四',exact:true})}).first().selectOption('4')
-    await reg.locator('select').filter({has:reg.locator('option[value="'+id+'LAB"],option:has-text("'+id+'LAB")')}).selectOption(id+'LAB')
+    await reg
+      .getByRole('combobox')
+      .filter({ has: reg.getByRole('option', { name: '周四', exact: true }) })
+      .first()
+      .selectOption('4')
+    await reg
+      .locator('select')
+      .filter({ has: reg.locator('option[value="' + id + 'LAB"],option:has-text("' + id + 'LAB")') })
+      .selectOption(id + 'LAB')
     await btn(reg, '生成排课预览').click()
     await btn(reg, '发布此批次').waitFor()
     await snap(reg, 'admin-real-solver-preview')
@@ -330,7 +379,10 @@ try {
     })
     await go(reg, '/admin/planning', '排课与分配')
     await btn(reg, '志愿分配').click()
-    await reg.locator('select').filter({has:reg.locator('option[value="'+roundSpec.id+'"]')}).selectOption(roundSpec.id)
+    await reg
+      .locator('select')
+      .filter({ has: reg.locator('option[value="' + roundSpec.id + '"]') })
+      .selectOption(roundSpec.id)
     await btn(reg, '生成分配预览').click()
     await btn(reg, '发布此批次').waitFor()
     await snap(reg, 'admin-real-allocation-preview')
@@ -339,8 +391,24 @@ try {
     await reg.getByText('批次已发布，结果已重新读取。').waitFor()
     await go(s, '/student/planning', '学业规划')
     await btn(s, '选课志愿').click()
-    await s.locator('select').filter({has:s.locator('option[value="'+roundSpec.id+'"]')}).selectOption(roundSpec.id)
+    await s
+      .locator('select')
+      .filter({ has: s.locator('option[value="' + roundSpec.id + '"]') })
+      .selectOption(roundSpec.id)
     await s.getByText('获分配 ' + preferenceSection + ' · 第 1 志愿').waitFor()
+    const preferenceResult = await request(st.context, 3, '/student/preferences/' + roundSpec.id)
+    assert.equal(preferenceResult.phase, 'PUBLISHED')
+    const skipped = preferenceResult.unassigned.find((x) => x.sectionId === sec)
+    assert(
+      skipped?.explanation && skipped.reasons.length,
+      'published student receives actual rejection reasons',
+    )
+    await s.getByText(skipped.explanation, { exact: true }).waitFor()
+    evidence.allocation = {
+      assigned: preferenceResult.assignments.length,
+      unassigned: preferenceResult.unassigned.length,
+      reasonCodes: skipped.reasons,
+    }
     await snap(s, 'student-real-allocation')
     evidence.checks.push('real allocation committed before opening and published after closure')
   }
@@ -353,13 +421,23 @@ try {
 } catch (e) {
   evidence.status = 'FAIL'
   evidence.failure = e instanceof Error ? e.message : String(e)
-  for (const [n,page] of opened.entries()){
-    if(page.url().includes('/login'))continue
-    try{
-      await page.screenshot({path:resolve(output,'failed-'+id+'-'+n+'.png')})
-      const diagnostics=await page.locator('[role=alert],.error-inline,.plan-verdict').allTextContents()
-      evidence['page'+n]={path:new URL(page.url()).pathname,alerts:diagnostics.slice(0,5),inputs:await page.locator('select').evaluateAll(es=>es.map(el=>[el.getAttribute('aria-label'),el.selectedOptions[0]?.label,el.options.length]))}
-    }catch{/* diagnostics cannot mask the original cause */}
+  for (const [n, page] of opened.entries()) {
+    if (page.url().includes('/login')) continue
+    try {
+      await page.screenshot({ path: resolve(output, 'failed-' + id + '-' + n + '.png') })
+      const diagnostics = await page.locator('[role=alert],.error-inline,.plan-verdict').allTextContents()
+      evidence['page' + n] = {
+        path: new URL(page.url()).pathname,
+        alerts: diagnostics.slice(0, 5),
+        inputs: await page
+          .locator('select')
+          .evaluateAll((es) =>
+            es.map((el) => [el.getAttribute('aria-label'), el.selectedOptions[0]?.label, el.options.length]),
+          ),
+      }
+    } catch {
+      /* diagnostics cannot mask the original cause */
+    }
   }
   throw e
 } finally {

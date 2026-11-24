@@ -68,11 +68,12 @@ public class ApiController {
   public Api.Page catalog(
       @RequestParam(required = false) String termId,
       @RequestParam(required = false) String q,
+      @RequestParam(required = false) String courseId,
       @RequestParam(required = false) String department,
       @RequestParam(defaultValue = "false") boolean availableOnly,
       @RequestParam(defaultValue = "0") int page,
       @RequestParam(defaultValue = "20") int size) {
-    return query.catalog(termId, q, department, availableOnly, page, size, null);
+    return query.catalog(termId, q, department, availableOnly, page, size, null, courseId);
   }
 
   @GetMapping("/sections/{id}")

@@ -64,10 +64,20 @@ public class QueryService {
       int page,
       int size,
       String teacher) {
+    return catalog(term, query, department, available, page, size, teacher, null);
+  }
+
+  public Api.Page catalog(
+      String term, String query, String department, boolean available,
+      int page, int size, String teacher, String courseId) {
     StringBuilder sql =
         new StringBuilder(
             SECTIONS + " WHERE o.term_id=? AND s.state='PUBLISHED' AND o.state='PUBLISHED'");
     List<Object> args = new ArrayList<>(List.of(term(term)));
+    if (courseId != null && !courseId.isBlank()) {
+      sql.append(" AND o.course_id=?");
+      args.add(courseId);
+    }
     if (query != null && !query.isBlank()) {
       sql.append(
           " AND (LOWER(c.title) LIKE ? OR LOWER(s.id) LIKE ? OR LOWER(t.name) LIKE ? OR"

@@ -26,7 +26,7 @@ const reason = ref(''),
   proposed = ref(''),
   gradeId = ref(''),
   approve = ref(true)
-const busy = ref(false),
+const ready = ref(false), busy = ref(false),
   actionError = ref(''),
   message = ref('')
 const role = computed(() => auth.user?.role)
@@ -73,6 +73,7 @@ watch(
   { immediate: true }
 )
 async function open(item?: GradeReview) {
+  ready.value = false
   selected.value = item
   modal.value = true
   reason.value = ''
@@ -86,6 +87,7 @@ async function open(item?: GradeReview) {
     try {
       selected.value = await v3<GradeReview>('/grade-reviews/' + encode(item.id))
       proposed.value = formatScore(selected.value.proposedGrade ?? selected.value.originalGrade)
+      ready.value = true
     } catch (e) {
       actionError.value = e instanceof Error ? e.message : '读取记录失败'
     } finally {
@@ -105,6 +107,7 @@ async function open(item?: GradeReview) {
       if (++p * data.size >= data.total || !data.items.length) break
     }
     eligible.value = available
+    ready.value = true
   } catch (e) {
     actionError.value = e instanceof Error ? e.message : '读取成绩失败'
   } finally {
@@ -112,7 +115,7 @@ async function open(item?: GradeReview) {
   }
 }
 async function submit() {
-  if (busy.value || action.value === 'read') return
+  if (busy.value || !ready.value || action.value === 'read') return
   const item = selected.value,
     mode = action.value
   busy.value = true
@@ -255,7 +258,7 @@ async function submit() {
     </div>
     <form v-if="action !== 'read'" id="review-action" class="workflow-form" @submit.prevent="submit">
       <label v-if="action === 'apply'" class="field"
-        >已发布成绩<select v-model="gradeId" required>
+        >已发布成绩<select v-model="gradeId" :disabled="busy || !ready" required>
           <option value="">选择需要复核的课程</option>
           <option v-for="e in eligible" :key="e.id" :value="e.id">
             {{ e.courseTitle }} · {{ formatScore(e.grade) }}
@@ -263,17 +266,17 @@ async function submit() {
         ><small v-if="!busy && !eligible.length">本学期没有可申请复核的正式成绩。</small></label
       >
       <label v-if="action === 'recommend'" class="field"
-        >建议成绩<input v-model="proposed" type="number" min="0" max="100" step="0.01" required
+        >建议成绩<input v-model="proposed" :disabled="busy || !ready" type="number" min="0" max="100" step="0.01" required
       /></label>
       <label v-if="action === 'decide'" class="field"
-        >审核决定<select v-model="approve">
+        >审核决定<select v-model="approve" :disabled="busy || !ready">
           <option :value="true">批准，由任课教师发布</option>
           <option :value="false">驳回，保留原成绩</option>
         </select></label
       >
       <label v-if="action !== 'publish'" class="field"
         >具体说明<textarea
-          v-model="reason"
+          v-model="reason" :disabled="busy || !ready"
           minlength="5"
           maxlength="500"
           required
@@ -286,7 +289,7 @@ async function submit() {
     </form>
     <template #footer
       ><button class="button button-secondary" :disabled="busy" @click="modal = false">关闭</button
-      ><button v-if="action !== 'read'" type="submit" form="review-action" class="button" :disabled="busy">
+      ><button v-if="action !== 'read'" type="submit" form="review-action" class="button" :disabled="busy || !ready">
         {{ actionTitle }}
       </button></template
     >

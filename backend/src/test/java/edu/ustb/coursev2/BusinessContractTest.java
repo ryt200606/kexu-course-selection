@@ -629,6 +629,20 @@ class BusinessContractTest {
   }
 
   @Test
+  void exactCourseLinkFiltersBeforeCountingAndPaging() {
+    db.update("INSERT INTO cs2_course(id,title,department,description) VALUES('COURSE10','课程10','系','测试')");
+    db.update("INSERT INTO cs2_offering(id,course_id,term_id,credits,state) VALUES('OFF10','COURSE10','TERM',3,'PUBLISHED')");
+    db.update("INSERT INTO cs2_section(id,offering_id,teacher_id,capacity,state) VALUES('SEC10','OFF10','TEACHER',3,'PUBLISHED')");
+    var broad = queries.catalog("TERM","COURSE1",null,false,0,10,null);
+    assertThat(broad.total()).isEqualTo(2);
+    var exact = queries.catalog("TERM","COURSE1",null,false,0,1,null,"COURSE1");
+    assertThat(exact.total()).isOne();
+    assertThat(exact.items().get(0).get("id")).isEqualTo("SEC1");
+    assertThat(queries.catalog("TERM",null,null,false,1,1,null,"COURSE1").items()).isEmpty();
+    assertThat(queries.catalog("TERM",null,null,false,0,1,null,"NO_SUCH_COURSE").total()).isZero();
+  }
+
+  @Test
   void studentLookupFindsTheTenThousandAndFirstRecordOnPageOne() {
     String range=env.getProperty("app.database.type","h2").equals("h2")
         ? "SELECT X AS n FROM SYSTEM_RANGE(1,10001)" : "SELECT generate_series(1,10001) AS n";

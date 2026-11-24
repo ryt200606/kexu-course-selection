@@ -8,6 +8,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "test:live": "node scripts/verify-live.mjs",
     "test:preview": "node scripts/verify-preview.mjs",
+    "test:pages": "node scripts/verify-pages.mjs",
     "build:preview": "vue-tsc --noEmit && vite build --mode pages --base ./ --outDir dist-preview",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest run",

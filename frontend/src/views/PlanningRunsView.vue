@@ -240,6 +240,10 @@ watch(
   () => {
     invalidate()
     commitment.value = ''
+    sections.value = [{ sectionId: '', slots: [defaults()] }]
+    rooms.value = [{ id: '', capacity: 30 }]
+    blocked.value = []
+    resourceVersion.value = 0
     if (!ws.termId) return
     historyPage.value = 0
     void historyLoad()
@@ -373,7 +377,9 @@ async function publish() {
   <p v-if="issue" class="error-inline" role="alert">{{ issue }}</p>
   <p v-if="message" class="notice-banner" role="status"><Check :size="16" />{{ message }}</p>
   <StatePanel v-if="error" :error="error" @retry="ws.loadTerms" />
-  <form class="card workflow-card workflow-form" @submit.prevent="preview">
+  <StatePanel v-if="mode === 'schedule' && (resourceRequest.loading.value || resourceRequest.error.value)"
+    :loading="resourceRequest.loading.value" :error="resourceRequest.error.value" @retry="loadResource" />
+  <form v-else class="card workflow-card workflow-form" @submit.prevent="preview">
     <template v-if="mode === 'schedule'">
       <div class="row-between">
         <div>
@@ -411,9 +417,6 @@ async function publish() {
           保存学期资源</button
         ><button type="button" class="text-button" :disabled="busy" @click="loadResource">重新读取</button>
       </div>
-      <p v-if="resourceRequest.error.value" class="error-inline" role="alert">
-        {{ resourceRequest.error.value }}
-      </p>
       <div class="row-between">
         <h2>待排教学班与候选时段</h2>
         <button

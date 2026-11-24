@@ -9,11 +9,13 @@ export default defineConfig(({mode}) => ({
     generateBundle(){
       if(mode!=='pages')return
       const included:string[]=[]
-      for(const id of ['sql-matrix','uniform','hot']){
+      for(const id of ['sql-matrix','resource-summary','allocation-ceiling','uniform','hot','v2-uniform','v2-hot','planning-linux','planning-windows-20261124','solver-contention']){
         const path=resolve(process.cwd(),'../performance/results',id+'.json')
         if(!existsSync(path))continue
         const contents=readFileSync(path,'utf8')
-        JSON.parse(contents)
+        const data=JSON.parse(contents)
+        if(['uniform','hot','v2-uniform','v2-hot','solver-contention'].includes(id) && data.status!=='MEASURED')continue
+        if(id.startsWith('planning-') && (!data.finishedAt || !Array.isArray(data.allocation) || !Array.isArray(data.scheduling)))continue
         this.emitFile({type:'asset',fileName:'measurements/'+id+'.json',source:contents})
         included.push(id)
       }
